@@ -36,10 +36,10 @@ public class CavernGenerator : MonoBehaviour
         backgroundSprite.transform.position = new Vector3(width / 2f - 0.5f, height / 2f - 0.5f, 0);
         backgroundSprite.GetComponent<SpriteRenderer>().sortingOrder = -1;
 
-        // Calculate center of the cavern for camera
+        // Calculate center of the cavern for player
         Vector3 cavernCenter = new Vector3(width / 2f, height / 2f, 0);
-        // Move the camera to the center of the cavern
-        Camera.main.transform.position = new Vector3(cavernCenter.x, cavernCenter.y, Camera.main.transform.position.z);
+        // Move the player to the center of the cavern
+        Player.Obj.transform.position = new Vector3(cavernCenter.x, cavernCenter.y, Player.Obj.transform.position.z);
 
         for (int x = 0; x < width; x++)
         {

@@ -48,13 +48,23 @@ public class PlayerCombat : MonoBehaviour {
             // Subtract health
             Health -= damage;
             
-            // Print result
-            if (Health > 0) print("Health: " + Health);
-            else print("You died");
+            // Update health indicator
+            HUD.HIndicator.Set(Health);
             
             // Grant invincibility frames
             Instance.StartCoroutine(IFrames(INVINCIBILITY_PERIOD));
+            
         }
+    }
+    
+    /// <summary>Heals the player by <paramref name="amt"/> health</summary>
+    /// <param name="amt">Amount of health to heal</param>
+    public static void Heal(int amt) {
+        // Add health
+        Health += amt;
+        
+        // Update health indicator
+        HUD.HIndicator.Set(Health);
     }
     
     /// I-Frames

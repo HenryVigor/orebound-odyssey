@@ -11,6 +11,7 @@ public class NextLevel : MonoBehaviour
         if (collision.gameObject == Player.Obj && cavernGenerator != null)
         {
             cavernGenerator.GenerateCavern();
+            Destroy(gameObject);
         }
     }
 }

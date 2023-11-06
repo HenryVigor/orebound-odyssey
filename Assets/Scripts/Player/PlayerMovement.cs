@@ -35,12 +35,15 @@ public class PlayerMovement : BehaviourFSM {
     /// Player Animation Controller
     public Animator animator;
     
+    GameObject rangeObject;
+    
     void Awake() {
         Instance = this;
         if (Instance == this) {
             // Get components and values
             rb = GetComponent<Rigidbody2D>();
             pi = GetComponent<PlayerInput>();
+            rangeObject = GameObject.Find("PlayerRange");
             if (ExternalSpeedModifier <= 0f) ExternalSpeedModifier = 1f;
 
             // Get animation component
@@ -91,6 +94,18 @@ public class PlayerMovement : BehaviourFSM {
             
             // Set player velocity
             SetPlayerVelocity(xAcc, xTarget, yAcc, yTarget);
+
+            // Set PlayerRange Rotation --- Bad temporary code, should improve on this later
+            if (xDir != 0)
+            {
+                Instance.rangeObject.transform.SetLocalPositionAndRotation(new Vector3(0.65f*xDir, -0.055f, 0f), Quaternion.identity);
+            }
+            if (yDir != 0)
+            {
+                Instance.rangeObject.transform.SetLocalPositionAndRotation(new Vector3(0f, 0.5f*yDir, 0f), Quaternion.identity);
+            }
+
+
         }
         
         protected override Type Transitions() {

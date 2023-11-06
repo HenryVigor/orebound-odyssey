@@ -31,6 +31,9 @@ public class PlayerMovement : BehaviourFSM {
     
     Rigidbody2D rb;
     PlayerInput pi;
+
+    /// Player Animation Controller
+    Animator animator;
     
     void Awake() {
         Instance = this;
@@ -39,6 +42,9 @@ public class PlayerMovement : BehaviourFSM {
             rb = GetComponent<Rigidbody2D>();
             pi = GetComponent<PlayerInput>();
             if (ExternalSpeedModifier <= 0f) ExternalSpeedModifier = 1f;
+
+            // Get animation component
+            animator = GetComponent<Animator>();
             
             // Set starting state
             SetState(typeof(InputMovement));
@@ -56,6 +62,20 @@ public class PlayerMovement : BehaviourFSM {
             // Get input
             int xDir = GetXAxisInput();
             int yDir = GetYAxisInput();
+
+            // Determine animation values
+            if (xDir == 0) {
+                Instance.animator.SetBool("Is Horizontal Zero", true);
+            } else {
+                Instance.animator.SetBool("Is Horizontal Zero", false);
+                Instance.animator.SetFloat("Horizontal Speed", xDir);
+            }
+            if (yDir == 0) {
+                Instance.animator.SetBool("Is Vertical Zero", true);
+            } else {
+                Instance.animator.SetBool("Is Vertical Zero", false);
+                Instance.animator.SetFloat("Vertical Speed", yDir);
+            }
             
             // Determine top and target velocities
             float topSpeed = GetTopSpeed(xDir, yDir);

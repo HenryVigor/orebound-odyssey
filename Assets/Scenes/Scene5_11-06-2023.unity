@@ -445,12 +445,11 @@ MonoBehaviour:
   - oreBlockPrefab: {fileID: 5786096766264122376, guid: f5423b41b22b93d4e8664d083da18151, type: 3}
     rarity: 0.1
   - oreBlockPrefab: {fileID: 1032201051}
-    rarity: 10
+    rarity: 0.04
   enemyPrefab: {fileID: 112220968}
   blockHolder: {fileID: 0}
   width: 200
   height: 200
-  noiseScale: 11
   threshold: 0.4
   noOreChance: 0.95
   maxEnemyCount: 3

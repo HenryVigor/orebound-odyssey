@@ -19,16 +19,17 @@ public class CavernGenerator : MonoBehaviour
 
     public int width = 100; // Width of the cavern in tiles
     public int height = 100; // Height of the cavern in tiles
-    public float noiseScale = 10f; // Adjust the scale of the noise texture
     public float threshold = 0.4f; // Adjust this threshold to control density of cavern
     public float noOreChance = 0.2f; // Chance of no ore spawning
 
+    private float noiseScale; // Random float that will be between 6f and 13f when caves are generated.
     private int enemyCount = 0;
     public int maxEnemyCount = 3; // Maximum number of enemies allowed to spawn
     private int playerSpawned = 0;
 
     void Start()
     {
+        noiseScale = Random.Range(6f, 13f);
         GenerateCavern();
     }
 

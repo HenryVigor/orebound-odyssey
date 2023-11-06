@@ -24,17 +24,19 @@ public class CavernGenerator : MonoBehaviour
 
     private float noiseScale; // Random float that will be between 6f and 13f when caves are generated.
     private int enemyCount = 0;
-    public int maxEnemyCount = 3; // Maximum number of enemies allowed to spawn
     private int playerSpawned = 0;
 
     void Start()
     {
-        noiseScale = Random.Range(6f, 13f);
+
         GenerateCavern();
     }
 
     public void GenerateCavern()
     {
+        noiseScale = Random.Range(6f, 13f);
+        playerSpawned = 0;
+
         // Generate background sprite
         GameObject backgroundSprite = Instantiate(backgroundSpritePrefab, transform.position, Quaternion.identity);
         backgroundSprite.transform.localScale = new Vector3(width, height, 1);

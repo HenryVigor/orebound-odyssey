@@ -33,7 +33,7 @@ public class PlayerMovement : BehaviourFSM {
     PlayerInput pi;
 
     /// Player Animation Controller
-    Animator animator;
+    public Animator animator;
     
     void Awake() {
         Instance = this;

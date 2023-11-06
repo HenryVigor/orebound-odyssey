@@ -31,7 +31,7 @@ public class CavernGenerator : MonoBehaviour
         GenerateCavern();
     }
 
-    void GenerateCavern()
+    public void GenerateCavern()
     {
         // Generate background sprite
         GameObject backgroundSprite = Instantiate(backgroundSpritePrefab, transform.position, Quaternion.identity);

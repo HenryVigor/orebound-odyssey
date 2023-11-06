@@ -14,6 +14,7 @@ public class CavernGenerator : MonoBehaviour
     public GameObject cavernSpritePrefab; // Reference to your cavern sprite prefab
     public GameObject backgroundSpritePrefab; // Reference to your background sprite prefab
     public OreBlockInfo[] oreBlocks; // Array of ore block information
+    public GameObject enemyPrefab; // Reference to the enemy prefab
 
     public int width = 100; // Width of the cavern in tiles
     public int height = 100; // Height of the cavern in tiles
@@ -21,12 +22,16 @@ public class CavernGenerator : MonoBehaviour
     public float threshold = 0.4f; // Adjust this threshold to control density of cavern
     public float noOreChance = 0.2f; // Chance of no ore spawning
 
+    private int enemyCount = 0;
+    public int maxEnemyCount = 3; // Maximum number of enemies allowed to spawn
+    private int playerSpawned = 0;
+
     void Start()
     {
         GenerateCavern();
     }
 
-    void GenerateCavern()
+    public void GenerateCavern()
     {
         // Generate background sprite
         GameObject backgroundSprite = Instantiate(backgroundSpritePrefab, transform.position, Quaternion.identity);
@@ -36,10 +41,13 @@ public class CavernGenerator : MonoBehaviour
         backgroundSprite.transform.position = new Vector3(width / 2f - 0.5f, height / 2f - 0.5f, 0);
         backgroundSprite.GetComponent<SpriteRenderer>().sortingOrder = -1;
 
+
+
         // Calculate center of the cavern for player
         Vector3 cavernCenter = new Vector3(width / 2f, height / 2f, 0);
         // Move the player to the center of the cavern
-        Player.Obj.transform.position = new Vector3(cavernCenter.x, cavernCenter.y, Player.Obj.transform.position.z);
+        //Player.Obj.transform.position = new Vector3(cavernCenter.x, cavernCenter.y, Player.Obj.transform.position.z);
+
 
         for (int x = 0; x < width; x++)
         {
@@ -75,9 +83,43 @@ public class CavernGenerator : MonoBehaviour
                         }
                     }
                 }
+                else
+                {
+                    if (x > width / 2 - 12 && x < width / 2 + 12 && y > height / 2 - 12 && y < height / 2 + 12)
+                    {
+                        Vector3 position = new Vector3(x, y, Player.Obj.transform.position.z);
+
+
+                        if (playerSpawned == 0)
+                        {
+                            // Spawn an enemy at spots where no ore spawns
+                            Player.Obj.transform.position = new Vector3(position.x, position.y, Player.Obj.transform.position.z);
+                            playerSpawned++;
+                            Debug.Log("Spawned Player at " + position);
+                        }
+                    }
+                    if (!(x > width / 2 - 20 && x < width / 2 + 20 && y > height / 2 - 20 && y < height / 2 + 20))
+                    {
+                        Vector3 position = new Vector3(x, y, enemyPrefab.transform.position.x);
+                        // Generate a random value between 0 and 1
+                        float randomValue = Random.value;
+
+                        // Check if the random value is less than or equal to 0.05 (5% chance)
+                        if (randomValue <= 0.01f)
+                        {
+                            // Spawn an enemy at spots where no ore spawns
+                            Instantiate(enemyPrefab, position, Quaternion.identity);
+                            enemyCount++;
+                            //Debug.Log("Spawned Enemy at " + position);
+                        }
+                    }
+
+                }
             }
         }
+        Debug.Log("Number of Enemies: " + enemyCount);
     }
+
 }
 
 

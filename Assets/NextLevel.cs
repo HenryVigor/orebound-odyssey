@@ -10,6 +10,7 @@ public class NextLevel : MonoBehaviour
     {
         if (collision.gameObject == Player.Obj && cavernGenerator != null)
         {
+            Destroy(GameObject.Find("BlockHolder"));
             cavernGenerator.GenerateCavern();
             Destroy(gameObject);
         }

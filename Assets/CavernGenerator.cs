@@ -15,6 +15,7 @@ public class CavernGenerator : MonoBehaviour
     public GameObject backgroundSpritePrefab; // Reference to your background sprite prefab
     public OreBlockInfo[] oreBlocks; // Array of ore block information
     public GameObject enemyPrefab; // Reference to the enemy prefab
+    public GameObject blockHolder;
 
     public int width = 100; // Width of the cavern in tiles
     public int height = 100; // Height of the cavern in tiles
@@ -41,6 +42,9 @@ public class CavernGenerator : MonoBehaviour
         backgroundSprite.transform.position = new Vector3(width / 2f - 0.5f, height / 2f - 0.5f, 0);
         backgroundSprite.GetComponent<SpriteRenderer>().sortingOrder = -1;
 
+        // Generate background sprite
+        blockHolder = new GameObject("BlockHolder");
+
 
 
         // Calculate center of the cavern for player
@@ -58,7 +62,7 @@ public class CavernGenerator : MonoBehaviour
                 if (perlinValue > threshold)
                 {
                     Vector3 position = new Vector3(x, y, 0);
-                    Instantiate(cavernSpritePrefab, position, Quaternion.identity);
+                    Instantiate(cavernSpritePrefab, position, Quaternion.identity, blockHolder.transform);
 
                     // Randomly determine if no ore should spawn
                     if (Random.value > noOreChance && !Physics2D.OverlapPoint(position, LayerMask.GetMask("Background")))
@@ -77,7 +81,7 @@ public class CavernGenerator : MonoBehaviour
                             currentRarity += oreBlockInfo.rarity;
                             if (randomValue <= currentRarity)
                             {
-                                GameObject oreBlockSprite = Instantiate(oreBlockInfo.oreBlockPrefab, position, Quaternion.identity);
+                                GameObject oreBlockSprite = Instantiate(oreBlockInfo.oreBlockPrefab, position, Quaternion.identity, blockHolder.transform);
                                 break;
                             }
                         }
@@ -108,7 +112,7 @@ public class CavernGenerator : MonoBehaviour
                         if (randomValue <= 0.01f)
                         {
                             // Spawn an enemy at spots where no ore spawns
-                            Instantiate(enemyPrefab, position, Quaternion.identity);
+                            Instantiate(enemyPrefab, position, Quaternion.identity, blockHolder.transform);
                             enemyCount++;
                             //Debug.Log("Spawned Enemy at " + position);
                         }

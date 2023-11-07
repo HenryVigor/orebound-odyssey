@@ -14,7 +14,8 @@ public class CavernGenerator : MonoBehaviour
     public GameObject cavernSpritePrefab; // Reference to your cavern sprite prefab
     public GameObject backgroundSpritePrefab; // Reference to your background sprite prefab
     public OreBlockInfo[] oreBlocks; // Array of ore block information
-    public GameObject enemyPrefab; // Reference to the enemy prefab
+    public GameObject enemyPrefab; // Reference to the enemy 
+    public GameObject exitBlock;
     public GameObject blockHolder;
 
     public int width = 100; // Width of the cavern in tiles
@@ -25,6 +26,7 @@ public class CavernGenerator : MonoBehaviour
     private float noiseScale; // Random float that will be between 6f and 13f when caves are generated.
     private int enemyCount = 0;
     private int playerSpawned = 0;
+    private int exitSpawned = 0;
 
     void Start()
     {
@@ -47,8 +49,6 @@ public class CavernGenerator : MonoBehaviour
 
         // Generate background sprite
         blockHolder = new GameObject("BlockHolder");
-
-
 
         // Calculate center of the cavern for player
         Vector3 cavernCenter = new Vector3(width / 2f, height / 2f, 0);
@@ -118,6 +118,12 @@ public class CavernGenerator : MonoBehaviour
                             Instantiate(enemyPrefab, position, Quaternion.identity, blockHolder.transform);
                             enemyCount++;
                             //Debug.Log("Spawned Enemy at " + position);
+                        }
+                        if (randomValue <= 0.001f && exitSpawned == 0)
+                        {
+                            // Spawn an enemy at spots where no ore spawns
+                            Instantiate(exitBlock, position, Quaternion.identity, blockHolder.transform);
+                            exitSpawned++;
                         }
                     }
 

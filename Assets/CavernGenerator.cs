@@ -17,6 +17,8 @@ public class CavernGenerator : MonoBehaviour
     public GameObject enemyPrefab; // Reference to the enemy 
     public GameObject exitBlock;
     public GameObject blockHolder;
+    public GameObject spikesPrefab;
+    public GameObject trappedBlock;
 
     public int width = 100; // Width of the cavern in tiles
     public int height = 100; // Height of the cavern in tiles
@@ -65,7 +67,7 @@ public class CavernGenerator : MonoBehaviour
                 if (perlinValue > threshold)
                 {
                     Vector3 position = new Vector3(x, y, 0);
-                    Instantiate(cavernSpritePrefab, position, Quaternion.identity, blockHolder.transform);
+                    GameObject stoneBlock = Instantiate(cavernSpritePrefab, position, Quaternion.identity, blockHolder.transform);
 
                     // Randomly determine if no ore should spawn
                     if (Random.value > noOreChance && !Physics2D.OverlapPoint(position, LayerMask.GetMask("Background")))
@@ -88,6 +90,10 @@ public class CavernGenerator : MonoBehaviour
                                 break;
                             }
                         }
+                    }
+                    else if (Random.value > 0.995)
+                    {
+                        Instantiate(trappedBlock, position, Quaternion.identity, blockHolder.transform);
                     }
                 }
                 else
@@ -118,6 +124,11 @@ public class CavernGenerator : MonoBehaviour
                             Instantiate(enemyPrefab, position, Quaternion.identity, blockHolder.transform);
                             enemyCount++;
                             //Debug.Log("Spawned Enemy at " + position);
+                        }
+                        else if (randomValue > 0.01f && randomValue <= 0.02f)
+                        {
+                            // Spawn spikes
+                            Instantiate(spikesPrefab, new(position.x, position.y, 0), Quaternion.identity, blockHolder.transform);
                         }
                         if (randomValue <= 0.001f && exitSpawned == 0)
                         {

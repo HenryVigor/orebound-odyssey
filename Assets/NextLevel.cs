@@ -5,18 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-    const int shopFrequency = 3; // How often a shop will appear
-    const int shopScene = 1; // Name of shop scene
-    
-    static int currentLevel = 1; // Number of levels played
-    
     public CavernGenerator cavernGenerator; // Reference to the CavernGenerator component
+    private LevelIndicator levelIndicator; // Declare levelIndicator at the class level
+
+    void Start()
+    {
+        levelIndicator = FindObjectOfType<LevelIndicator>();
+    }
+
+    const int shopFrequency = 3; // How often a shop will appear
+    const int shopScene = 1; // Name of shop scene   
 
     void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject == Player.Obj && cavernGenerator != null)
         {
-            if (currentLevel % shopFrequency == 0)
+            if (levelIndicator.LevelValue % shopFrequency == 0)
             {
                 SceneManager.LoadScene(shopScene);
             }
@@ -26,7 +30,7 @@ public class NextLevel : MonoBehaviour
                 cavernGenerator.GenerateCavern();
             }
             
-            currentLevel++;
+            levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text
             Destroy(gameObject);
         }
     }

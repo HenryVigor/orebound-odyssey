@@ -21,15 +21,15 @@ public class PlayerCombat : MonoBehaviour {
     /// <summary>Maximum health value</summary>
     [SerializeField] int MaxHealth = 5;
     
-    [SerializeField] int _Health;
+    [SerializeField] static int _Health;
     /// <summary>Current health value</summary>
     /// <value>Must remain between 0 and <see cref="MaxHealth"/></value>
     public static int Health {
-        get => Instance._Health;
+        get => _Health;
         private set {
             if (value > Instance.MaxHealth) value = Instance.MaxHealth;
             else if (value < 0) value = 0;
-            Instance._Health = value;
+            _Health = value;
         }
     }
     
@@ -39,6 +39,10 @@ public class PlayerCombat : MonoBehaviour {
     void Awake() {
         Instance = this;
         Health = MaxHealth;
+    }
+    
+    void OnDestroy() {
+        _Instance = null;
     }
     
     /// <summary>Registers a hit if player is not currently invincible</summary>

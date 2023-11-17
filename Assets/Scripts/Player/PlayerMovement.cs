@@ -52,7 +52,10 @@ public class PlayerMovement : BehaviourFSM {
             // Set starting state
             SetState(typeof(InputMovement));
         }
-        
+    }
+    
+    void OnDestroy() {
+        _Instance = null;
     }
     
     /// Main Movement State

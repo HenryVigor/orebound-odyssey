@@ -5,6 +5,12 @@ using UnityEngine;
 public class NextLevel : MonoBehaviour
 {
     public CavernGenerator cavernGenerator; // Reference to the CavernGenerator component
+    private LevelIndicator levelIndicator; // Declare levelIndicator at the class level
+
+    void Start()
+    {
+        levelIndicator = FindObjectOfType<LevelIndicator>();
+    }
 
     void OnCollisionStay2D(Collision2D collision)
     {
@@ -13,6 +19,7 @@ public class NextLevel : MonoBehaviour
             Destroy(GameObject.Find("BlockHolder"));
             cavernGenerator.GenerateCavern();
             Destroy(gameObject);
+            levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text
         }
     }
 }

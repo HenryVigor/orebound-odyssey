@@ -1,60 +1,101 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventorySystem : MonoBehaviour
 {
-    // Variables to store ore values
-    private int copperValue;
-    private int ironValue;
-    private int crystalValue;
-    private int goldValue;
-    private int coinsValue;
-
     // Text objects for each ore type
-    public Text copperText;
-    public Text ironText;
-    public Text crystalText;
-    public Text goldText;
-    public Text coinsText;
+    public TextMeshProUGUI copperText;
+    public TextMeshProUGUI ironText;
+    public TextMeshProUGUI goldText;
+    public TextMeshProUGUI crystalText;
+    public TextMeshProUGUI coinsText;
 
-    void Update()
-    {
-        // Update values from text objects
-        UpdateOreValues();
-        
-        // Display values in the 'Inventory' UI Text
-        UpdateInventoryText();
-    }
+    // Variables to store ore values
+    [SerializeField] private int _copperValue = 0;
+    [SerializeField] private int _ironValue = 0;
+    [SerializeField] private int _goldValue = 0;
+    [SerializeField] private int _crystalValue = 0;
+    [SerializeField] private int _coinsValue = 0;
 
-    void UpdateOreValues()
+    public int CopperValue
     {
-        // Parse values from text objects
-        copperValue = ExtractValueFromText(copperText);
-        ironValue = ExtractValueFromText(ironText);
-        crystalValue = ExtractValueFromText(crystalText);
-        goldValue = ExtractValueFromText(goldText);
-        coinsValue = ExtractValueFromText(coinsText);
-    }
-
-    int ExtractValueFromText(Text oreText)
-    {
-        // Extract the numeric value from the ore text
-        string[] parts = oreText.text.Split(':');
-        if (parts.Length == 2)
+        get { return _copperValue; }
+        set
         {
-            if (int.TryParse(parts[1].Trim(), out int value))
+            if (_copperValue != value)
             {
-                return value;
+                _copperValue = value;
+                UpdateInventoryText();
             }
         }
-        // Return 0 if extraction fails
-        return 0;
+    }
+
+    public int IronValue
+    {
+        get { return _ironValue; }
+        set
+        {
+            if (_ironValue != value)
+            {
+                _ironValue = value;
+                UpdateInventoryText();
+            }
+        }
+    }
+
+    public int GoldValue
+    {
+        get { return _goldValue; }
+        set
+        {
+            if (_goldValue != value)
+            {
+                _goldValue = value;
+                UpdateInventoryText();
+            }
+        }
+    }
+
+    public int CrystalValue
+    {
+        get { return _crystalValue; }
+        set
+        {
+            if (_crystalValue != value)
+            {
+                _crystalValue = value;
+                UpdateInventoryText();
+            }
+        }
+    }
+
+    public int CoinsValue
+    {
+        get { return _coinsValue; }
+        set
+        {
+            if (_coinsValue != value)
+            {
+                _coinsValue = value;
+                UpdateInventoryText();
+            }
+        }
     }
 
     void UpdateInventoryText()
     {
-        // Update the 'Inventory' UI Text with the ore values
-        Text inventoryText = GetComponent<Text>();
-        inventoryText.text = $"Copper: {copperValue}\nIron: {ironValue}\nCrystal: {crystalValue}\nGold: {goldValue}\nCoins: {coinsValue}";
+        copperText.text = $"Copper: {_copperValue}";
+        ironText.text = $"Iron: {_ironValue}";
+        goldText.text = $"Gold: {_goldValue}";
+        crystalText.text = $"Crystal: {_crystalValue}";
+        coinsText.text = $"<b>Coins: {_coinsValue}</b>";
+    }
+
+
+    private void OnValidate()
+    {
+        // OnValidate() will update the text in the Editor when any ore/coin value is changed through the Inspector window, otherwise only scripts can update the value and text.
+        UpdateInventoryText();
     }
 }

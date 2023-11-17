@@ -11,7 +11,7 @@ public class HealthIndicator : MonoBehaviour {
     }
     
     public void Set(int health) {
-        if (health > 0) TextField.text = "Health: " + health;
-        else TextField.text = "You died!";
+        if (health > 0) TextField.text = "<b>Health: " + health + "</b>"; 
+        else TextField.text = "<b>You Died!</b>";
     }
 }

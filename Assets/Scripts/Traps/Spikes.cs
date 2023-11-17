@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>Behavior for spike trap object</summary>
 public class Spikes : MonoBehaviour {
     void OnTriggerStay2D(Collider2D collider) {
         if (

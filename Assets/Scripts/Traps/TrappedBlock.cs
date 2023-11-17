@@ -1,5 +1,6 @@
 using UnityEngine;
 
+/// <summary>Behavior extension for trapped block object</summary>
 public class TrappedBlock : BlockObject {
     [SerializeField] GameObject SpawnedEnemy;
     

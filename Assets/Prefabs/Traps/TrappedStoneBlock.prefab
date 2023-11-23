@@ -82,6 +82,6 @@ MonoBehaviour:
   maxDurability: 100
   randomizeSpriteFlips: 0
   flipChance: 20
-  breakSpriteList: []
+  breakSpriteList:
+  - {fileID: -1862351504, guid: 0bb867af7b53fb04f8887788ad1ba604, type: 3}
   SpawnedEnemy: {fileID: 0}
-  BlockHolder: {fileID: 0}

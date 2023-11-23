@@ -35,8 +35,9 @@ public class PlayerMovement : BehaviourFSM {
     /// Player Animation Controller
     public Animator animator;
     
+    // For player attack/mine range
     GameObject rangeObject;
-    
+
     void Awake() {
         Instance = this;
         if (Instance == this) {
@@ -44,6 +45,7 @@ public class PlayerMovement : BehaviourFSM {
             rb = GetComponent<Rigidbody2D>();
             pi = GetComponent<PlayerInput>();
             rangeObject = GameObject.Find("PlayerRange");
+
             if (ExternalSpeedModifier <= 0f) ExternalSpeedModifier = 1f;
 
             // Get animation component
@@ -101,11 +103,11 @@ public class PlayerMovement : BehaviourFSM {
             // Set PlayerRange Rotation --- Bad temporary code, should improve on this later
             if (xDir != 0)
             {
-                Instance.rangeObject.transform.SetLocalPositionAndRotation(new Vector3(0.65f*xDir, -0.055f, 0f), Quaternion.identity);
+                Instance.rangeObject.transform.SetLocalPositionAndRotation(new Vector3(0.65f*xDir, -0.12f, 0f), Quaternion.Euler(0f, 0f, 90f));
             }
             if (yDir != 0)
             {
-                Instance.rangeObject.transform.SetLocalPositionAndRotation(new Vector3(0f, 0.5f*yDir, 0f), Quaternion.identity);
+                Instance.rangeObject.transform.SetLocalPositionAndRotation(new Vector3(0f, 0.5f*yDir, 0f), Quaternion.Euler(0f, 0f, 0f));
             }
 
 

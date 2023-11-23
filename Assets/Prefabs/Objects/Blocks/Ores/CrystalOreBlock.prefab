@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3371987256585201798}
   - component: {fileID: 1997557483968679115}
   - component: {fileID: 5331374516074834625}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: CrystalOreBlock
   m_TagString: OreBlock
   m_Icon: {fileID: 0}
@@ -154,8 +154,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0a56f7bc9cde6c0479060838f8f255fc, type: 3}
   hasDrops: 1
   dropCount: 1
-  droppedItems:
-  - {fileID: 434999144831861620, guid: 5f4a890db2ef4cc48860c0d02238da27, type: 3}
+  baseDropValue: 1
+  dropBonus: 0
+  dropMultiplier: 1
+  oreID: 3
   randomizeDropGiven: 0
+  maxPossibleValue: 1
   randomizeDropChance: 0
   dropChance: 100

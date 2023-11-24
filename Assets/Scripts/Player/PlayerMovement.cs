@@ -37,6 +37,7 @@ public class PlayerMovement : BehaviourFSM {
     
     // For player attack/mine range
     GameObject rangeObject;
+    GameObject interactObject;
 
     void Awake() {
         Instance = this;
@@ -45,6 +46,7 @@ public class PlayerMovement : BehaviourFSM {
             rb = GetComponent<Rigidbody2D>();
             pi = GetComponent<PlayerInput>();
             rangeObject = GameObject.Find("PlayerRange");
+            interactObject = GameObject.Find("InteractRange");
 
             if (ExternalSpeedModifier <= 0f) ExternalSpeedModifier = 1f;
 
@@ -103,11 +105,13 @@ public class PlayerMovement : BehaviourFSM {
             // Set PlayerRange Rotation --- Bad temporary code, should improve on this later
             if (xDir != 0)
             {
-                Instance.rangeObject.transform.SetLocalPositionAndRotation(new Vector3(0.65f*xDir, -0.12f, 0f), Quaternion.Euler(0f, 0f, 90f));
+                Instance.rangeObject.transform.SetLocalPositionAndRotation(new Vector3(0.65f*xDir, -0.12f, 0f), Quaternion.Euler(0f, 0f, 0f));
+                Instance.interactObject.transform.SetLocalPositionAndRotation(new Vector3(0.65f * xDir, -0.12f, 0f), Quaternion.Euler(0f, 0f, 0f));
             }
             if (yDir != 0)
             {
-                Instance.rangeObject.transform.SetLocalPositionAndRotation(new Vector3(0f, 0.5f*yDir, 0f), Quaternion.Euler(0f, 0f, 0f));
+                Instance.rangeObject.transform.SetLocalPositionAndRotation(new Vector3(0f, 0.5f*yDir, 0f), Quaternion.Euler(0f, 0f, 90f));
+                Instance.interactObject.transform.SetLocalPositionAndRotation(new Vector3(0f, 0.5f * yDir, 0f), Quaternion.Euler(0f, 0f, 90f));
             }
 
 

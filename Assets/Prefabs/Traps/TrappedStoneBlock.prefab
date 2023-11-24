@@ -84,4 +84,4 @@ MonoBehaviour:
   flipChance: 20
   breakSpriteList:
   - {fileID: -1862351504, guid: 0bb867af7b53fb04f8887788ad1ba604, type: 3}
-  SpawnedEnemy: {fileID: 0}
+  SpawnedEnemy: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}

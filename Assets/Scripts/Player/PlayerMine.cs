@@ -17,9 +17,9 @@ public class PlayerMine : MonoBehaviour
     public float attackRate = 0.5f; // Cooldown between attacks
     public int attackDamage = 10; // Base damage done to enemies
     public float critChance = 0f; // Chance for a critical hit (player upgrade)
-    public int critMultiplier = 2; // Critical damage multiplier (player upgrade)
-    public float attackAreaX = 0.6f;
-    public float attackAreaY = 0.5f;
+    public float critMultiplier = 2; // Critical damage multiplier (player upgrade)
+    public float attackAreaX = 0.65f;
+    public float attackAreaY = 0.3f;
     private bool canAttack = true;
 
     // Mining Variables
@@ -27,9 +27,9 @@ public class PlayerMine : MonoBehaviour
     public float mineSpeed = 0.5f; // Cooldown between mining
     public int mineDamage = 10; // Base damage done to ore durability
     public int oreBonus = 0; // Ore drop value static bonus (player upgrade) (default 0, no bonus)
-    public int oreMultiplier = 1; // Ore drop value multiplier (player upgrade) (default 1, no bonus)
-    public float mineAreaX = 0.6f;
-    public float mineAreaY = 0.5f;
+    public float oreMultiplier = 1; // Ore drop value multiplier (player upgrade) (default 1, no bonus)
+    public float mineAreaX = 0.65f;
+    public float mineAreaY = 0.3f;
     private bool canMine = true;
 
     private void Awake()
@@ -53,7 +53,17 @@ public class PlayerMine : MonoBehaviour
 
             foreach(Collider2D entity in hitEntities)
             {
-                entity.GetComponent<IDamageable>().Damage(attackDamage);
+                float critical = Random.Range(1f, 100f);
+
+                if (critical <= critChance)
+                {
+                    entity.GetComponent<IDamageable>().Damage(Mathf.FloorToInt(attackDamage * critMultiplier));
+                }
+                else
+                {
+                    entity.GetComponent<IDamageable>().Damage((attackDamage));
+                }
+
             }
 
             Invoke("ResetAttack", attackRate);

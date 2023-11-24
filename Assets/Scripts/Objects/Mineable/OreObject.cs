@@ -9,14 +9,13 @@ public class OreObject : BlockObject
     // An extension of the generic block objects - drops items from a drop table when destroyed
     //
     private InventorySystem inventorySystem;
-    private int oreInventoryValue;
 
     [Header("Ore Drop Settings")]
     [SerializeField] bool hasDrops = true;
     [SerializeField] int dropCount = 1; // How many times drops should be rolled for
     [SerializeField] int baseDropValue = 1; // How much will be added to the inventory value by default before bonuses (default 1)
     public int dropBonus = 0; // A static bonus for ore drops (player upgrade) (default 0, no bonus)
-    public int dropMultiplier = 1; // Multiplier for ore drops (player upgrade) (default 1, no bonus)
+    public float dropMultiplier = 1; // Multiplier for ore drops (player upgrade) (default 1, no bonus)
     [SerializeField] int oreID; // This is used to determine which inventory value should be incremented.
                                 // 0 - Copper, 1 - Iron, 2 - Gold, 3 - Crystal
 
@@ -53,7 +52,7 @@ public class OreObject : BlockObject
                 //Debug.Log("Dropped " + dropObject.name);
 
                 // Apply all potential modifiers from player upgrades
-                baseDropValue *= dropMultiplier;
+                baseDropValue = Mathf.FloorToInt(baseDropValue * dropMultiplier);
                 baseDropValue += dropBonus;
 
                 // Add to inventory

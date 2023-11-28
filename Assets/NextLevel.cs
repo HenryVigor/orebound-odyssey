@@ -13,7 +13,7 @@ public class NextLevel : MonoBehaviour
         levelIndicator = FindObjectOfType<LevelIndicator>();
     }
 
-    const int shopFrequency = 1; // How often a shop will appear
+    const int shopFrequency = 3; // How often a shop will appear
     const int shopScene = 1; // Shop scene index
 
     void OnCollisionStay2D(Collision2D collision)

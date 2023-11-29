@@ -33,6 +33,7 @@ public class CavernGenerator : MonoBehaviour
 
     void Start()
     {
+        cavernSpritePrefab.GetComponent<SpriteRenderer>().color = new Color(255f / 255f, 255f / 255f, 255f / 255f);
         GenerateCavern();
     }
 

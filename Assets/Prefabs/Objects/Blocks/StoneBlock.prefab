@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6687097545769686278}
   - component: {fileID: 5785165136947829243}
   - component: {fileID: 5546950925912294342}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: StoneBlock
   m_TagString: Mineable
   m_Icon: {fileID: 0}
@@ -231,7 +231,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBreakable: 1
   maxDurability: 50
-  defaultBlockSprite: {fileID: -1862351504, guid: 0bb867af7b53fb04f8887788ad1ba604, type: 3}
   randomizeSpriteFlips: 0
   flipChance: 20
   breakSpriteList:

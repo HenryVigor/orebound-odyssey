@@ -7,7 +7,8 @@ TagManager:
   - OreBlock
   - CavernSprite
   - Mineable
-  - Usable
+  - Interactable
+  - Stairs
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - UI
   - Damageable
   - Interactable
-  - 
-  - 
+  - Enemies
+  - Mineables
   - 
   - 
   - 

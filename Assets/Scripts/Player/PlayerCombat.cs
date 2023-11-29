@@ -70,7 +70,21 @@ public class PlayerCombat : MonoBehaviour {
         // Update health indicator
         HUD.HIndicator.Set(Health);
     }
-    
+
+    /// <summary>Upgrades the player's max health to <paramref name="amt"/> health</summary>
+    /// <param name="amt">Amount of health to set</param>
+    public static void UpgradeMaxHealth(int amt)
+    {
+        // Add health
+        Instance.MaxHealth = amt;
+    }
+
+    /// <summary>Get the player's max health</summary>
+    public static int GetMaxHealth()
+    {
+        return Instance.MaxHealth;
+    }
+
     /// I-Frames
     /// <summary>
     ///     Makes player invincible for <paramref name="time"/> seconds

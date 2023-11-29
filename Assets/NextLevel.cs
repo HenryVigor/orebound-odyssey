@@ -28,7 +28,7 @@ public class NextLevel : MonoBehaviour
     }
 
     const int shopFrequency = 3; // How often a shop will appear
-    const int shopScene = 1; // Name of shop scene   
+    const int shopScene = 1; // Shop scene index
 
     void OnCollisionStay2D(Collision2D collision)
     {
@@ -37,6 +37,7 @@ public class NextLevel : MonoBehaviour
             if (levelIndicator.LevelValue % shopFrequency == 0)
             {
                 SceneManager.LoadScene(shopScene);
+                levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text
             }
             else
             {
@@ -53,8 +54,6 @@ public class NextLevel : MonoBehaviour
 >>>>>>> Stashed changes
                 cavernGenerator.GenerateCavern();
             }
-            
-            levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text
             Destroy(gameObject);
         }
     }

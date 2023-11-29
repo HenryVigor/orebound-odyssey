@@ -19,6 +19,7 @@ public class CavernGenerator : MonoBehaviour
     public GameObject blockHolder;
     public GameObject spikesPrefab;
     public GameObject trappedBlock;
+    [SerializeField] List<GameObject> lootBoxes = new List<GameObject>();
 
     public int width = 100; // Width of the cavern in tiles
     public int height = 100; // Height of the cavern in tiles
@@ -42,6 +43,9 @@ public class CavernGenerator : MonoBehaviour
 
     public void GenerateCavern()
     {
+        // Get the floor theme and change the settings to match
+        GetComponent<FloorVariation>().SetFloorTheme();
+
         noiseScale = Random.Range(6f, 13f);
         playerSpawned = 0;
 
@@ -117,7 +121,7 @@ public class CavernGenerator : MonoBehaviour
                     }
                     if (!(x > width / 2 - 20 && x < width / 2 + 20 && y > height / 2 - 20 && y < height / 2 + 20))
                     {
-                        Vector3 position = new Vector3(x, y, enemyPrefab.transform.position.x);
+                        Vector3 position = new Vector3(x, y, Player.Obj.transform.position.z);
                         // Generate a random value between 0 and 1
                         float randomValue = Random.value;
 
@@ -134,11 +138,18 @@ public class CavernGenerator : MonoBehaviour
                             // Spawn spikes
                             Instantiate(spikesPrefab, new(position.x, position.y, 0), Quaternion.identity, blockHolder.transform);
                         }
+                        else if (randomValue > 0.02f && randomValue <= 0.02075f)
+                        {
+                            int randChoice = Random.Range(0, lootBoxes.Count);
+                            GameObject boxToSpawn = lootBoxes[randChoice];
+                            Instantiate(boxToSpawn, position, Quaternion.identity, blockHolder.transform);
+                        }
                         if (randomValue <= 0.001f && exitSpawned == 0)
                         {
                             // Spawn an enemy at spots where no ore spawns
                             Instantiate(exitBlock, position, Quaternion.identity, blockHolder.transform);
                             exitSpawned++;
+                            Player.Obj.transform.Find("HUD").Find("MapText").GetComponent<ExitIndicator>().TrackNewItem(position);
                         }
                     }
 

@@ -14,17 +14,17 @@ public abstract class BaseEnemy : MonoBehaviour, IDamageable
     [SerializeField] protected int maxHealth = 100;
     [SerializeField] protected int currentHealth = 100;
 
-    [Header("Enemy Attack Settings")]
-    [SerializeField] protected int attackDamage = 1;
-    [SerializeField] protected float attackCooldown = 0.5f;
-    [SerializeField] protected bool canAttack = true;
+    //[Header("Enemy Attack Settings")]
+    //[SerializeField] protected int attackDamage = 1;
+    //[SerializeField] protected float attackCooldown = 0.5f;
+    //[SerializeField] protected bool canAttack = true;
 
-    [Header("Enemy Movement Settings")]
-    [SerializeField] protected float speed = 5f;
+    //[Header("Enemy Movement Settings")]
+    //[SerializeField] protected float speed = 5f;
 
     public abstract void Damage(int damageAmount);
     public abstract void ObjectDestroy();
 
-    public abstract void Attack();
+    //public abstract void Attack();
 
 }

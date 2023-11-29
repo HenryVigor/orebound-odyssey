@@ -23,14 +23,14 @@ public class NextLevel : MonoBehaviour
             if (levelIndicator.LevelValue % shopFrequency == 0)
             {
                 SceneManager.LoadScene(shopScene);
+                levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text
             }
             else
             {
                 Destroy(GameObject.Find("BlockHolder"));
+                levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text --- Needed to move this into here so that the value was incremented before generation (for getting floor theme)
                 cavernGenerator.GenerateCavern();
             }
-            
-            levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text
             Destroy(gameObject);
         }
     }

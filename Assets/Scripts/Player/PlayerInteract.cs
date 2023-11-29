@@ -13,7 +13,7 @@ public class PlayerInteract : MonoBehaviour
     public bool canInteract = true;
     public float interactCooldown = 0.25f;
     public Transform interactPoint;
-    public Vector2 interactArea = new Vector2(1, .75f);
+    public Vector2 interactArea = new Vector2(0.65f, .5f);
 
     private void Awake()
     {

@@ -14,7 +14,7 @@ public class NextLevel : MonoBehaviour
     }
 
     const int shopFrequency = 3; // How often a shop will appear
-    const int shopScene = 1; // Name of shop scene   
+    const int shopScene = 1; // Shop scene index
 
     void OnCollisionStay2D(Collision2D collision)
     {

@@ -22,28 +22,31 @@ public class ShopUIButtonFunctions : MonoBehaviour {
     public static bool ExUpgrade1Purchased { get; private set; } = false;
     public static bool ExUpgrade2Purchased { get; private set; } = false;
     
+    /// <summary>Serialized pointer to coin count script</summary>
+    [SerializeField] CoinCount CCScript;
+    
     /// Sell Ores
     /// <summary>
     ///     "Sell Ores" button function<br/>
-    ///     Adds to coin amount and sets ore amounts to 0.
+    ///     Adds to coin count and sets ore counts to 0
     /// </summary>
     public void SellOres() {
-        print("Ores sold");
-        /*/////  Pseudo code until inventory / currency is done  ///////////////
-        inventory.coins +=
-            inventory.copper * COPPER_VALUE +
-            inventory.iron * IRON_VALUE +
-            inventory.gold * GOLD_VALUE +
-            inventory.crystal * CRYSTAL_VALUE
+        // Add coins
+        InventorySystem.staticCoinsValue +=
+            InventorySystem.staticCopperValue * COPPER_VALUE +
+            InventorySystem.staticIronValue * IRON_VALUE +
+            InventorySystem.staticGoldValue * GOLD_VALUE +
+            InventorySystem.staticCrystalValue * CRYSTAL_VALUE
         ;
         
-        inventory.copper = 0;
-        inventory.iron = 0;
-        inventory.gold = 0;
-        inventory.crystal = 0;
+        // Update ore counts
+        InventorySystem.staticCopperValue = 0;
+        InventorySystem.staticIronValue = 0;
+        InventorySystem.staticGoldValue = 0;
+        InventorySystem.staticCrystalValue = 0;
         
-        inventory.updateText();
-        *///////////////////////////////////////////////////////////////////////
+        // Update coin count in UI
+        CCScript.UpdateValue();
     }
     
     /// <summary>Placeholder button function or an example upgrade</summary>
@@ -78,14 +81,11 @@ public class ShopUIButtonFunctions : MonoBehaviour {
     /// <param name="amt">Amount of coins to remove</param>
     /// <returns>Whether or not player has enough coins to remove</returns>
     bool SpendCoins(int amt) {
-        print("Spent " + amt + " coins");
-        return true;
-        /*/////  Pseudo code until inventory / currency is done  ///////////////
-        if (inventory.coins >= amt) {
-            inventory.coins -= amt;
+        if (InventorySystem.staticCoinsValue >= amt) {
+            InventorySystem.staticCoinsValue -= amt;
+            CCScript.UpdateValue();
             return true;
         }
         return false;
-        *///////////////////////////////////////////////////////////////////////
     }
 }

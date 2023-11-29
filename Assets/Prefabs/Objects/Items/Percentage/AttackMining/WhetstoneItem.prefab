@@ -156,14 +156,14 @@ MonoBehaviour:
   maxHealthBonus: 1
   upgradingAttack: 1
   attackRateBonus: 1
-  attackDamageBonus: 0.95
+  attackDamageBonus: 1.05
   critChanceBonus: 1
   critMultiplierBonus: 1
   attackAreaXBonus: 1
   attackAreaYBonus: 1
   upgradingMining: 1
   mineSpeedBonus: 1
-  mineDamageBonus: 0.95
+  mineDamageBonus: 1.05
   mineOreBonus: 1
   oreMultiplierBonus: 1
   mineAreaXBonus: 1

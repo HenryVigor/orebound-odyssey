@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Mining Map
-  itemText: Always know your distance from the nearest exit
+  itemText: Always know your distance from an exit
   itemAction: Pickup
   isInteractable: 1
   interactCooldown: 10

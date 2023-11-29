@@ -8,7 +8,6 @@ TagManager:
   - CavernSprite
   - Mineable
   - Interactable
-  - Usable
   - Stairs
   layers:
   - Default

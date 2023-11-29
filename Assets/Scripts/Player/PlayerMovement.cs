@@ -31,19 +31,35 @@ public class PlayerMovement : BehaviourFSM {
     
     Rigidbody2D rb;
     PlayerInput pi;
+
+    /// Player Animation Controller
+    public Animator animator;
     
+    // For player attack/mine range
+    GameObject rangeObject;
+    GameObject interactObject;
+
     void Awake() {
         Instance = this;
         if (Instance == this) {
             // Get components and values
             rb = GetComponent<Rigidbody2D>();
             pi = GetComponent<PlayerInput>();
+            rangeObject = GameObject.Find("PlayerRange");
+            interactObject = GameObject.Find("InteractRange");
+
             if (ExternalSpeedModifier <= 0f) ExternalSpeedModifier = 1f;
+
+            // Get animation component
+            animator = GetComponent<Animator>();
             
             // Set starting state
             SetState(typeof(InputMovement));
         }
-        
+    }
+    
+    void OnDestroy() {
+        _Instance = null;
     }
     
     /// Main Movement State
@@ -56,6 +72,20 @@ public class PlayerMovement : BehaviourFSM {
             // Get input
             int xDir = GetXAxisInput();
             int yDir = GetYAxisInput();
+
+            // Determine animation values
+            if (xDir == 0) {
+                Instance.animator.SetBool("Is Horizontal Zero", true);
+            } else {
+                Instance.animator.SetBool("Is Horizontal Zero", false);
+                Instance.animator.SetFloat("Horizontal Speed", xDir);
+            }
+            if (yDir == 0) {
+                Instance.animator.SetBool("Is Vertical Zero", true);
+            } else {
+                Instance.animator.SetBool("Is Vertical Zero", false);
+                Instance.animator.SetFloat("Vertical Speed", yDir);
+            }
             
             // Determine top and target velocities
             float topSpeed = GetTopSpeed(xDir, yDir);
@@ -71,6 +101,20 @@ public class PlayerMovement : BehaviourFSM {
             
             // Set player velocity
             SetPlayerVelocity(xAcc, xTarget, yAcc, yTarget);
+
+            // Set PlayerRange Rotation --- Bad temporary code, should improve on this later
+            if (xDir != 0)
+            {
+                Instance.rangeObject.transform.SetLocalPositionAndRotation(new Vector3(0.65f*xDir, -0.12f, 0f), Quaternion.Euler(0f, 0f, 0f));
+                Instance.interactObject.transform.SetLocalPositionAndRotation(new Vector3(0.65f * xDir, -0.12f, 0f), Quaternion.Euler(0f, 0f, 0f));
+            }
+            if (yDir != 0)
+            {
+                Instance.rangeObject.transform.SetLocalPositionAndRotation(new Vector3(0f, 0.5f*yDir, 0f), Quaternion.Euler(0f, 0f, 90f));
+                Instance.interactObject.transform.SetLocalPositionAndRotation(new Vector3(0f, 0.5f * yDir, 0f), Quaternion.Euler(0f, 0f, 90f));
+            }
+
+
         }
         
         protected override Type Transitions() {

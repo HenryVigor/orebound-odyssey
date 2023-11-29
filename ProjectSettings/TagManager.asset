@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - OreBlock
+  - CavernSprite
+  - Mineable
+  - Interactable
+  - Stairs
   layers:
   - Default
   - TransparentFX
@@ -11,10 +16,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Damageable
+  - Interactable
+  - Enemies
+  - Mineables
   - 
   - 
   - 

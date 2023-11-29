@@ -28,6 +28,10 @@ public class Player : MonoBehaviour {
     void Awake() {
         Instance = this;
         if (Instance != this) Destroy(gameObject);
-        else DontDestroyOnLoad(gameObject);
+        // else DontDestroyOnLoad(gameObject);
+    }
+    
+    void OnDestroy() {
+        _Instance = null;
     }
 }

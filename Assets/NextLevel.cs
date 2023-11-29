@@ -7,7 +7,7 @@ public class NextLevel : MonoBehaviour
 {
     public CavernGenerator cavernGenerator; // Reference to the CavernGenerator component
     private SpriteRenderer cavernSpriteRenderer; // Reference to the Sprite Renderer of the cavern prefab
-    public LevelIndicator levelIndicator; // Declare levelIndicator at the class level
+    private LevelIndicator levelIndicator; // Declare levelIndicator at the class level
     public GameObject trappedStoneBlock; // Reference to trap
 
     private Color[] predefinedColors = new Color[]

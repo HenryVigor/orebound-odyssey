@@ -1369,7 +1369,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cavernGenerator: {fileID: 1360399074}
-  levelIndicator: {fileID: 0}
   trappedStoneBlock: {fileID: 394335374}
 --- !u!61 &1032201053
 BoxCollider2D:
@@ -2126,18 +2125,6 @@ PrefabInstance:
     - target: {fileID: 2341969578321632570, guid: 3d1b4af813a586c43ad564d97843cfc3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2900513317541760614, guid: 3d1b4af813a586c43ad564d97843cfc3, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2900513317541760614, guid: 3d1b4af813a586c43ad564d97843cfc3, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2900513317541760614, guid: 3d1b4af813a586c43ad564d97843cfc3, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3848608997749573165, guid: 3d1b4af813a586c43ad564d97843cfc3, type: 3}
       propertyPath: m_Name

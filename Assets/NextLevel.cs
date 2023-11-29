@@ -42,8 +42,6 @@ public class NextLevel : MonoBehaviour
             else
             {
                 Destroy(GameObject.Find("BlockHolder"));
-<<<<<<< Updated upstream
-=======
                 levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text --- Needed to move this into here so that the value was incremented before generation (for getting floor theme)
                 
                 // Randomly select a color from predefinedColors and color cavernPrefab's sprite renderer
@@ -51,7 +49,6 @@ public class NextLevel : MonoBehaviour
                 cavernSpriteRenderer.color = predefinedColors[randomIndex];
                 trappedStoneBlock.GetComponent<SpriteRenderer>().color = predefinedColors[randomIndex]; //Change color of trap blocks as well
 
->>>>>>> Stashed changes
                 cavernGenerator.GenerateCavern();
             }
             Destroy(gameObject);

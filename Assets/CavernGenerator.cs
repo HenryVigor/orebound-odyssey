@@ -33,11 +33,7 @@ public class CavernGenerator : MonoBehaviour
 
     void Start()
     {
-<<<<<<< Updated upstream
-
-=======
         cavernSpritePrefab.GetComponent<SpriteRenderer>().color = new Color(255f / 255f, 255f / 255f, 255f / 255f);
->>>>>>> Stashed changes
         GenerateCavern();
     }
 

@@ -8,6 +8,9 @@ public class AIChase : MonoBehaviour
 
     private float distance;
 
+    // Prevent moving when damaged
+    public bool canMove = true;
+
     // Set up Animator Controller
     public Animator animator;
 
@@ -26,7 +29,7 @@ public class AIChase : MonoBehaviour
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; //Angle for the player rotation 
 
-        if(distance < 4)
+        if(distance < 4 && canMove)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, Player.Obj.transform.position, speed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(Vector3.forward * angle);

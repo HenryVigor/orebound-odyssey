@@ -148,14 +148,17 @@ MonoBehaviour:
   randomizeSpriteFlips: 0
   flipChance: 20
   breakSpriteList:
-  - {fileID: 21300000, guid: f53e00d6566f8764b81ad5021c4bf8c5, type: 3}
-  - {fileID: 21300000, guid: aae8f83f56860a8438ebb92994acf72c, type: 3}
-  - {fileID: 21300000, guid: 9730e085eb2a6154087d4bae5fee04f6, type: 3}
-  - {fileID: 21300000, guid: 0a56f7bc9cde6c0479060838f8f255fc, type: 3}
+  - {fileID: 417880128, guid: f4ee8763722c0214aa84cfa84844bcac, type: 3}
+  - {fileID: 2021887802, guid: f4ee8763722c0214aa84cfa84844bcac, type: 3}
+  - {fileID: 1705429194, guid: f4ee8763722c0214aa84cfa84844bcac, type: 3}
+  - {fileID: 1424292949, guid: f4ee8763722c0214aa84cfa84844bcac, type: 3}
   hasDrops: 1
   dropCount: 1
-  droppedItems:
-  - {fileID: 434999144831861620, guid: 5f4a890db2ef4cc48860c0d02238da27, type: 3}
+  baseDropValue: 1
+  dropBonus: 0
+  dropMultiplier: 1
+  oreID: 0
   randomizeDropGiven: 0
+  maxPossibleValue: 1
   randomizeDropChance: 0
   dropChance: 100

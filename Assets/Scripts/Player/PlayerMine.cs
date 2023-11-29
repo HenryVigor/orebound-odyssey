@@ -24,13 +24,16 @@ public class PlayerMine : MonoBehaviour
 
     // Mining Variables
     [Header("Player Mining Settings")]
-    public float mineSpeed = 0.45f; // Cooldown between mining
+    public float mineSpeed = 0.2f; // Cooldown between mining
     public float mineDamage = 10; // Base damage done to ore durability
     public float oreBonus = 0; // Ore drop value static bonus (player upgrade) (default 0, no bonus)
     public float oreMultiplier = 1; // Ore drop value multiplier (player upgrade) (default 1, no bonus)
     public float mineAreaX = 0.65f;
     public float mineAreaY = 0.3f;
     private bool canMine = true;
+
+    // Sound
+    public PlayerAudioScript playerAudioScript;
 
     private void Awake()
     {
@@ -85,6 +88,10 @@ public class PlayerMine : MonoBehaviour
                     entity.GetComponent<OreObject>().dropMultiplier = oreMultiplier;
                 }
 
+                // Play mine sound
+                if (playerAudioScript != null) {
+                    playerAudioScript.PlaySoundMine();
+                }
             }
 
             Invoke("ResetMine", mineSpeed);

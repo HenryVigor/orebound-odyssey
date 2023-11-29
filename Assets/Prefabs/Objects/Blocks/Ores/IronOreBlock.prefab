@@ -148,10 +148,10 @@ MonoBehaviour:
   randomizeSpriteFlips: 0
   flipChance: 20
   breakSpriteList:
-  - {fileID: 21300000, guid: f53e00d6566f8764b81ad5021c4bf8c5, type: 3}
-  - {fileID: 21300000, guid: aae8f83f56860a8438ebb92994acf72c, type: 3}
-  - {fileID: 21300000, guid: 9730e085eb2a6154087d4bae5fee04f6, type: 3}
-  - {fileID: 21300000, guid: 0a56f7bc9cde6c0479060838f8f255fc, type: 3}
+  - {fileID: -1894792775, guid: d9e72e5d824fd9046955b13b169e1496, type: 3}
+  - {fileID: 1918784158, guid: d9e72e5d824fd9046955b13b169e1496, type: 3}
+  - {fileID: -1318695986, guid: d9e72e5d824fd9046955b13b169e1496, type: 3}
+  - {fileID: 941223589, guid: d9e72e5d824fd9046955b13b169e1496, type: 3}
   hasDrops: 1
   dropCount: 1
   baseDropValue: 1

@@ -230,12 +230,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBreakable: 1
-  maxDurability: 50
+  maxDurability: 40
   randomizeSpriteFlips: 0
   flipChance: 20
   breakSpriteList:
-  - {fileID: -1862351504, guid: 0bb867af7b53fb04f8887788ad1ba604, type: 3}
-  - {fileID: -1322063301, guid: 0bb867af7b53fb04f8887788ad1ba604, type: 3}
-  - {fileID: -1056446125, guid: 0bb867af7b53fb04f8887788ad1ba604, type: 3}
-  - {fileID: 1858462706, guid: 0bb867af7b53fb04f8887788ad1ba604, type: 3}
-  - {fileID: -252043280, guid: 0bb867af7b53fb04f8887788ad1ba604, type: 3}
+  - {fileID: -28280355, guid: 10bc32446adeeb242b87a1807d096ceb, type: 3}
+  - {fileID: 1747857371, guid: 10bc32446adeeb242b87a1807d096ceb, type: 3}
+  - {fileID: -368958170, guid: 10bc32446adeeb242b87a1807d096ceb, type: 3}
+  - {fileID: -1337676245, guid: 10bc32446adeeb242b87a1807d096ceb, type: 3}

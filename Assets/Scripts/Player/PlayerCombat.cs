@@ -24,6 +24,7 @@ public class PlayerCombat : MonoBehaviour {
     [SerializeField] static int _Health;
     /// <summary>Current health value</summary>
     /// <value>Must remain between 0 and <see cref="MaxHealth"/></value>
+
     public static int Health {
         get => _Health;
         private set {
@@ -36,6 +37,10 @@ public class PlayerCombat : MonoBehaviour {
     /// <summary>Invincibility status</summary>
     bool Invincible = false;
     
+    // Sound
+    public PlayerAudioScript playerAudioScript;
+    
+
     void Awake() {
         Instance = this;
         Health = MaxHealth;
@@ -57,7 +62,11 @@ public class PlayerCombat : MonoBehaviour {
             
             // Grant invincibility frames
             Instance.StartCoroutine(IFrames(INVINCIBILITY_PERIOD));
-            
+
+            // Play hurt sound
+            if (Instance.playerAudioScript != null) {
+                Instance.playerAudioScript.PlaySoundHurt();
+            }
         }
     }
     

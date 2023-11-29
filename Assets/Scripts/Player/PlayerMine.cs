@@ -14,19 +14,19 @@ public class PlayerMine : MonoBehaviour
 
     // Attack Variables
     [Header("Player Attack Settings")]
-    public float attackRate = 0.5f; // Cooldown between attacks
-    public int attackDamage = 10; // Base damage done to enemies
+    public float attackRate = 0.45f; // Cooldown between attacks
+    public float attackDamage = 10; // Base damage done to enemies
     public float critChance = 0f; // Chance for a critical hit (player upgrade)
-    public float critMultiplier = 2; // Critical damage multiplier (player upgrade)
+    public float critMultiplier = 1.5f; // Critical damage multiplier (player upgrade)
     public float attackAreaX = 0.65f;
     public float attackAreaY = 0.3f;
     private bool canAttack = true;
 
     // Mining Variables
     [Header("Player Mining Settings")]
-    public float mineSpeed = 0.5f; // Cooldown between mining
-    public int mineDamage = 10; // Base damage done to ore durability
-    public int oreBonus = 0; // Ore drop value static bonus (player upgrade) (default 0, no bonus)
+    public float mineSpeed = 0.45f; // Cooldown between mining
+    public float mineDamage = 10; // Base damage done to ore durability
+    public float oreBonus = 0; // Ore drop value static bonus (player upgrade) (default 0, no bonus)
     public float oreMultiplier = 1; // Ore drop value multiplier (player upgrade) (default 1, no bonus)
     public float mineAreaX = 0.65f;
     public float mineAreaY = 0.3f;
@@ -61,7 +61,7 @@ public class PlayerMine : MonoBehaviour
                 }
                 else
                 {
-                    entity.GetComponent<IDamageable>().Damage((attackDamage));
+                    entity.GetComponent<IDamageable>().Damage(Mathf.FloorToInt((attackDamage)));
                 }
 
             }
@@ -78,10 +78,10 @@ public class PlayerMine : MonoBehaviour
 
             foreach (Collider2D entity in hitEntities)
             {
-                entity.GetComponent<IDamageable>().Damage(mineDamage);
+                entity.GetComponent<IDamageable>().Damage(Mathf.FloorToInt((mineDamage)));
                 if (entity.tag == "OreBlock")
                 {
-                    entity.GetComponent<OreObject>().dropBonus = oreBonus;
+                    entity.GetComponent<OreObject>().dropBonus = Mathf.FloorToInt(oreBonus);
                     entity.GetComponent<OreObject>().dropMultiplier = oreMultiplier;
                 }
 

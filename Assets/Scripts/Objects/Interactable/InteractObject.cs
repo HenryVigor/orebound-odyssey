@@ -27,6 +27,7 @@ public class InteractObject : BaseInteractableObject
         }
     }
 
+
     private void ResetInteract()
     {
         isInteractable = true;
@@ -44,6 +45,21 @@ public class InteractObject : BaseInteractableObject
             interactState = 0;
             Debug.Log("Interact Object Deactivated");
         }
+    }
+
+    public override string GetInteractName()
+    {
+        return itemName;
+    }
+
+    public override string GetInteractDesc()
+    {
+        return itemText;
+    }
+
+    public override string GetInteractAction()
+    {
+        return itemAction;
     }
 
 }

@@ -1,0 +1,187 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6383072274537889422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3497970230386341184}
+  - component: {fileID: 5199016966514136102}
+  - component: {fileID: 4965052435965443723}
+  - component: {fileID: 883034808357036592}
+  m_Layer: 7
+  m_Name: DwarvenCrate
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3497970230386341184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6383072274537889422}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.19, y: -15.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &5199016966514136102
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6383072274537889422}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 0.31732762, g: 0.26210397, b: 0.3584906, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &4965052435965443723
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6383072274537889422}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &883034808357036592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6383072274537889422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284bf02321113db468116758735bfa32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Dwarven Crate
+  itemText: Unlocked
+  itemAction: Open
+  isInteractable: 1
+  interactCooldown: 0.5
+  limitInteractions: 0
+  maxInteractions: 2
+  interactState: 0
+  possibleBasicItems:
+  - {fileID: 5658562684107599227, guid: 0fc8894dd5a5a1f4386631dd3c58183c, type: 3}
+  - {fileID: 4072601693245005556, guid: 4bfbb7f6e019ef64f8e6612b4c1057ae, type: 3}
+  - {fileID: 4488630916669706194, guid: 6e7d3b8bb96704440b4efa299be73dd8, type: 3}
+  - {fileID: 1372893065061335536, guid: f12fd1f6443e1b84b8bab879ab98809a, type: 3}
+  - {fileID: 6516588728546669217, guid: 700a5d5201139d24f8e01b291824d8d0, type: 3}
+  - {fileID: 4516106962277965024, guid: 294ed8fbd6e2e464bb3c6d4e094d5473, type: 3}
+  - {fileID: 6419867341241865086, guid: 19ccc38c1dd8a7b4a9d9aa4805980bdb, type: 3}
+  - {fileID: 8720163093425682297, guid: 9f1a13ef830f04f4ab2124226a181736, type: 3}
+  - {fileID: 2498230757179479678, guid: 02b79d3fe2d99b543a77d44203fbe52a, type: 3}
+  - {fileID: 8774285026162134782, guid: 7274ba26245f80240933c83f962a7291, type: 3}
+  - {fileID: 133758832852554474, guid: 1a0321661e92207469762440b5b2621f, type: 3}
+  - {fileID: 5138488420684182993, guid: 5eecb613d7f56484c8034b66d908aa5a, type: 3}
+  - {fileID: 7130053031372675716, guid: ffba2bb04f187ac4a8dd70c091262b74, type: 3}
+  - {fileID: 3257755000782290545, guid: b5e81674714589644a1b0619c4fdfabc, type: 3}
+  possibleRareItems:
+  - {fileID: 5717482457810291094, guid: 7ea1be70efc44024c8744ab376e63dba, type: 3}
+  - {fileID: 7517503007710479388, guid: 2f5651d4fd4ae9d4dba483d5cd058baf, type: 3}
+  - {fileID: 3380121219101351376, guid: 68b56b786ee2d6e4ca473d8dfb951f5c, type: 3}
+  - {fileID: 6656555445026455462, guid: 6fb21f6d8219f044e9ec903d049fa621, type: 3}
+  - {fileID: 674928472080405030, guid: 5486b351bf24f9d4f96563e245530d9e, type: 3}
+  - {fileID: 6131649409726753973, guid: 6887c1991f81ff345a731476a7db51c0, type: 3}
+  - {fileID: 6131649409726753973, guid: 5660e11d6d33a2c4d8b0b6b918b2301a, type: 3}
+  possibleSpecialItems:
+  - {fileID: 7067467450453258317, guid: ebb304f9a2453764c8953e6e71ce9e20, type: 3}
+  - {fileID: 6778510398236049725, guid: cac0cc18f72b52a44aca3a5434c897e9, type: 3}
+  - {fileID: 1348497166601760873, guid: 00cfc7ecf334f2a45bc347e4c501e19d, type: 3}
+  - {fileID: 7716159370597143624, guid: 05e699aa85465894ebaf47a8210f7296, type: 3}
+  - {fileID: 2757891186973589673, guid: db5eff7a0f21cb349b61d65b066ee52f, type: 3}
+  - {fileID: 9141481317946849577, guid: 9eb113b04115b75429c3908af5f25b2f, type: 3}
+  - {fileID: 3352598392901217432, guid: 3d284535c4c6aaa4b9b8a31615a30f3a, type: 3}
+  rareDropChance: 5
+  specialDropChance: 1
+  lockedChance: 75

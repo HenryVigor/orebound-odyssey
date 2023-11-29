@@ -103,11 +103,11 @@ public class InventorySystem : MonoBehaviour
 
     void UpdateInventoryText()
     {
-        copperText.text = $"Copper: {_copperValue}";
-        ironText.text = $"Iron: {_ironValue}";
-        goldText.text = $"Gold: {_goldValue}";
-        crystalText.text = $"Crystal: {_crystalValue}";
-        coinsText.text = $"<b>Coins: {_coinsValue}</b>";
+        copperText.text = $"{_copperValue}";
+        ironText.text = $"{_ironValue}";
+        goldText.text = $"{_goldValue}";
+        crystalText.text = $"{_crystalValue}";
+        coinsText.text = $"{_coinsValue}</b>";
     }
 
 

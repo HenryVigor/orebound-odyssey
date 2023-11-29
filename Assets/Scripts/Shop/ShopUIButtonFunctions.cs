@@ -72,7 +72,7 @@ public class ShopUIButtonFunctions : MonoBehaviour {
     ///     "Next Level" button function<br/>
     ///     Closes shop and moves to next level
     /// </summary>
-    public void NextLevel() => SceneManager.LoadScene(LEVEL_SCENE);
+    public void NextLevel() => SceneManager.LoadScene("CurrentScene");
     
     /// Spend Coins
     /// <summary>

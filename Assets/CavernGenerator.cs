@@ -40,7 +40,7 @@ public class CavernGenerator : MonoBehaviour
     public void GenerateCavern()
     {
         // Get the floor theme and change the settings to match
-        GetComponent<FloorVariation>().SetFloorTheme();
+        // GetComponent<FloorVariation>().SetFloorTheme();
 
         noiseScale = Random.Range(6f, 13f);
         playerSpawned = 0;

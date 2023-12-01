@@ -9,6 +9,7 @@ TagManager:
   - Mineable
   - Interactable
   - Stairs
+  - Torch
   layers:
   - Default
   - TransparentFX

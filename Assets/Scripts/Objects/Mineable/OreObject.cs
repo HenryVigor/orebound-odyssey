@@ -17,7 +17,7 @@ public class OreObject : BlockObject
     public int dropBonus = 0; // A static bonus for ore drops (player upgrade) (default 0, no bonus)
     public float dropMultiplier = 1; // Multiplier for ore drops (player upgrade) (default 1, no bonus)
     [SerializeField] int oreID; // This is used to determine which inventory value should be incremented.
-                                // 0 - Copper, 1 - Iron, 2 - Gold, 3 - Crystal
+                                // 0 - Coal, 1 - Copper, 2 - Iron, 3 - Gold, 4 - Crystal
 
     //[SerializeField] List<GameObject> droppedItems = new List<GameObject>(); -- for gameobject dropping, currently not in use
 
@@ -69,19 +69,22 @@ public class OreObject : BlockObject
         switch(oreID)
         {
             case 0:
-                inventorySystem.CopperValue += baseDropValue;
+                inventorySystem.CoalValue += baseDropValue;
                 break;
             case 1:
-                inventorySystem.IronValue += baseDropValue;
+                inventorySystem.CopperValue += baseDropValue;
                 break;
             case 2:
-                inventorySystem.GoldValue += baseDropValue;
+                inventorySystem.IronValue += baseDropValue;
                 break;
             case 3:
+                inventorySystem.GoldValue += baseDropValue;
+                break;
+            case 4:
                 inventorySystem.CrystalValue += baseDropValue;
                 break;
             default:
-                inventorySystem.CopperValue += baseDropValue;
+                inventorySystem.CoalValue += baseDropValue;
                 break;
         }
         

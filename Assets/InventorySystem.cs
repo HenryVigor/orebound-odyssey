@@ -5,6 +5,7 @@ using TMPro;
 public class InventorySystem : MonoBehaviour
 {
     // Text objects for each ore type
+    public TextMeshProUGUI coalText;
     public TextMeshProUGUI copperText;
     public TextMeshProUGUI ironText;
     public TextMeshProUGUI goldText;
@@ -12,6 +13,8 @@ public class InventorySystem : MonoBehaviour
     public TextMeshProUGUI coinsText;
 
     // Variables to store ore values
+    [SerializeField] private int _coalValue = 0;
+    public static int staticCoalValue = 0;
     [SerializeField] private int _copperValue = 0;
     public static int staticCopperValue = 0;
     [SerializeField] private int _ironValue = 0;
@@ -22,6 +25,20 @@ public class InventorySystem : MonoBehaviour
     public static int staticCrystalValue = 0;
     [SerializeField] private int _coinsValue = 0;
     public static int staticCoinsValue = 0;
+
+    public int CoalValue
+    {
+        get { return _coalValue; }
+        set
+        {
+            if (_coalValue != value)
+            {
+                _coalValue = value;
+                UpdateInventoryText();
+                staticCoalValue = value;
+            }
+        }
+    }
 
     public int CopperValue
     {
@@ -94,6 +111,7 @@ public class InventorySystem : MonoBehaviour
     }
     
     void Start() {
+        CoalValue = staticCoalValue;
         CopperValue = staticCopperValue;
         IronValue = staticIronValue;
         GoldValue = staticGoldValue;
@@ -103,6 +121,7 @@ public class InventorySystem : MonoBehaviour
 
     void UpdateInventoryText()
     {
+        coalText.text = $"{_coalValue}";
         copperText.text = $"{_copperValue}";
         ironText.text = $"{_ironValue}";
         goldText.text = $"{_goldValue}";

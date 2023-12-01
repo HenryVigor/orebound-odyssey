@@ -54,7 +54,7 @@ public class FloorVariation : MonoBehaviour
     private FloorTheme GetFloorTheme()
     {
         int currentLevel = GetCurrentLevel();
-        FloorTheme floorTheme = floorThemes[0]; // default normal theme
+        FloorTheme floorTheme = floorThemes[currentLevel]; // default normal theme
         foreach (FloorTheme theme in floorThemes)
         {
             if (currentLevel >= theme.themeStartLevel)

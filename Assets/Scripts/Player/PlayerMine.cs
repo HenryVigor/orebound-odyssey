@@ -21,7 +21,7 @@ public class PlayerMine : MonoBehaviour
     public float attackDamage = 10; // Base damage done to enemies
     public float critChance = 0f; // Chance for a critical hit (player upgrade)
     public float critMultiplier = 1.5f; // Critical damage multiplier (player upgrade)
-    public float attackAreaX = 0.65f;
+    public float attackAreaX = 0.4f;
     public float attackAreaY = 0.3f;
     private bool canAttack = true;
 

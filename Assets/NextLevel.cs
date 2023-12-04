@@ -36,7 +36,7 @@ public class NextLevel : MonoBehaviour
         {
             if (levelIndicator.LevelValue % shopFrequency == 0)
             {
-                SceneManager.LoadScene(shopScene);
+                SceneManager.LoadScene("ShopScene");
                 levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text
             }
             else

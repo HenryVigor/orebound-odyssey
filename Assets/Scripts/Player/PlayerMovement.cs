@@ -32,12 +32,27 @@ public class PlayerMovement : BehaviourFSM {
     Rigidbody2D rb;
     PlayerInput pi;
 
-    /// Player Animation Controller
-    public Animator animator;
+    /// Player Animation Controllers
+    public Animator playerAnimator;
+    public Animator toolAnimator;
     
     // For player attack/mine range
     GameObject rangeObject;
     GameObject interactObject;
+
+    private void Start() 
+    {
+        Transform toolAnimatorObject = transform.Find("Tool");
+        if (toolAnimatorObject != null)
+        {
+        toolAnimator = toolAnimatorObject.GetComponent<Animator>();
+        Debug.Log("FOUND");
+        }
+        else
+        {
+            Debug.LogError("oops");
+        }
+    }
 
     void Awake() {
         Instance = this;
@@ -50,8 +65,8 @@ public class PlayerMovement : BehaviourFSM {
 
             if (ExternalSpeedModifier <= 0f) ExternalSpeedModifier = 1f;
 
-            // Get animation component
-            animator = GetComponent<Animator>();
+            // Get animation components
+            playerAnimator = GetComponent<Animator>();
             
             // Set starting state
             SetState(typeof(InputMovement));
@@ -73,20 +88,25 @@ public class PlayerMovement : BehaviourFSM {
             int xDir = GetXAxisInput();
             int yDir = GetYAxisInput();
 
+            Instance.toolAnimator.SetFloat("Horizontal Direction", xDir);
+            Instance.toolAnimator.SetFloat("Vertical Direction", yDir);
+
             // Determine animation values
             if (xDir == 0) {
-                Instance.animator.SetBool("Is Horizontal Zero", true);
+                Instance.playerAnimator.SetBool("Is Horizontal Zero", true);
+                Instance.toolAnimator.SetBool("Is Horizontal Zero", true);
             } else {
-                Instance.animator.SetBool("Is Horizontal Zero", false);
-                Instance.animator.SetFloat("Horizontal Speed", xDir);
+                Instance.playerAnimator.SetBool("Is Horizontal Zero", false);
+                Instance.toolAnimator.SetBool("Is Horizontal Zero", false);
+                Instance.playerAnimator.SetFloat("Horizontal Speed", xDir);
             }
             if (yDir == 0) {
-                Instance.animator.SetBool("Is Vertical Zero", true);
+                Instance.playerAnimator.SetBool("Is Vertical Zero", true);
             } else {
-                Instance.animator.SetBool("Is Vertical Zero", false);
-                Instance.animator.SetFloat("Vertical Speed", yDir);
+                Instance.playerAnimator.SetBool("Is Vertical Zero", false);
+                Instance.playerAnimator.SetFloat("Vertical Speed", yDir);
             }
-            
+
             // Determine top and target velocities
             float topSpeed = GetTopSpeed(xDir, yDir);
             topSpeed *= Instance.ExternalSpeedModifier;  // For testing

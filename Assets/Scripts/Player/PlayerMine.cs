@@ -35,9 +35,11 @@ public class PlayerMine : MonoBehaviour
     public float mineAreaY = 0.3f;
     private bool canMine = true;
 
+    [Header("Tool Animation Settings")]
     // Tool animation
     public Animator toolAnimator;
 
+    [Header("Player Audio Settings")]
     // Sound
     public PlayerAudioScript playerAudioScript;
 

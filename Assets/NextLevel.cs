@@ -28,16 +28,20 @@ public class NextLevel : MonoBehaviour
     }
 
     const int shopFrequency = 3; // How often a shop will appear
-    const int shopScene = 1; // Shop scene index
+    // const int shopScene = 1; // Shop scene index
+    static bool playerAtShop = false; // Whether player is at the shop
 
     void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject == Player.Obj && cavernGenerator != null)
         {
-            if (levelIndicator.LevelValue % shopFrequency == 0)
+            if (!playerAtShop && levelIndicator.LevelValue % shopFrequency == 0)
             {
-                SceneManager.LoadScene("ShopScene");
-                levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text
+                // Send player to shop
+                Player.Obj.transform.position = new(150.5f, 51.5f, Player.Obj.transform.position.z);
+                Instantiate(gameObject, new(150.5f, 49.5f, transform.position.z), Quaternion.identity);
+                Shop.Initialize();
+                playerAtShop = true;
             }
             else
             {
@@ -50,6 +54,8 @@ public class NextLevel : MonoBehaviour
                 trappedStoneBlock.GetComponent<SpriteRenderer>().color = predefinedColors[randomIndex]; //Change color of trap blocks as well
 
                 cavernGenerator.GenerateCavern();
+                
+                playerAtShop = false;
             }
             Destroy(gameObject);
         }

@@ -14,17 +14,11 @@ public class InventorySystem : MonoBehaviour
 
     // Variables to store ore values
     [SerializeField] private int _coalValue = 0;
-    public static int staticCoalValue = 0;
     [SerializeField] private int _copperValue = 0;
-    public static int staticCopperValue = 0;
     [SerializeField] private int _ironValue = 0;
-    public static int staticIronValue = 0;
     [SerializeField] private int _goldValue = 0;
-    public static int staticGoldValue = 0;
     [SerializeField] private int _crystalValue = 0;
-    public static int staticCrystalValue = 0;
     [SerializeField] private int _coinsValue = 0;
-    public static int staticCoinsValue = 0;
 
     public int CoalValue
     {
@@ -35,7 +29,6 @@ public class InventorySystem : MonoBehaviour
             {
                 _coalValue = value;
                 UpdateInventoryText();
-                staticCoalValue = value;
             }
         }
     }
@@ -49,7 +42,6 @@ public class InventorySystem : MonoBehaviour
             {
                 _copperValue = value;
                 UpdateInventoryText();
-                staticCopperValue = value;
             }
         }
     }
@@ -63,7 +55,6 @@ public class InventorySystem : MonoBehaviour
             {
                 _ironValue = value;
                 UpdateInventoryText();
-                staticIronValue = value;
             }
         }
     }
@@ -77,7 +68,6 @@ public class InventorySystem : MonoBehaviour
             {
                 _goldValue = value;
                 UpdateInventoryText();
-                staticGoldValue = value;
             }
         }
     }
@@ -91,7 +81,6 @@ public class InventorySystem : MonoBehaviour
             {
                 _crystalValue = value;
                 UpdateInventoryText();
-                staticCrystalValue = value;
             }
         }
     }
@@ -105,18 +94,8 @@ public class InventorySystem : MonoBehaviour
             {
                 _coinsValue = value;
                 UpdateInventoryText();
-                staticCoinsValue = value;
             }
         }
-    }
-    
-    void Start() {
-        CoalValue = staticCoalValue;
-        CopperValue = staticCopperValue;
-        IronValue = staticIronValue;
-        GoldValue = staticGoldValue;
-        CrystalValue = staticCrystalValue;
-        CoinsValue = staticCoinsValue;
     }
 
     void UpdateInventoryText()

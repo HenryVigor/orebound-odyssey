@@ -22,6 +22,7 @@ public abstract class BaseEnemy : MonoBehaviour, IDamageable
     //[Header("Enemy Movement Settings")]
     //[SerializeField] protected float speed = 5f;
 
+    public abstract void SetHealthBonus(float healthBonus);
     public abstract void Damage(int damageAmount);
     public abstract void ObjectDestroy();
 

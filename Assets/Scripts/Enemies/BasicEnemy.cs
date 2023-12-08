@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BasicEnemy : BaseEnemy
 {
-    public float knockback;
+    //public float knockback;
 
     public float stunRate = 0.15f;
 
@@ -26,7 +26,7 @@ public class BasicEnemy : BaseEnemy
         {
             currentHealth -= damageAmount;
             // Knockback
-            transform.position = Vector2.MoveTowards(this.transform.position, Player.Obj.transform.position, -1 * knockback * Time.deltaTime);
+            //transform.position = Vector2.MoveTowards(this.transform.position, Player.Obj.transform.position, -1 * knockback * Time.deltaTime);
             // Stun
             aiChase.canMove = false;
             Invoke("ResetMove", stunRate);
@@ -59,4 +59,9 @@ public class BasicEnemy : BaseEnemy
         }
     }
 
+    public override void SetHealthBonus(float healthBonus)
+    {
+        maxHealth = Mathf.FloorToInt(maxHealth+(healthBonus*maxHealth));
+        currentHealth = maxHealth;
+    }
 }

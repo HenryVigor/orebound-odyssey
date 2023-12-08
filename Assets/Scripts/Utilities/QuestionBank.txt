@@ -1,0 +1,405 @@
+{
+	"questions": 
+	[
+		{
+			"text": "What is a data structure?",
+			"answerA": "A programming language",
+			"answerB": "A collection of algorithms",
+			"answerC": "A way to store and organize data",
+			"answerD": "A type of computer hardware",
+			"correctAnswer": "A way to store and organize data"
+		},
+		{
+			"text": "Which of the following statements about stack data structures is NOT correct?",
+			"answerA": "Top of the Stack always contain the new node",
+			"answerB": "Stack is a FIFO data structure",
+			"answerC": "Null link is present in the last node at the bottom of the stack",
+			"answerD": "Linked List are used for implementing Stacks",
+			"correctAnswer": "Stack is a FIFO data structure"
+		},
+		{
+			"text": "Which data structure is based on the Last In First Out (LIFO) principle?",
+			"answerA": "Tree",
+			"answerB": "Linked List",
+			"answerC": "Stack",
+			"answerD": "Queue",
+			"correctAnswer": "Stack"
+		},
+		{
+			"text": "Which of these best describes an array?",
+			"answerA": "A data structure that shows a hierarchical behavior",
+			"answerB": "Container of objects of similar types",
+			"answerC": "Arrays are immutable once initialised",
+			"answerD": "Array is not a data structure",
+			"correctAnswer": "Container of objects of similar types"
+		},
+		{
+			"text": "Which of the following methods is used for sorting in merge sort?",
+			"answerA": "Partitioning",
+			"answerB": "Merging",
+			"answerC": "Exchanging",
+			"answerD": "Selection",
+			"correctAnswer": "Merging"
+		},
+		{
+			"text": "Which of the following sorting algorithms is the fastest?",
+			"answerA": "Merge sort",
+			"answerB": "Shell sort",
+			"answerC": "Insertion sort",
+			"answerD": "Quick sort",
+			"correctAnswer": "Quick sort"
+		},
+		{
+			"text": "Quick sort uses which of the following methods to implement sorting?",
+			"answerA": "Partitioning",
+			"answerB": "Merging",
+			"answerC": "Exchanging",
+			"answerD": "Selection",
+			"correctAnswer": "Partitioning"
+		},
+		{
+			"text": "In recursion, the condition for which the function will stop calling itself is called what?",
+			"answerA": "Best case",
+			"answerB": "Worst case",
+			"answerC": "Base case",
+			"answerD": "No condition exists",
+			"correctAnswer": "Base case"
+		},
+		{
+			"text": "Recursion is a method in which the solution of a problem depends on what?",
+			"answerA": "Larger instances of different problems",
+			"answerB": "Larger instances of the same problem",
+			"answerC": "Smaller instances of the same problem",
+			"answerD": "Smaller instances of different problems",
+			"correctAnswer": "Smaller instances of the same problem"
+		},
+		{
+			"text": "What format is usually used to store data?",
+			"answerA": "BCD",
+			"answerB": "Decimal",
+			"answerC": "Hexadecimal",
+			"answerD": "Octal",
+			"correctAnswer": "BCD"
+		},
+		{
+			"text": "How many bits are in a byte?",
+			"answerA": "8",
+			"answerB": "64",
+			"answerC": "128",
+			"answerD": "1024",
+			"correctAnswer": "8"
+		},
+		{
+			"text": "What is an operating system?",
+			"answerA": "An interface between the hardware and application programs",
+			"answerB": "A collection of programs that manage hardware resources",
+			"answerC": "A system service provider to the application programs",
+			"answerD": "All of these",
+			"correctAnswer": "All of these"
+		},
+		{
+			"text": "In Operating Systems, which of the following are CPU scheduling algorithms?",
+			"answerA": "Priority",
+			"answerB": "Round Robin",
+			"answerC": "Shortest Job First",
+			"answerD": "All of these",
+			"correctAnswer": "All of these"
+		},
+		{
+			"text": "Which feature of object-oriented programming indicates code reusability?",
+			"answerA": "Abstraction",
+			"answerB": "Polymorphism",
+			"answerC": "Encapsulation",
+			"answerD": "Inheritance",
+			"correctAnswer": "Inheritance"
+		},
+		{
+			"text": "Software is defined as what?",
+			"answerA": "A set of programs, documentation & configuration of data",
+			"answerB": "A set of programs",
+			"answerC": "The documentation and configuration of data",
+			"answerD": "None of these",
+			"correctAnswer": "A set of programs, documentation & configuration of data"
+		},
+		{
+			"text": "What is Software Engineering?",
+			"answerA": "Designing a software",
+			"answerB": "Testing a software",
+			"answerC": "Application of engineering principles to the design a software",
+			"answerD": "None of these",
+			"correctAnswer": "Application of engineering principles to the design a software"
+		},
+		{
+			"text": "What does SDLC stands for?",
+			"answerA": "System Design Life Cycle",
+			"answerB": "Software Design Life Cycle",
+			"answerC": "Software Development Life Cycle",
+			"answerD": "System Development Life Cycle",
+			"correctAnswer": "Software Development Life Cycle"
+		},
+		{
+			"text": "Which language is directly understood by the computer without translation program?",
+			"answerA": "Machine language",
+			"answerB": "High level language",
+			"answerC": "BASIC language",
+			"answerD": "Assembly language",
+			"correctAnswer": "Machine language"
+		},
+		{
+			"text": "What does CPU stand for?",
+			"answerA": "Core Process Unit",
+			"answerB": "Central Processing Unit",
+			"answerC": "Central Programming Unit",
+			"answerD": "Central Progress Unit",
+			"correctAnswer": "Central Processing Unit"
+		},
+		{
+			"text": "Which of the following is the brain of the computer?",
+			"answerA": "Random Access Memory",
+			"answerB": "Central Processing Unit",
+			"answerC": "Arithmetic and Logic unit",
+			"answerD": "Control unit",
+			"correctAnswer": "Central Processing Unit"
+		},
+		{
+			"text": "What does an Operating System do?",
+			"answerA": "Memory Management",
+			"answerB": "File Management",
+			"answerC": "All of these",
+			"answerD": "Application Management",
+			"correctAnswer": "All of these"
+		},
+		{
+			"text": "What is the full form of WWW?",
+			"answerA": "World Wide Web",
+			"answerB": "World Wide Wave",
+			"answerC": "World Web Websites",
+			"answerD": "None of these",
+			"correctAnswer": "World Wide Web"
+		},
+		{
+			"text": "What is the full form of LAN?",
+			"answerA": "Local Access Network",
+			"answerB": "Local Area Network",
+			"answerC": "Local Accelerator Network",
+			"answerD": "Logical Area Network",
+			"correctAnswer": "Local Area Network"
+		},
+		{
+			"text": "What is the full form of IP?",
+			"answerA": "Internet Progress",
+			"answerB": "Internet Protocol",
+			"answerC": "Internet Pass",
+			"answerD": "Internet Password",
+			"correctAnswer": "Internet Protocol"
+		},
+		{
+			"text": "Which of the following is the smallest unit of data in a computer?",
+			"answerA": "Bit",
+			"answerB": "KB",
+			"answerC": "Nibble",
+			"answerD": "Byte",
+			"correctAnswer": "Bit"
+		},
+		{
+			"text": "Which of the following are physical devices of a computer?",
+			"answerA": "Hardware",
+			"answerB": "Software",
+			"answerC": "System Software",
+			"answerD": "Package",
+			"correctAnswer": "Hardware"
+		},
+		{
+			"text": "Which of the following devices provides the communication between a computer and the outer world?",
+			"answerA": "Compact",
+			"answerB": "IO",
+			"answerC": "Drivers",
+			"answerD": "Storage",
+			"correctAnswer": "IO"
+		},
+		{
+			"text": "Which one of the following is used to insert an element into a stack?",
+			"answerA": "Insert",
+			"answerB": "Add",
+			"answerC": "Push",
+			"answerD": "None of these",
+			"correctAnswer": "Push"
+		},
+		{
+			"text": "Which data structure is mainly used for implementing the recursive algorithm?",
+			"answerA": "Queue",
+			"answerB": "Stack",
+			"answerC": "Binary tree",
+			"answerD": "Linked list",
+			"correctAnswer": "Stack"
+		},
+		{
+			"text": "Which of the following is an infix expression?",
+			"answerA": "A+B*C",
+			"answerB": "+A*BC",
+			"answerC": "ABC+*",
+			"answerD": "None of these",
+			"correctAnswer": "A+B*C"
+		},
+		{
+			"text": "Which of the following is the prefix form of A+B*C?",
+			"answerA": "A+(BC*)",
+			"answerB": "+AB*C",
+			"answerC": "ABC+*",
+			"answerD": "+A*BC",
+			"correctAnswer": "+A*BC"
+		},
+		{
+			"text": "If the elements '1', '2', '3' and '4' are added to a stack, what would be the order of their removal?",
+			"answerA": "1234",
+			"answerB": "2134",
+			"answerC": "4321",
+			"answerD": "3241",
+			"correctAnswer": "4321"
+		},
+		{
+			"text": "If the elements '1', '2', '3' and '4' are added to a queue, what would be the order of their removal?",
+			"answerA": "1234",
+			"answerB": "4321",
+			"answerC": "3241",
+			"answerD": "2134",
+			"correctAnswer": "1234"
+		},
+		{
+			"text": "Which of the following principle does a queue use?",
+			"answerA": "LIFO principle",
+			"answerB": "FIFO principle",
+			"answerC": "Linear tree principle",
+			"answerD": "Ordered array principle",
+			"correctAnswer": "FIFO principle"
+		},
+		{
+			"text": "The process of finding errors and fixing them within a program is called what?",
+			"answerA": "Compiling",
+			"answerB": "Executing",
+			"answerC": "Debugging",
+			"answerD": "Scanning",
+			"correctAnswer": "Debugging"
+		},
+		{
+			"text": "During program development, software requirements specify what?",
+			"answerA": "How the program will accomplish the task",
+			"answerB": "What the task is that the program must perform",
+			"answerC": "How to divide the task into subtasks",
+			"answerD": "How to test the program when it is done",
+			"correctAnswer": "What the task is that the program must perform"
+		},
+		{
+			"text": "Which of the following is a type of conditional statement?",
+			"answerA": "If statement",
+			"answerB": "If-else statement",
+			"answerC": "Switch statement",
+			"answerD": "All of these",
+			"correctAnswer": "All of these"
+		},
+		{
+			"text": "Which of the following is NOT a type of loop?",
+			"answerA": "For loop",
+			"answerB": "While loop",
+			"answerC": "Do-While loop",
+			"answerD": "Continue loop",
+			"correctAnswer": "Continue loop"
+		},
+		{
+			"text": "A loop that never ends is referred to as what?",
+			"answerA": "While loop",
+			"answerB": "Infinite loop",
+			"answerC": "Recursive loop",
+			"answerD": "For loop",
+			"correctAnswer": "Infinite loop"
+		},
+		{
+			"text": "What does HTML stand for?",
+			"answerA": "HyperText Markup Language",
+			"answerB": "HyperTrain Markup Language",
+			"answerC": "HyperText Marking Language",
+			"answerD": "Highly Trained Machine Language",
+			"correctAnswer": "HyperText Markup Language"
+		},
+		{
+			"text": "What does ALU stand for?",
+			"answerA": "Arithmetic Logic Unit",
+			"answerB": "Arithmetic Legality Unit",
+			"answerC": "Arithmetic Logic Uniformity",
+			"answerD": "Arithmetic Localization Unit",
+			"correctAnswer": "Arithmetic Logic Unit"
+		},
+		{
+			"text": "What does GUI stand for?",
+			"answerA": "Graphical User Interface",
+			"answerB": "Graphical User Ideas",
+			"answerC": "Granted User Interfacee",
+			"answerD": "Graphic Using Interface",
+			"correctAnswer": "Graphical User Interface"
+		},
+		{
+			"text": "The basic operations performed by a computer are?",
+			"answerA": "Arithmetic operation",
+			"answerB": "Logical operation",
+			"answerC": "Storage and relative",
+			"answerD": "All of these",
+			"correctAnswer": "All of these"
+		},
+		{
+			"text": "What are the two kinds of main memory?",
+			"answerA": "Primary and secondary",
+			"answerB": "Random and sequential",
+			"answerC": "ROM and RAM",
+			"answerD": "All of these",
+			"correctAnswer": "ROM and RAM"
+		},
+		{
+			"text": "Instructions and memory address are represented by what?",
+			"answerA": "Character codes",
+			"answerB": "Binary codes",
+			"answerC": "Binary words",
+			"answerD": "Parity bits",
+			"correctAnswer": "Binary codes"
+		},
+		{
+			"text": "The difference between memory and storage is that memory is _____ and storage is _____",
+			"answerA": "Temporary, permanent",
+			"answerB": "Permanent, temporary",
+			"answerC": "Slow, fast",
+			"answerD": "All of these",
+			"correctAnswer": "Temporary, permanent"
+		},
+		{
+			"text": "A gigabyte is what?",
+			"answerA": "1024 bytes",
+			"answerB": "1024 kilobytes",
+			"answerC": "1024 megabytes",
+			"answerD": "1024 bits",
+			"correctAnswer": "1024 megabytes"
+		},
+		{
+			"text": "Machine language is:",
+			"answerA": "Machine dependent",
+			"answerB": "Difficult to program",
+			"answerC": "Error prone",
+			"answerD": "All of these",
+			"correctAnswer": "All of these"
+		},
+		{
+			"text": "Programs designed to perform specific tasks are known as what?",
+			"answerA": "System software",
+			"answerB": "Application software",
+			"answerC": "Utility programs",
+			"answerD": "Operating systems",
+			"correctAnswer": "Application software"
+		},
+		{
+			"text": "Which of the following is easily understood and written by humans?",
+			"answerA": "High-level language",
+			"answerB": "Low-level language",
+			"answerC": "Assembly language",
+			"answerD": "Machine language",
+			"correctAnswer": "High-level language"
+		}
+	]
+}

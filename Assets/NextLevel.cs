@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextLevel : MonoBehaviour
+public class NextLevel : MonoBehaviour, IEducational
 {
     public CavernGenerator cavernGenerator; // Reference to the CavernGenerator component
     private SpriteRenderer cavernSpriteRenderer; // Reference to the Sprite Renderer of the cavern prefab
     private LevelIndicator levelIndicator; // Declare levelIndicator at the class level
     public GameObject trappedStoneBlock; // Reference to trap
+    public bool educationalMode = false;
 
     private Color[] predefinedColors = new Color[]
     {
@@ -34,24 +35,61 @@ public class NextLevel : MonoBehaviour
     {
         if (collision.gameObject == Player.Obj && cavernGenerator != null)
         {
-            if (levelIndicator.LevelValue % shopFrequency == 0)
+            if (educationalMode)
             {
-                SceneManager.LoadScene(shopScene);
-                levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text
+                var prompt = GameObject.FindGameObjectWithTag("Player").transform.Find("HUD").Find("EduPrompt");
+                prompt.GetComponent<EducationQuestion>().targetObject = gameObject;
+                prompt.transform.Find("DropText").gameObject.SetActive(false);
+                prompt.gameObject.SetActive(true);
             }
             else
             {
-                Destroy(GameObject.Find("BlockHolder"));
-                levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text --- Needed to move this into here so that the value was incremented before generation (for getting floor theme)
-                
-                // Randomly select a color from predefinedColors and color cavernPrefab's sprite renderer
-                int randomIndex = Random.Range(0, predefinedColors.Length);
-                cavernSpriteRenderer.color = predefinedColors[randomIndex];
-                trappedStoneBlock.GetComponent<SpriteRenderer>().color = predefinedColors[randomIndex]; //Change color of trap blocks as well
-
-                cavernGenerator.GenerateCavern();
+                GoNextLevel();
             }
-            Destroy(gameObject);
+        }
+    }
+
+    public void GoNextLevel()
+    {
+        if (levelIndicator.LevelValue % shopFrequency == 0)
+        {
+            SceneManager.LoadScene(shopScene);
+            levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text
+        }
+        else
+        {
+            Destroy(GameObject.Find("BlockHolder"));
+            levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text --- Needed to move this into here so that the value was incremented before generation (for getting floor theme)
+
+            // Randomly select a color from predefinedColors and color cavernPrefab's sprite renderer
+            int randomIndex = Random.Range(0, predefinedColors.Length);
+            cavernSpriteRenderer.color = predefinedColors[randomIndex];
+            trappedStoneBlock.GetComponent<SpriteRenderer>().color = predefinedColors[randomIndex]; //Change color of trap blocks as well
+
+            cavernGenerator.GenerateCavern();
+        }
+        Destroy(gameObject);
+    }
+
+    public void EduAnswerCorrect()
+    {
+        Invoke("GoNextLevel", 1.25f);
+    }
+
+    public void EduAnswerIncorrect()
+    {
+        return;
+    }
+
+    public void ToggleEducational()
+    {
+        if (!educationalMode)
+        {
+            educationalMode = true;
+        }
+        else
+        {
+            educationalMode = false;
         }
     }
 }

@@ -18,6 +18,7 @@ public class PlayerMine : MonoBehaviour
     public float attackDamage = 10; // Base damage done to enemies
     public float critChance = 0f; // Chance for a critical hit (player upgrade)
     public float critMultiplier = 1.5f; // Critical damage multiplier (player upgrade)
+    public float knockback = 7f;
     public float attackAreaX = 0.65f;
     public float attackAreaY = 0.3f;
     private bool canAttack = true;
@@ -66,6 +67,11 @@ public class PlayerMine : MonoBehaviour
                 {
                     entity.GetComponent<IDamageable>().Damage(Mathf.FloorToInt((attackDamage)));
                 }
+
+                // Knockback
+                Vector2 diff = (transform.position - entity.transform.position).normalized;
+                Vector2 force = diff * knockback;
+                entity.attachedRigidbody.AddForce(-force, ForceMode2D.Impulse);
 
             }
 

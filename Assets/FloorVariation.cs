@@ -5,11 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class FloorTheme
 {
-    public int themeStartLevel; // The level which the floor begins at -- can also change this to a random chance to appear after this point maybe?
+    public int floorCanSpawnAt; // The level which the floor can begin to spawn at
     public GameObject cavernSpritePrefab;
     public GameObject backgroundSpritePrefab;
     public OreBlockInfo[] oreBlocks;
-    public GameObject enemyPrefab; // This should be updated to a GameObject list later on when multiple enemies are added
+    //public GameObject enemyPrefab; // This should be updated to a GameObject list later on when multiple enemies are added
     // For variations in difficulty, once more enemies are added, might also turn this into several lists of enemies (easy, medium, hard) and randomize with weight based on level
     public GameObject exitBlock;
     public GameObject spikesPrefab; // Maybe same to the traps?
@@ -23,9 +23,12 @@ public class FloorTheme
 public class FloorVariation : MonoBehaviour
 {
 
+    private float healthScaling = 1.085f; // This number is used to increase health exponentially by floor: (((currentLevel^healthScaling)/100) * enemyHealth) + enemyHealth
+    private float enemyHealthBonus;
     // The current floor themes are for testing and should be changed later
 
     public FloorTheme[] floorThemes;
+    private List<FloorTheme> spawnableThemes = new List<FloorTheme>();
 
     // TO-DO: Need to add a system that makes floors more difficult alongside the theme; differences in enemies spawned?
     // Could also maybe make an EnemySettings and have all enemies get their stats from it and then increment every few levels or something
@@ -38,30 +41,42 @@ public class FloorVariation : MonoBehaviour
         cavern.cavernSpritePrefab = currentTheme.cavernSpritePrefab;
         cavern.backgroundSpritePrefab = currentTheme.backgroundSpritePrefab;
         cavern.oreBlocks = currentTheme.oreBlocks;
-        cavern.enemyPrefab = currentTheme.enemyPrefab;
+        //cavern.enemyPrefab = currentTheme.enemyPrefab;
         cavern.exitBlock = currentTheme.exitBlock;
         cavern.spikesPrefab = currentTheme.spikesPrefab;
         cavern.trappedBlock = currentTheme.trappedBlock;
         cavern.threshold = currentTheme.threshold;
         cavern.noOreChance = currentTheme.noOreChance;
+        cavern.enemyHealthBonus = enemyHealthBonus;
     }
 
     private int GetCurrentLevel()
     {
         return GetComponent<LevelIndicator>().LevelValue;
     }
+
+    private void UpdateSpawnableThemes(int level)
+    {
+        foreach (FloorTheme theme in floorThemes)
+        {
+            if (!spawnableThemes.Contains(theme) && theme.floorCanSpawnAt <= level)
+            {
+                spawnableThemes.Add(theme);
+            }
+        }
+    }
     
     private FloorTheme GetFloorTheme()
     {
         int currentLevel = GetCurrentLevel();
-        FloorTheme floorTheme = floorThemes[currentLevel]; // default normal theme
-        foreach (FloorTheme theme in floorThemes)
-        {
-            if (currentLevel >= theme.themeStartLevel)
-            {
-                floorTheme = theme;
-            }
-        }
+        UpdateSpawnableThemes(currentLevel);
+
+        // Select a random theme out of the possible themes until a theme is selected which can be spawned (based on floor)
+        int randomThemeIndex = Random.Range(0, spawnableThemes.Count);
+        FloorTheme floorTheme = spawnableThemes[randomThemeIndex];
+
+        // Modify enemy health based on current level -- for scaling difficulty
+        enemyHealthBonus = Mathf.Pow(currentLevel, healthScaling)/100;
         return floorTheme;
     }
 

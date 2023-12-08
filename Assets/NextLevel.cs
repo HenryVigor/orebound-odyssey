@@ -9,7 +9,6 @@ public class NextLevel : MonoBehaviour, IEducational
     private SpriteRenderer cavernSpriteRenderer; // Reference to the Sprite Renderer of the cavern prefab
     private LevelIndicator levelIndicator; // Declare levelIndicator at the class level
     public GameObject trappedStoneBlock; // Reference to trap
-    public bool educationalMode = false;
 
     private Color[] predefinedColors = new Color[]
     {
@@ -35,7 +34,7 @@ public class NextLevel : MonoBehaviour, IEducational
     {
         if (collision.gameObject == Player.Obj && cavernGenerator != null)
         {
-            if (educationalMode)
+            if (collision.gameObject.GetComponent<PlayerInteract>().educationalMode == true)
             {
                 var prompt = GameObject.FindGameObjectWithTag("Player").transform.Find("HUD").Find("EduPrompt");
                 prompt.GetComponent<EducationQuestion>().targetObject = gameObject;
@@ -79,17 +78,5 @@ public class NextLevel : MonoBehaviour, IEducational
     public void EduAnswerIncorrect()
     {
         return;
-    }
-
-    public void ToggleEducational()
-    {
-        if (!educationalMode)
-        {
-            educationalMode = true;
-        }
-        else
-        {
-            educationalMode = false;
-        }
     }
 }

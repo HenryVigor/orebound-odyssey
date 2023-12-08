@@ -52,6 +52,7 @@ public class PlayerPlace : MonoBehaviour
             Vector3 placePosition = transform.position;
 
             // Place at player
+            blockHolder = GameObject.Find("BlockHolder");
             GameObject newTorch = Instantiate(torchPrefab, placePosition, Quaternion.identity);
             newTorch.transform.SetParent(blockHolder.transform);
 

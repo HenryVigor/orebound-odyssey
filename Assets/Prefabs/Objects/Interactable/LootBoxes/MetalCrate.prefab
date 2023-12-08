@@ -206,5 +206,4 @@ MonoBehaviour:
   rareDropChance: 5
   specialDropChance: 1
   lockedChance: 50
-  crateTier: 2
   educationalMode: 0

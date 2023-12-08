@@ -15,6 +15,9 @@ public class PlayerPlace : MonoBehaviour
     // Get player input
     PlayerInput pi;
 
+    // Get block holder
+    private GameObject blockHolder;
+
     [Header("Torch Place Settings")]
     public bool canPlace = true;
     public float placeCooldown = 0.5f;
@@ -22,7 +25,11 @@ public class PlayerPlace : MonoBehaviour
     // How much coal needed for 1 torch
     [SerializeField] int torchCost = 1;
 
-    // Start is called before the first frame update
+    void Start()
+    {
+        blockHolder = GameObject.Find("BlockHolder");
+    }
+
     void Awake()
     {
         pi = GetComponent<PlayerInput>();
@@ -45,7 +52,8 @@ public class PlayerPlace : MonoBehaviour
             Vector3 placePosition = transform.position;
 
             // Place at player
-            Instantiate(torchPrefab, placePosition, Quaternion.identity);
+            GameObject newTorch = Instantiate(torchPrefab, placePosition, Quaternion.identity);
+            newTorch.transform.SetParent(blockHolder.transform);
 
             Invoke("ResetPlace", placeCooldown);
             RemoveCoal();

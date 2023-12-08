@@ -12,6 +12,9 @@ public class PlayerMine : MonoBehaviour
     [SerializeField] private LayerMask mineableLayers;
     public Transform attackPoint;
 
+    // Set which tool the player is using
+    public bool usePickaxe = true;
+
     // Attack Variables
     [Header("Player Attack Settings")]
     public float attackRate = 0.45f; // Cooldown between attacks
@@ -19,7 +22,7 @@ public class PlayerMine : MonoBehaviour
     public float critChance = 0f; // Chance for a critical hit (player upgrade)
     public float critMultiplier = 1.5f; // Critical damage multiplier (player upgrade)
     public float knockback = 7f;
-    public float attackAreaX = 0.65f;
+    public float attackAreaX = 0.4f;
     public float attackAreaY = 0.3f;
     private bool canAttack = true;
 
@@ -33,24 +36,57 @@ public class PlayerMine : MonoBehaviour
     public float mineAreaY = 0.3f;
     private bool canMine = true;
 
+    [Header("Tool Animation Settings")]
+    // Tool animation
+    public Animator toolAnimator;
+
+    [Header("Player Audio Settings")]
     // Sound
     public PlayerAudioScript playerAudioScript;
+
+    private void Start()
+    {
+        Transform toolAnimatorObject = transform.Find("Tool");
+        if (toolAnimatorObject != null)
+        {
+        toolAnimator = toolAnimatorObject.GetComponent<Animator>();
+        }
+        else
+        {
+            Debug.LogError("oops");
+        }
+    }
 
     private void Awake()
     {
         pi = GetComponent<PlayerInput>();
+
+        
     }
 
     private void Update()
     {
+        // Update current tool
+        if (pi.actions["SelectPickaxe"].IsPressed()) {
+            usePickaxe = true;
+        }
+        if (pi.actions["SelectSword"].IsPressed()) {
+            usePickaxe = false;
+        }
+        // Update animator
+        toolAnimator.SetBool("UsePickaxe", usePickaxe);
+
         if (pi.actions["Attack"].IsPressed()) Attack();
     }
 
     private void Attack()
     {
         // Attack any enemies in the attack range
-        if (canAttack)
+        if (canAttack && usePickaxe == false)
         {
+            // Animation
+            toolAnimator.SetBool("Using Tool", true);
+
             canAttack = false;
 
             Collider2D[] hitEntities = Physics2D.OverlapBoxAll(attackPoint.position, new Vector2(attackAreaX, attackAreaY), attackPoint.eulerAngles.z, enemyLayers);
@@ -75,12 +111,16 @@ public class PlayerMine : MonoBehaviour
 
             }
 
+            Invoke("ResetUsingTool", 0.2f);
             Invoke("ResetAttack", attackRate);
         }
 
         // Mine any blocks in the mining range
-        if (canMine)
+        if (canMine && usePickaxe == true)
         {
+            // Animation
+            toolAnimator.SetBool("Using Tool", true);
+
             canMine = false;
 
             Collider2D[] hitEntities = Physics2D.OverlapBoxAll(attackPoint.position, new Vector2(mineAreaX, mineAreaY), attackPoint.eulerAngles.z, mineableLayers);
@@ -100,9 +140,15 @@ public class PlayerMine : MonoBehaviour
                 }
             }
 
+            Invoke("ResetUsingTool", 0.2f);
             Invoke("ResetMine", mineSpeed);
         }
 
+    }
+
+    private void ResetUsingTool()
+    {
+        toolAnimator.SetBool("Using Tool", false);
     }
 
     private void ResetAttack()

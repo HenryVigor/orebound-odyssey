@@ -157,7 +157,7 @@ MonoBehaviour:
   baseDropValue: 1
   dropBonus: 0
   dropMultiplier: 1
-  oreID: 2
+  oreID: 3
   randomizeDropGiven: 0
   maxPossibleValue: 1
   randomizeDropChance: 0

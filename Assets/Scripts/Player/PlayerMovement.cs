@@ -32,12 +32,27 @@ public class PlayerMovement : BehaviourFSM {
     Rigidbody2D rb;
     PlayerInput pi;
 
-    /// Player Animation Controller
-    public Animator animator;
+    /// Player Animation Controllers
+    public Animator playerAnimator;
+    public Animator toolAnimator;
     
     // For player attack/mine range
     GameObject rangeObject;
     GameObject interactObject;
+
+    private void Start() 
+    {
+        Transform toolAnimatorObject = transform.Find("Tool");
+        if (toolAnimatorObject != null)
+        {
+        toolAnimator = toolAnimatorObject.GetComponent<Animator>();
+        Debug.Log("FOUND");
+        }
+        else
+        {
+            Debug.LogError("oops");
+        }
+    }
 
     void Awake() {
         Instance = this;
@@ -50,8 +65,8 @@ public class PlayerMovement : BehaviourFSM {
 
             if (ExternalSpeedModifier <= 0f) ExternalSpeedModifier = 1f;
 
-            // Get animation component
-            animator = GetComponent<Animator>();
+            // Get animation components
+            playerAnimator = GetComponent<Animator>();
             
             // Set starting state
             SetState(typeof(InputMovement));
@@ -73,20 +88,9 @@ public class PlayerMovement : BehaviourFSM {
             int xDir = GetXAxisInput();
             int yDir = GetYAxisInput();
 
-            // Determine animation values
-            if (xDir == 0) {
-                Instance.animator.SetBool("Is Horizontal Zero", true);
-            } else {
-                Instance.animator.SetBool("Is Horizontal Zero", false);
-                Instance.animator.SetFloat("Horizontal Speed", xDir);
-            }
-            if (yDir == 0) {
-                Instance.animator.SetBool("Is Vertical Zero", true);
-            } else {
-                Instance.animator.SetBool("Is Vertical Zero", false);
-                Instance.animator.SetFloat("Vertical Speed", yDir);
-            }
-            
+            // Update animation variables
+            UpdateAnimation(xDir, yDir);
+
             // Determine top and target velocities
             float topSpeed = GetTopSpeed(xDir, yDir);
             topSpeed *= Instance.ExternalSpeedModifier;  // For testing
@@ -121,6 +125,58 @@ public class PlayerMovement : BehaviourFSM {
             if (IsOverridden()) return typeof(DoNothing);
             else if (IsLocked()) return typeof(Decelerate);
             return null;
+        }
+
+        void UpdateAnimation (int xDir, int yDir) {
+
+            Instance.toolAnimator.SetFloat("Horizontal Direction", xDir);
+            Instance.toolAnimator.SetFloat("Vertical Direction", yDir);
+
+            // Determine animation values
+            
+
+            if (xDir == 0) {
+                Instance.playerAnimator.SetBool("Is Horizontal Zero", true);
+                Instance.toolAnimator.SetBool("Is Horizontal Zero", true);
+            } else {
+                Instance.playerAnimator.SetBool("Is Horizontal Zero", false);
+                Instance.toolAnimator.SetBool("Is Horizontal Zero", false);
+                Instance.playerAnimator.SetFloat("Horizontal Speed", xDir);
+            }
+            if (yDir == 0) {
+                Instance.playerAnimator.SetBool("Is Vertical Zero", true);
+                Instance.toolAnimator.SetBool("Is Vertical Zero", true);
+            } else {
+                Instance.playerAnimator.SetBool("Is Vertical Zero", false);
+                Instance.toolAnimator.SetBool("Is Vertical Zero", false);
+                Instance.playerAnimator.SetFloat("Vertical Speed", yDir);
+            }
+
+            if (yDir > 0) {
+                Instance.toolAnimator.SetBool("Is Right", false);
+                Instance.toolAnimator.SetBool("Is Left", false);
+                Instance.toolAnimator.SetBool("Is Up", true);
+                Instance.toolAnimator.SetBool("Is Down", false);
+            } else if (yDir < 0) {
+                Instance.toolAnimator.SetBool("Is Right", false);
+                Instance.toolAnimator.SetBool("Is Left", false);
+                Instance.toolAnimator.SetBool("Is Up", false);
+                Instance.toolAnimator.SetBool("Is Down", true);
+            } else {
+                if (xDir > 0) {
+                    Instance.toolAnimator.SetBool("Is Right", true);
+                    Instance.toolAnimator.SetBool("Is Left", false);
+                    Instance.toolAnimator.SetBool("Is Up", false);
+                    Instance.toolAnimator.SetBool("Is Down", false);
+                } else if (xDir < 0) {
+                    Instance.toolAnimator.SetBool("Is Right", false);
+                    Instance.toolAnimator.SetBool("Is Left", true);
+                    Instance.toolAnimator.SetBool("Is Up", false);
+                    Instance.toolAnimator.SetBool("Is Down", false);
+                }
+            }
+
+            return;
         }
     }
     

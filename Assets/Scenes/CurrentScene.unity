@@ -175,6 +175,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: -2931499617934185993, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
+      propertyPath: enemyAudio
+      value: 
+      objectReference: {fileID: 112220977}
+    - target: {fileID: -2931499617934185993, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
       propertyPath: isKillable
       value: 1
       objectReference: {fileID: 0}
@@ -311,7 +315,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 112220968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58a0808d2ced2be4db17e369e1f4378c, type: 3}
+  m_Script: {fileID: 11500000, guid: a5c4889273f89964eb980b7ca7acc70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSourceHurt: {fileID: 112220978}
@@ -2119,7 +2123,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1ef14b8788a3cef4aaae77946c13e3b6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3070e586faaca754da9732d958a56c26, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.25
   m_Pitch: 1
@@ -2813,12 +2817,12 @@ MonoBehaviour:
     rarity: 10
   - oreBlockPrefab: {fileID: 5786096766264122376, guid: 7ffae48c116057747bc8e71796eaf1fc, type: 3}
     rarity: 5
-  - oreBlockPrefab: {fileID: 5786096766264122376, guid: e26fe59fc4b78f44cb115cc5f092f837, type: 3}
-    rarity: 1
   - oreBlockPrefab: {fileID: 5786096766264122376, guid: f5423b41b22b93d4e8664d083da18151, type: 3}
+    rarity: 1
+  - oreBlockPrefab: {fileID: 5786096766264122376, guid: e26fe59fc4b78f44cb115cc5f092f837, type: 3}
     rarity: 0.1
   - oreBlockPrefab: {fileID: 1032201051}
-    rarity: 0.2
+    rarity: 1
   enemyPrefab: {fileID: 112220968}
   exitBlock: {fileID: 1032201051}
   blockHolder: {fileID: 0}
@@ -3993,6 +3997,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2289923764687938175, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1954120908}
+    - target: {fileID: 2289923764687938175, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
       propertyPath: playerAudioScript
       value: 
       objectReference: {fileID: 1954120908}
@@ -4201,7 +4209,7 @@ MonoBehaviour:
   mineAreaX: 0.65
   mineAreaY: 0.3
   toolAnimator: {fileID: 1743373247}
-  playerAudioScript: {fileID: 1954120908}
+  playerAudio: {fileID: 1954120908}
 --- !u!82 &1954120907
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4307,7 +4315,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1954120895}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a8741b393b71f5429e4918a52e604f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 689fb7f8768208744836d8832359865e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSourceHurt: {fileID: 1954120907}

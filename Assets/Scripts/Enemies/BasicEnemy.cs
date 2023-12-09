@@ -11,7 +11,7 @@ public class BasicEnemy : BaseEnemy
     private AIChase aiChase;
 
     // Sound
-    public ZombieAudioScript zombieAudioScript;
+    public EnemyAudio enemyAudio;
 
     private void Start()
     {
@@ -32,8 +32,8 @@ public class BasicEnemy : BaseEnemy
             Invoke("ResetMove", stunRate);
         }
         // Play hurt sound
-        if (zombieAudioScript != null) {
-            zombieAudioScript.PlaySoundHurt();
+        if (enemyAudio != null) {
+            enemyAudio.PlaySoundHurt();
         }
 
         if (currentHealth <= 0)

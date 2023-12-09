@@ -38,7 +38,7 @@ public class PlayerCombat : MonoBehaviour {
     bool Invincible = false;
     
     // Sound
-    public PlayerAudioScript playerAudioScript;
+    public PlayerAudio playerAudio;
     
 
     void Awake() {
@@ -64,8 +64,8 @@ public class PlayerCombat : MonoBehaviour {
             Instance.StartCoroutine(IFrames(INVINCIBILITY_PERIOD));
 
             // Play hurt sound
-            if (Instance.playerAudioScript != null) {
-                Instance.playerAudioScript.PlaySoundHurt();
+            if (Instance.playerAudio != null) {
+                Instance.playerAudio.PlaySoundHurt();
             }
         }
     }

@@ -1,3 +1,5 @@
+/////////////////////////// This class is now unused ///////////////////////////
+
 // using System.Collections;
 // using System.Collections.Generic;
 // using TMPro;

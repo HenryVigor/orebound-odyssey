@@ -51,6 +51,8 @@ public class BuyStation : MonoBehaviour {
         
         // Create new purchasable item and set info
         Purchasable = Instantiate(PurchasablePrefab, transform);
+        Vector3 offset = new Vector3(0f, .1f, 0f);
+        Purchasable.transform.position += offset;
         Purchasable.GetComponent<PurchasableItem>().SetItem(item, PriceToSet);
     }
     

@@ -3682,6 +3682,11 @@ MonoBehaviour:
       rarity: 25
     - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
       rarity: 5
+    enemies:
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
+      rarity: 70
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
+      rarity: 30
     threshold: 0.4
     oreChance: 0.05
     trapBlockChance: 0.005
@@ -3724,6 +3729,11 @@ MonoBehaviour:
       rarity: 25
     - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
       rarity: 5
+    enemies:
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
+      rarity: 70
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
+      rarity: 30
     threshold: 0.53
     oreChance: 0.07
     trapBlockChance: 0.005
@@ -3766,6 +3776,11 @@ MonoBehaviour:
       rarity: 25
     - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
       rarity: 5
+    enemies:
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
+      rarity: 40
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
+      rarity: 60
     threshold: 0.465
     oreChance: 0.04
     trapBlockChance: 0.0065
@@ -3808,6 +3823,11 @@ MonoBehaviour:
       rarity: 25
     - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
       rarity: 5
+    enemies:
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
+      rarity: 20
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
+      rarity: 80
     threshold: 0.38
     oreChance: 0.05
     trapBlockChance: 0.005
@@ -3850,6 +3870,11 @@ MonoBehaviour:
       rarity: 30
     - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
       rarity: 5
+    enemies:
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
+      rarity: 80
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
+      rarity: 20
     threshold: 0.42
     oreChance: 0.05
     trapBlockChance: 0.005
@@ -3892,6 +3917,11 @@ MonoBehaviour:
       rarity: 40
     - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
       rarity: 10
+    enemies:
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
+      rarity: 70
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
+      rarity: 30
     threshold: 0.3
     oreChance: 0.065
     trapBlockChance: 0.005
@@ -3932,6 +3962,11 @@ MonoBehaviour:
       rarity: 15
     - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
       rarity: 5
+    enemies:
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
+      rarity: 70
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
+      rarity: 30
     threshold: 0.42
     oreChance: 0.065
     trapBlockChance: 0.005
@@ -3974,6 +4009,11 @@ MonoBehaviour:
       rarity: 75
     - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
       rarity: 25
+    enemies:
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
+      rarity: 70
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
+      rarity: 30
     threshold: 0.35
     oreChance: 0.062
     trapBlockChance: 0.005
@@ -4016,6 +4056,11 @@ MonoBehaviour:
       rarity: 25
     - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
       rarity: 5
+    enemies:
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
+      rarity: 70
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
+      rarity: 30
     threshold: 0.5
     oreChance: 0.06
     trapBlockChance: 0.006
@@ -4060,6 +4105,11 @@ MonoBehaviour:
       rarity: 25
     - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
       rarity: 5
+    enemies:
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
+      rarity: 70
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
+      rarity: 30
     threshold: 0.45
     oreChance: 0.1
     trapBlockChance: 0.005
@@ -13099,8 +13149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8741b393b71f5429e4918a52e604f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSourceHurt: {fileID: 1954120907}
-  audioSourceMine: {fileID: 1954120909}
 --- !u!82 &1954120909
 AudioSource:
   m_ObjectHideFlags: 0

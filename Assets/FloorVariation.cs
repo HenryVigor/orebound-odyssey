@@ -14,7 +14,7 @@ public class FloorTheme
     public StoneInfo[] stoneBlocks;
     public OreBlockInfo[] oreBlocks;
     public CrateInfo[] crates;
-    //public EnemyInfo[] enemies; Can uncomment this if we ever want to specify certain enemy types per floor ------------------------------------------
+    public EnemyInfo[] enemies;
     [Header("World Generation Settings")]
     public float threshold = 0.4f; // Adjust this threshold to control density of cavern, higher = more open, lower = more dense
     // Ore spawn settings
@@ -55,7 +55,7 @@ public class FloorVariation : MonoBehaviour
         cavern.oreBlocks = currentTheme.oreBlocks;
         cavern.crates = currentTheme.crates;
         // Could add structures per floor too
-        //cavern.enemies = currentTheme.enemies; Can uncomment this if we ever want to specify certain enemy types per floor ------------------------------------------
+        cavern.enemies = currentTheme.enemies;
         cavern.threshold = currentTheme.threshold;
         cavern.oreChance = currentTheme.oreChance;
         cavern.trapBlockChance = currentTheme.trapBlockChance;

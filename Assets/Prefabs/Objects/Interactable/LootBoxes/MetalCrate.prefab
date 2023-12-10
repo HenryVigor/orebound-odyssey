@@ -151,6 +151,7 @@ MonoBehaviour:
   limitInteractions: 0
   maxInteractions: 2
   interactState: 0
+  breakParticles: {fileID: 1782700655131604157, guid: fbb46cd757a388648a9f2272ef8af27f, type: 3}
   possibleBasicItems:
   - {fileID: 9079316254227664623, guid: 501542f00348fff41b572ec54faa9a22, type: 3}
   - {fileID: 7929988436631910921, guid: 0e94da5f49ed90c41997cb5fdcaa80c5, type: 3}
@@ -203,6 +204,7 @@ MonoBehaviour:
   - {fileID: 674928472080405030, guid: 5486b351bf24f9d4f96563e245530d9e, type: 3}
   - {fileID: 6131649409726753973, guid: 6887c1991f81ff345a731476a7db51c0, type: 3}
   - {fileID: 6131649409726753973, guid: 5660e11d6d33a2c4d8b0b6b918b2301a, type: 3}
+  - {fileID: 6131649409726753973, guid: a9f4fea2059a079468f051e36428a172, type: 3}
   rareDropChance: 5
   specialDropChance: 1
   lockedChance: 50

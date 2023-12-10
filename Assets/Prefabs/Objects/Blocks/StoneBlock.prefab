@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1862351504, guid: 0bb867af7b53fb04f8887788ad1ba604, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8122826, g: 0.76922387, b: 0.68261015, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -240,6 +240,7 @@ MonoBehaviour:
   - {fileID: 1747857371, guid: 10bc32446adeeb242b87a1807d096ceb, type: 3}
   - {fileID: -368958170, guid: 10bc32446adeeb242b87a1807d096ceb, type: 3}
   - {fileID: -1337676245, guid: 10bc32446adeeb242b87a1807d096ceb, type: 3}
+  breakParticles: {fileID: 2289549727386296429, guid: c4c0175a4faa80f40b495aea2be73e02, type: 3}
 --- !u!114 &2062133314387014438
 MonoBehaviour:
   m_ObjectHideFlags: 0

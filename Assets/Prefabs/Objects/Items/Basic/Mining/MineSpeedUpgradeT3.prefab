@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Mining Speed III
-  itemText: +0.15 Mining Speed
+  itemText: +0.03 Mining Speed
   itemAction: Pickup
   isInteractable: 1
   interactCooldown: 10
@@ -162,7 +162,7 @@ MonoBehaviour:
   attackAreaXBonus: 0
   attackAreaYBonus: 0
   upgradingMining: 1
-  mineSpeedBonus: 0.15
+  mineSpeedBonus: 0.03
   mineDamageBonus: 0
   mineOreBonus: 0
   oreMultiplierBonus: 0

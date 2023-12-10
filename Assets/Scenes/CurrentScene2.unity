@@ -123,267 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &112220967
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -2931499617934185993, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: stunRate
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: -2931499617934185993, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: knockback
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: -2931499617934185993, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: maxHealth
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: -2931499617934185993, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: isKillable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -2931499617934185993, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: currentHealth
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: -2931499617934185993, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: zombieAudioScript
-      value: 
-      objectReference: {fileID: 112220977}
-    - target: {fileID: 1465350484875037328, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1465350484875037328, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: canMove
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1465350484875037328, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 112220969}
-    - target: {fileID: 1465350484875037328, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: maxSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028894207596104455, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261077220366696017, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -13.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261077220366696017, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -13.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261077220366696017, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261077220366696017, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261077220366696017, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261077220366696017, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261077220366696017, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261077220366696017, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261077220366696017, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5261077220366696017, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6359389418368176660, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: enemyKnockback
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7775021112460385226, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a39f1089cb7c42b43a9732d3a9a13225, type: 3}
-    - target: {fileID: 7775021112460385226, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7775021112460385226, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7775021112460385226, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3028894207596104455, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 112220969}
-    - targetCorrespondingSourceObject: {fileID: 3028894207596104455, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 112220978}
-    - targetCorrespondingSourceObject: {fileID: 3028894207596104455, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 112220977}
-  m_SourcePrefab: {fileID: 100100000, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
---- !u!1 &112220968 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3028894207596104455, guid: 379a741ec42c23944b065ae4e9d38b52, type: 3}
-  m_PrefabInstance: {fileID: 112220967}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &112220969
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112220968}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 245889b74d655944ca2ddc3e6cea8122, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &112220977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112220968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58a0808d2ced2be4db17e369e1f4378c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSourceHurt: {fileID: 112220978}
---- !u!82 &112220978
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112220968}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6a6873566d263884185c12bf34c4695c, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &394335374 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3848608997749573165, guid: 3d1b4af813a586c43ad564d97843cfc3, type: 3}
@@ -466,11 +205,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &729986876 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7311816993415469958, guid: eeff771bb5aae634ca095866f1559a73, type: 3}
-  m_PrefabInstance: {fileID: 1165486303}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832801861
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,7 +314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cavernGenerator: {fileID: 1360399074}
-  trappedStoneBlock: {fileID: 394335374}
 --- !u!61 &1032201053
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1147,6 +880,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4818409689494158157, guid: eeff771bb5aae634ca095866f1559a73, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5179382022329395399, guid: eeff771bb5aae634ca095866f1559a73, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -1467,8 +1204,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cavernSpritePrefab: {fileID: 7675928762439564537, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
   backgroundSpritePrefab: {fileID: 1659070545}
-  exitBlock: {fileID: 1032201051}
   blockHolder: {fileID: 0}
+  exitBlock: {fileID: 1032201051}
+  spikesPrefab: {fileID: 7311816992393425753}
+  trappedBlock: {fileID: 394335374}
+  torchPrefab: {fileID: 7675928762439564537, guid: 92fc2f6b226896342a13fe1113e11348, type: 3}
+  structures:
+  - {fileID: 4098609516466070311, guid: 63f3754a9b9c0164a82971db3fc92e32, type: 3}
+  - {fileID: 3668340318137059080, guid: 85fa9e1180cd7744f94202c827dc95fb, type: 3}
+  - {fileID: 5883849686185172150, guid: 3be0bdf997d8eba4ea9f564e4e22c623, type: 3}
+  - {fileID: 6708868042699507083, guid: 77d7bddb2a9176b4e8fc73e8fac79872, type: 3}
+  stoneBlocks:
+  - stonePrefab: {fileID: 7675928762439564537, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
+    rarity: 99.9
+  - stonePrefab: {fileID: 7675928762439564537, guid: f3b2e53410559c74eb0bb1a058fa2dbb, type: 3}
+    rarity: 0.06
+  - stonePrefab: {fileID: 4329539131549059757, guid: 0fb48cf941d752d4e8e0c7066cf3f3f1, type: 3}
+    rarity: 0.04
   oreBlocks:
   - oreBlockPrefab: {fileID: 5786096766264122376, guid: 2672ebe6f8f69fc43ae4df5103f4f2f2, type: 3}
     rarity: 15
@@ -1476,36 +1228,35 @@ MonoBehaviour:
     rarity: 10
   - oreBlockPrefab: {fileID: 5786096766264122376, guid: 7ffae48c116057747bc8e71796eaf1fc, type: 3}
     rarity: 5
-  - oreBlockPrefab: {fileID: 5786096766264122376, guid: e26fe59fc4b78f44cb115cc5f092f837, type: 3}
-    rarity: 1
   - oreBlockPrefab: {fileID: 5786096766264122376, guid: f5423b41b22b93d4e8664d083da18151, type: 3}
+    rarity: 1
+  - oreBlockPrefab: {fileID: 5786096766264122376, guid: e26fe59fc4b78f44cb115cc5f092f837, type: 3}
     rarity: 0.1
   - oreBlockPrefab: {fileID: 1032201051}
     rarity: 0.2
-  enemyPrefabs:
-  - {fileID: 112220968}
-  spikesPrefab: {fileID: 729986876}
-  trappedBlock: {fileID: 394335374}
-  lootBoxes:
-  - {fileID: 360919565009150044, guid: bf26288c3525fb544a34d14280ec151e, type: 3}
-  - {fileID: 6943342613031338607, guid: 6f0e0d07820a8b740b88d5d537807f9d, type: 3}
-  - {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
-  width: 100
-  height: 100
+  crates:
+  - cratePrefab: {fileID: 360919565009150044, guid: bf26288c3525fb544a34d14280ec151e, type: 3}
+    rarity: 70
+  - cratePrefab: {fileID: 6943342613031338607, guid: 6f0e0d07820a8b740b88d5d537807f9d, type: 3}
+    rarity: 25
+  - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
+    rarity: 5
+  enemies:
+  - enemyPrefab: {fileID: 3028894207641210912}
+    rarity: 100
   threshold: 0.4
-  noOreChance: 0.95
+  oreChance: 0.05
   trapBlockChance: 0.005
-  enemyMax: 25
-  enemyChance: 0.01
-  medEnemyChance: 1
-  hardEnemyChance: 0
-  enemyHealthBonus: 0
+  floorBaseColor: {r: 1, g: 1, b: 1, a: 1}
+  colorSpikes: 1
+  structureChance: 0.00028
+  stairChance: 0.001
   spikeChance: 0.02
   crateChance: 0.02075
-  stairChance: 0.001
-  mineableLayers:
-    serializedVersion: 2
-    m_Bits: 512
+  torchChance: 0.0209
+  enemyMax: 25
+  enemyChance: 0.01
+  enemyHealthBonus: 0
 --- !u!4 &1360399075
 Transform:
   m_ObjectHideFlags: 0
@@ -1548,9 +1299,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorThemes:
-  - floorCanSpawnAt: 0
-    cavernSpritePrefab: {fileID: 7675928762439564537, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
-    backgroundSpritePrefab: {fileID: 1659070545}
+  - floorThemeName: Basic Cave
+    allowedSpawnFloor: 0
+    spikesPrefab: {fileID: 7311816993415469958, guid: eeff771bb5aae634ca095866f1559a73, type: 3}
+    trappedBlock: {fileID: 394335374}
+    stoneBlocks:
+    - stonePrefab: {fileID: 7675928762439564537, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
+      rarity: 99.9
+    - stonePrefab: {fileID: 7675928762439564537, guid: f3b2e53410559c74eb0bb1a058fa2dbb, type: 3}
+      rarity: 0.06
+    - stonePrefab: {fileID: 4329539131549059757, guid: 0fb48cf941d752d4e8e0c7066cf3f3f1, type: 3}
+      rarity: 0.04
     oreBlocks:
     - oreBlockPrefab: {fileID: 5786096766264122376, guid: 2672ebe6f8f69fc43ae4df5103f4f2f2, type: 3}
       rarity: 15
@@ -1558,19 +1317,406 @@ MonoBehaviour:
       rarity: 10
     - oreBlockPrefab: {fileID: 5786096766264122376, guid: 7ffae48c116057747bc8e71796eaf1fc, type: 3}
       rarity: 5
-    - oreBlockPrefab: {fileID: 5786096766264122376, guid: e26fe59fc4b78f44cb115cc5f092f837, type: 3}
-      rarity: 1
     - oreBlockPrefab: {fileID: 5786096766264122376, guid: f5423b41b22b93d4e8664d083da18151, type: 3}
+      rarity: 1
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: e26fe59fc4b78f44cb115cc5f092f837, type: 3}
       rarity: 0.1
     - oreBlockPrefab: {fileID: 1032201051}
-      rarity: 0.04
-    exitBlock: {fileID: 1032201051}
+      rarity: 0.2
+    crates:
+    - cratePrefab: {fileID: 360919565009150044, guid: bf26288c3525fb544a34d14280ec151e, type: 3}
+      rarity: 70
+    - cratePrefab: {fileID: 6943342613031338607, guid: 6f0e0d07820a8b740b88d5d537807f9d, type: 3}
+      rarity: 25
+    - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
+      rarity: 5
+    threshold: 0.4
+    oreChance: 0.05
+    trapBlockChance: 0.005
+    floorBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    colorSpikes: 1
+    stairChance: 0.0012
+    spikeChance: 0.02
+    crateChance: 0.02075
+    torchChance: 0.0209
+  - floorThemeName: Open Cavern
+    allowedSpawnFloor: 2
     spikesPrefab: {fileID: 7311816993415469958, guid: eeff771bb5aae634ca095866f1559a73, type: 3}
     trappedBlock: {fileID: 394335374}
-    width: 100
-    height: 100
-    threshold: 0.4
-    noOreChance: 0.95
+    stoneBlocks:
+    - stonePrefab: {fileID: 7675928762439564537, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
+      rarity: 98
+    - stonePrefab: {fileID: 7675928762439564537, guid: f3b2e53410559c74eb0bb1a058fa2dbb, type: 3}
+      rarity: 1
+    - stonePrefab: {fileID: 4329539131549059757, guid: 0fb48cf941d752d4e8e0c7066cf3f3f1, type: 3}
+      rarity: 0.6
+    - stonePrefab: {fileID: 7017515548882722714, guid: 08238cc73ef24c34ebc1a0151e055948, type: 3}
+      rarity: 0.4
+    oreBlocks:
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 2672ebe6f8f69fc43ae4df5103f4f2f2, type: 3}
+      rarity: 16
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 11588273fd2d6724fa3b214fdd1360c5, type: 3}
+      rarity: 11
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 7ffae48c116057747bc8e71796eaf1fc, type: 3}
+      rarity: 6
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: f5423b41b22b93d4e8664d083da18151, type: 3}
+      rarity: 2
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: e26fe59fc4b78f44cb115cc5f092f837, type: 3}
+      rarity: 0.1
+    - oreBlockPrefab: {fileID: 1032201051}
+      rarity: 0.2
+    crates:
+    - cratePrefab: {fileID: 360919565009150044, guid: bf26288c3525fb544a34d14280ec151e, type: 3}
+      rarity: 70
+    - cratePrefab: {fileID: 6943342613031338607, guid: 6f0e0d07820a8b740b88d5d537807f9d, type: 3}
+      rarity: 25
+    - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
+      rarity: 5
+    threshold: 0.53
+    oreChance: 0.07
+    trapBlockChance: 0.005
+    floorBaseColor: {r: 1, g: 1, b: 1, a: 1}
+    colorSpikes: 1
+    stairChance: 0.0012
+    spikeChance: 0.02
+    crateChance: 0.02075
+    torchChance: 0.0209
+  - floorThemeName: Brittle Cave
+    allowedSpawnFloor: 2
+    spikesPrefab: {fileID: 7311816993415469958, guid: eeff771bb5aae634ca095866f1559a73, type: 3}
+    trappedBlock: {fileID: 394335374}
+    stoneBlocks:
+    - stonePrefab: {fileID: 7675928762439564537, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
+      rarity: 91
+    - stonePrefab: {fileID: 4329539131549059757, guid: 0fb48cf941d752d4e8e0c7066cf3f3f1, type: 3}
+      rarity: 6
+    - stonePrefab: {fileID: 4329539131549059757, guid: c7d29de71ecce924399fe205fc9f56b7, type: 3}
+      rarity: 2
+    - stonePrefab: {fileID: 4329539131549059757, guid: de0b1616db10b4d4fa30893aae4af8c8, type: 3}
+      rarity: 1
+    oreBlocks:
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 2672ebe6f8f69fc43ae4df5103f4f2f2, type: 3}
+      rarity: 13
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 11588273fd2d6724fa3b214fdd1360c5, type: 3}
+      rarity: 11
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 7ffae48c116057747bc8e71796eaf1fc, type: 3}
+      rarity: 7
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: f5423b41b22b93d4e8664d083da18151, type: 3}
+      rarity: 0.8
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: e26fe59fc4b78f44cb115cc5f092f837, type: 3}
+      rarity: 0.02
+    - oreBlockPrefab: {fileID: 1032201051}
+      rarity: 0.2
+    crates:
+    - cratePrefab: {fileID: 360919565009150044, guid: bf26288c3525fb544a34d14280ec151e, type: 3}
+      rarity: 70
+    - cratePrefab: {fileID: 6943342613031338607, guid: 6f0e0d07820a8b740b88d5d537807f9d, type: 3}
+      rarity: 25
+    - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
+      rarity: 5
+    threshold: 0.465
+    oreChance: 0.04
+    trapBlockChance: 0.0065
+    floorBaseColor: {r: 0.8867924, g: 0.84373367, b: 0.75711995, a: 1}
+    colorSpikes: 1
+    stairChance: 0.0012
+    spikeChance: 0.02
+    crateChance: 0.02075
+    torchChance: 0.0209
+  - floorThemeName: Overgrown Cave
+    allowedSpawnFloor: 3
+    spikesPrefab: {fileID: 7311816993415469958, guid: eeff771bb5aae634ca095866f1559a73, type: 3}
+    trappedBlock: {fileID: 394335374}
+    stoneBlocks:
+    - stonePrefab: {fileID: 7675928762439564537, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
+      rarity: 99
+    - stonePrefab: {fileID: 7675928762439564537, guid: f3b2e53410559c74eb0bb1a058fa2dbb, type: 3}
+      rarity: 0.05
+    - stonePrefab: {fileID: 4329539131549059757, guid: 0fb48cf941d752d4e8e0c7066cf3f3f1, type: 3}
+      rarity: 0.03
+    - stonePrefab: {fileID: 4329539131549059757, guid: c7d29de71ecce924399fe205fc9f56b7, type: 3}
+      rarity: 0.02
+    oreBlocks:
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 2672ebe6f8f69fc43ae4df5103f4f2f2, type: 3}
+      rarity: 16
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 11588273fd2d6724fa3b214fdd1360c5, type: 3}
+      rarity: 11
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 7ffae48c116057747bc8e71796eaf1fc, type: 3}
+      rarity: 6
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: f5423b41b22b93d4e8664d083da18151, type: 3}
+      rarity: 1
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: e26fe59fc4b78f44cb115cc5f092f837, type: 3}
+      rarity: 0.1
+    - oreBlockPrefab: {fileID: 1032201051}
+      rarity: 0.2
+    crates:
+    - cratePrefab: {fileID: 360919565009150044, guid: bf26288c3525fb544a34d14280ec151e, type: 3}
+      rarity: 70
+    - cratePrefab: {fileID: 6943342613031338607, guid: 6f0e0d07820a8b740b88d5d537807f9d, type: 3}
+      rarity: 25
+    - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
+      rarity: 5
+    threshold: 0.38
+    oreChance: 0.05
+    trapBlockChance: 0.005
+    floorBaseColor: {r: 0.4277888, g: 0.5754717, b: 0.40988785, a: 1}
+    colorSpikes: 1
+    stairChance: 0.0012
+    spikeChance: 0.018
+    crateChance: 0.02075
+    torchChance: 0.0208
+  - floorThemeName: Ice Cave
+    allowedSpawnFloor: 3
+    spikesPrefab: {fileID: 2033457346120736667, guid: e36d8572f6cc73241b3db65e2c6802fb, type: 3}
+    trappedBlock: {fileID: 394335374}
+    stoneBlocks:
+    - stonePrefab: {fileID: 7675928762439564537, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
+      rarity: 99.55
+    - stonePrefab: {fileID: 7675928762439564537, guid: f3b2e53410559c74eb0bb1a058fa2dbb, type: 3}
+      rarity: 0.375
+    - stonePrefab: {fileID: 7017515548882722714, guid: 08238cc73ef24c34ebc1a0151e055948, type: 3}
+      rarity: 0.02
+    - stonePrefab: {fileID: 4329539131549059757, guid: 0fb48cf941d752d4e8e0c7066cf3f3f1, type: 3}
+      rarity: 0.01
+    oreBlocks:
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 2672ebe6f8f69fc43ae4df5103f4f2f2, type: 3}
+      rarity: 15
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 11588273fd2d6724fa3b214fdd1360c5, type: 3}
+      rarity: 10
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 7ffae48c116057747bc8e71796eaf1fc, type: 3}
+      rarity: 5
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: f5423b41b22b93d4e8664d083da18151, type: 3}
+      rarity: 1
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: e26fe59fc4b78f44cb115cc5f092f837, type: 3}
+      rarity: 0.1
+    - oreBlockPrefab: {fileID: 1032201051}
+      rarity: 0.2
+    crates:
+    - cratePrefab: {fileID: 360919565009150044, guid: bf26288c3525fb544a34d14280ec151e, type: 3}
+      rarity: 65
+    - cratePrefab: {fileID: 6943342613031338607, guid: 6f0e0d07820a8b740b88d5d537807f9d, type: 3}
+      rarity: 30
+    - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
+      rarity: 5
+    threshold: 0.42
+    oreChance: 0.05
+    trapBlockChance: 0.005
+    floorBaseColor: {r: 0.740566, g: 0.95980597, b: 1, a: 1}
+    colorSpikes: 0
+    stairChance: 0.0012
+    spikeChance: 0.035
+    crateChance: 0.03575
+    torchChance: 0.01
+  - floorThemeName: Dense Cave
+    allowedSpawnFloor: 4
+    spikesPrefab: {fileID: 7311816993415469958, guid: eeff771bb5aae634ca095866f1559a73, type: 3}
+    trappedBlock: {fileID: 394335374}
+    stoneBlocks:
+    - stonePrefab: {fileID: 7675928762439564537, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
+      rarity: 90
+    - stonePrefab: {fileID: 7675928762439564537, guid: f3b2e53410559c74eb0bb1a058fa2dbb, type: 3}
+      rarity: 5
+    - stonePrefab: {fileID: 7017515548882722714, guid: 08238cc73ef24c34ebc1a0151e055948, type: 3}
+      rarity: 3
+    - stonePrefab: {fileID: 1675810897111969259, guid: 792325b4d65da7e49b4e6b4b8721ec84, type: 3}
+      rarity: 2
+    oreBlocks:
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 2672ebe6f8f69fc43ae4df5103f4f2f2, type: 3}
+      rarity: 20
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 11588273fd2d6724fa3b214fdd1360c5, type: 3}
+      rarity: 9
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 7ffae48c116057747bc8e71796eaf1fc, type: 3}
+      rarity: 4
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: f5423b41b22b93d4e8664d083da18151, type: 3}
+      rarity: 2
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: e26fe59fc4b78f44cb115cc5f092f837, type: 3}
+      rarity: 0.25
+    - oreBlockPrefab: {fileID: 1032201051}
+      rarity: 0.2
+    crates:
+    - cratePrefab: {fileID: 360919565009150044, guid: bf26288c3525fb544a34d14280ec151e, type: 3}
+      rarity: 50
+    - cratePrefab: {fileID: 6943342613031338607, guid: 6f0e0d07820a8b740b88d5d537807f9d, type: 3}
+      rarity: 40
+    - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
+      rarity: 10
+    threshold: 0.3
+    oreChance: 0.065
+    trapBlockChance: 0.005
+    floorBaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    colorSpikes: 1
+    stairChance: 0.0012
+    spikeChance: 0.02
+    crateChance: 0.02075
+    torchChance: 0.02076
+  - floorThemeName: Coal Mine
+    allowedSpawnFloor: 5
+    spikesPrefab: {fileID: 7311816993415469958, guid: eeff771bb5aae634ca095866f1559a73, type: 3}
+    trappedBlock: {fileID: 394335374}
+    stoneBlocks:
+    - stonePrefab: {fileID: 7675928762439564537, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
+      rarity: 99.9
+    - stonePrefab: {fileID: 7675928762439564537, guid: f3b2e53410559c74eb0bb1a058fa2dbb, type: 3}
+      rarity: 0.06
+    - stonePrefab: {fileID: 4329539131549059757, guid: 0fb48cf941d752d4e8e0c7066cf3f3f1, type: 3}
+      rarity: 0.04
+    oreBlocks:
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 2672ebe6f8f69fc43ae4df5103f4f2f2, type: 3}
+      rarity: 25
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 11588273fd2d6724fa3b214fdd1360c5, type: 3}
+      rarity: 5
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 7ffae48c116057747bc8e71796eaf1fc, type: 3}
+      rarity: 4
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: f5423b41b22b93d4e8664d083da18151, type: 3}
+      rarity: 0.5
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: e26fe59fc4b78f44cb115cc5f092f837, type: 3}
+      rarity: 0.2
+    - oreBlockPrefab: {fileID: 1032201051}
+      rarity: 0.2
+    crates:
+    - cratePrefab: {fileID: 360919565009150044, guid: bf26288c3525fb544a34d14280ec151e, type: 3}
+      rarity: 80
+    - cratePrefab: {fileID: 6943342613031338607, guid: 6f0e0d07820a8b740b88d5d537807f9d, type: 3}
+      rarity: 15
+    - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
+      rarity: 5
+    threshold: 0.42
+    oreChance: 0.065
+    trapBlockChance: 0.005
+    floorBaseColor: {r: 0.8396226, g: 0.82768685, b: 0.81189924, a: 1}
+    colorSpikes: 1
+    stairChance: 0.0012
+    spikeChance: 0.02
+    crateChance: 0.02075
+    torchChance: 0.022
+  - floorThemeName: Magma Cave
+    allowedSpawnFloor: 5
+    spikesPrefab: {fileID: 8631035041748413546, guid: b725194b4c8828f4292242038abcb691, type: 3}
+    trappedBlock: {fileID: 394335374}
+    stoneBlocks:
+    - stonePrefab: {fileID: 7675928762439564537, guid: f3b2e53410559c74eb0bb1a058fa2dbb, type: 3}
+      rarity: 80
+    - stonePrefab: {fileID: 7675928762439564537, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
+      rarity: 10
+    - stonePrefab: {fileID: 7017515548882722714, guid: 08238cc73ef24c34ebc1a0151e055948, type: 3}
+      rarity: 6
+    - stonePrefab: {fileID: 1675810897111969259, guid: 792325b4d65da7e49b4e6b4b8721ec84, type: 3}
+      rarity: 4
+    oreBlocks:
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 2672ebe6f8f69fc43ae4df5103f4f2f2, type: 3}
+      rarity: 18
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 11588273fd2d6724fa3b214fdd1360c5, type: 3}
+      rarity: 11
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 7ffae48c116057747bc8e71796eaf1fc, type: 3}
+      rarity: 6
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: f5423b41b22b93d4e8664d083da18151, type: 3}
+      rarity: 5
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: e26fe59fc4b78f44cb115cc5f092f837, type: 3}
+      rarity: 1
+    - oreBlockPrefab: {fileID: 1032201051}
+      rarity: 0.2
+    crates:
+    - cratePrefab: {fileID: 360919565009150044, guid: bf26288c3525fb544a34d14280ec151e, type: 3}
+      rarity: 10
+    - cratePrefab: {fileID: 6943342613031338607, guid: 6f0e0d07820a8b740b88d5d537807f9d, type: 3}
+      rarity: 75
+    - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
+      rarity: 25
+    threshold: 0.35
+    oreChance: 0.062
+    trapBlockChance: 0.005
+    floorBaseColor: {r: 0.509434, g: 0.38688147, b: 0.509434, a: 1}
+    colorSpikes: 0
+    stairChance: 0.0012
+    spikeChance: 0.021
+    crateChance: 0.02075
+    torchChance: 0.02182
+  - floorThemeName: Gold Mine
+    allowedSpawnFloor: 6
+    spikesPrefab: {fileID: 7311816993415469958, guid: eeff771bb5aae634ca095866f1559a73, type: 3}
+    trappedBlock: {fileID: 394335374}
+    stoneBlocks:
+    - stonePrefab: {fileID: 7675928762439564537, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
+      rarity: 99
+    - stonePrefab: {fileID: 7675928762439564537, guid: f3b2e53410559c74eb0bb1a058fa2dbb, type: 3}
+      rarity: 0.58
+    - stonePrefab: {fileID: 1675810897111969259, guid: 792325b4d65da7e49b4e6b4b8721ec84, type: 3}
+      rarity: 0.4
+    - stonePrefab: {fileID: 4329539131549059757, guid: 0fb48cf941d752d4e8e0c7066cf3f3f1, type: 3}
+      rarity: 0.02
+    oreBlocks:
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 2672ebe6f8f69fc43ae4df5103f4f2f2, type: 3}
+      rarity: 6
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 11588273fd2d6724fa3b214fdd1360c5, type: 3}
+      rarity: 4
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 7ffae48c116057747bc8e71796eaf1fc, type: 3}
+      rarity: 3
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: f5423b41b22b93d4e8664d083da18151, type: 3}
+      rarity: 12
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: e26fe59fc4b78f44cb115cc5f092f837, type: 3}
+      rarity: 0.15
+    - oreBlockPrefab: {fileID: 1032201051}
+      rarity: 0.2
+    crates:
+    - cratePrefab: {fileID: 360919565009150044, guid: bf26288c3525fb544a34d14280ec151e, type: 3}
+      rarity: 70
+    - cratePrefab: {fileID: 6943342613031338607, guid: 6f0e0d07820a8b740b88d5d537807f9d, type: 3}
+      rarity: 25
+    - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
+      rarity: 5
+    threshold: 0.5
+    oreChance: 0.06
+    trapBlockChance: 0.006
+    floorBaseColor: {r: 1, g: 0.8576486, b: 0.7216981, a: 1}
+    colorSpikes: 1
+    stairChance: 0.0012
+    spikeChance: 0.02
+    crateChance: 0.02075
+    torchChance: 0.022
+  - floorThemeName: Ore Cave
+    allowedSpawnFloor: 8
+    spikesPrefab: {fileID: 7311816993415469958, guid: eeff771bb5aae634ca095866f1559a73, type: 3}
+    trappedBlock: {fileID: 394335374}
+    stoneBlocks:
+    - stonePrefab: {fileID: 7675928762439564537, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
+      rarity: 90
+    - stonePrefab: {fileID: 7675928762439564537, guid: f3b2e53410559c74eb0bb1a058fa2dbb, type: 3}
+      rarity: 5.9
+    - stonePrefab: {fileID: 1675810897111969259, guid: 792325b4d65da7e49b4e6b4b8721ec84, type: 3}
+      rarity: 4.08
+    - stonePrefab: {fileID: 4329539131549059757, guid: 0fb48cf941d752d4e8e0c7066cf3f3f1, type: 3}
+      rarity: 0.02
+    - stonePrefab: {fileID: 4329539131549059757, guid: c7d29de71ecce924399fe205fc9f56b7, type: 3}
+      rarity: 0.01
+    oreBlocks:
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 2672ebe6f8f69fc43ae4df5103f4f2f2, type: 3}
+      rarity: 6
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 11588273fd2d6724fa3b214fdd1360c5, type: 3}
+      rarity: 12
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: 7ffae48c116057747bc8e71796eaf1fc, type: 3}
+      rarity: 14
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: f5423b41b22b93d4e8664d083da18151, type: 3}
+      rarity: 3
+    - oreBlockPrefab: {fileID: 5786096766264122376, guid: e26fe59fc4b78f44cb115cc5f092f837, type: 3}
+      rarity: 0.3
+    - oreBlockPrefab: {fileID: 1032201051}
+      rarity: 0.2
+    crates:
+    - cratePrefab: {fileID: 360919565009150044, guid: bf26288c3525fb544a34d14280ec151e, type: 3}
+      rarity: 70
+    - cratePrefab: {fileID: 6943342613031338607, guid: 6f0e0d07820a8b740b88d5d537807f9d, type: 3}
+      rarity: 25
+    - cratePrefab: {fileID: 6383072274537889422, guid: b51c1d4c58b14fd4c99a1599c526779f, type: 3}
+      rarity: 5
+    threshold: 0.45
+    oreChance: 0.1
+    trapBlockChance: 0.005
+    floorBaseColor: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
+    colorSpikes: 1
+    stairChance: 0.0012
+    spikeChance: 0.02
+    crateChance: 0.02075
+    torchChance: 0.0212
 --- !u!1001 &1462073942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1619,6 +1765,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2900513317541760614, guid: 3d1b4af813a586c43ad564d97843cfc3, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900513317541760614, guid: 3d1b4af813a586c43ad564d97843cfc3, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900513317541760614, guid: 3d1b4af813a586c43ad564d97843cfc3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3848608997749573165, guid: 3d1b4af813a586c43ad564d97843cfc3, type: 3}
       propertyPath: m_Name
       value: TrappedStoneBlock
@@ -1646,7 +1804,7 @@ PrefabInstance:
     - target: {fileID: 8161175180051297608, guid: 3d1b4af813a586c43ad564d97843cfc3, type: 3}
       propertyPath: SpawnedEnemy
       value: 
-      objectReference: {fileID: 112220968}
+      objectReference: {fileID: 3028894207641210912}
     - target: {fileID: 8161175180051297608, guid: 3d1b4af813a586c43ad564d97843cfc3, type: 3}
       propertyPath: maxDurability
       value: 50
@@ -1841,6 +1999,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1670319517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1670319519}
+  - component: {fileID: 1670319518}
+  m_Layer: 0
+  m_Name: PostProcessing
+  m_TagString: PostProcess
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1670319518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670319517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 1a10f1b90047b3b46831296a577e4dfe, type: 2}
+--- !u!4 &1670319519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670319517}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 50.466885, y: 12.032891, z: 0.02002716}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1840872544 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6278756889111974184, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
@@ -1912,6 +2119,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4312386694028155394, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4356185752807160019, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
       propertyPath: m_Size.x
       value: 0.9
@@ -1927,6 +2138,18 @@ PrefabInstance:
     - target: {fileID: 4356185752807160019, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
       propertyPath: m_Offset.y
       value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339905647336947246, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339905647336947246, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339905647336947246, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6255884248394636117, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2279,7 +2502,12 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!1001 &6080325030144656133
+--- !u!1 &3028894207641210912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5319390503971080706, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
+  m_PrefabInstance: {fileID: 4323516419382249417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4323516419382249417
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -2287,185 +2515,88 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3355193944943021473, guid: cf3eaa6666e9ca5459ad15af2e6857a4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -11.1900015
+    - target: {fileID: 2603440249783195461, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.185
       objectReference: {fileID: 0}
-    - target: {fileID: 3355193944943021473, guid: cf3eaa6666e9ca5459ad15af2e6857a4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -12.280004
+    - target: {fileID: 2603440249783195461, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.1
       objectReference: {fileID: 0}
-    - target: {fileID: 3355193944943021473, guid: cf3eaa6666e9ca5459ad15af2e6857a4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
+    - target: {fileID: 2603440249783195461, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 45
       objectReference: {fileID: 0}
-    - target: {fileID: 3355193944943021473, guid: cf3eaa6666e9ca5459ad15af2e6857a4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
+    - target: {fileID: 2603440249783195461, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.2240566
       objectReference: {fileID: 0}
-    - target: {fileID: 3355193944943021473, guid: cf3eaa6666e9ca5459ad15af2e6857a4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
+    - target: {fileID: 2603440249783195461, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3355193944943021473, guid: cf3eaa6666e9ca5459ad15af2e6857a4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
+    - target: {fileID: 2603440249783195461, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.24053082
       objectReference: {fileID: 0}
-    - target: {fileID: 3355193944943021473, guid: cf3eaa6666e9ca5459ad15af2e6857a4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3355193944943021473, guid: cf3eaa6666e9ca5459ad15af2e6857a4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3355193944943021473, guid: cf3eaa6666e9ca5459ad15af2e6857a4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3355193944943021473, guid: cf3eaa6666e9ca5459ad15af2e6857a4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7881104772845262862, guid: cf3eaa6666e9ca5459ad15af2e6857a4, type: 3}
-      propertyPath: m_Name
-      value: LeverTest
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cf3eaa6666e9ca5459ad15af2e6857a4, type: 3}
---- !u!1001 &8824203428190139070
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3241452204724207608, guid: a16984ec07d6cdd489998dd41f72c95a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -11.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 3241452204724207608, guid: a16984ec07d6cdd489998dd41f72c95a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -13.67172
-      objectReference: {fileID: 0}
-    - target: {fileID: 3241452204724207608, guid: a16984ec07d6cdd489998dd41f72c95a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3241452204724207608, guid: a16984ec07d6cdd489998dd41f72c95a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3241452204724207608, guid: a16984ec07d6cdd489998dd41f72c95a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3241452204724207608, guid: a16984ec07d6cdd489998dd41f72c95a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3241452204724207608, guid: a16984ec07d6cdd489998dd41f72c95a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3241452204724207608, guid: a16984ec07d6cdd489998dd41f72c95a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3241452204724207608, guid: a16984ec07d6cdd489998dd41f72c95a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3241452204724207608, guid: a16984ec07d6cdd489998dd41f72c95a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648825839610805515, guid: a16984ec07d6cdd489998dd41f72c95a, type: 3}
-      propertyPath: m_Name
-      value: ButtonTest
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a16984ec07d6cdd489998dd41f72c95a, type: 3}
---- !u!1001 &9016091166234114428
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3025640832990122148, guid: 61d4e32f2654aa64699bae27ed4dd6a4, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: 2603440249783195461, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 7ee54926057624143af1badf3976b674, type: 3}
-    - target: {fileID: 3025640832990122148, guid: 61d4e32f2654aa64699bae27ed4dd6a4, type: 3}
-      propertyPath: m_Color.b
-      value: 1
+      objectReference: {fileID: 1659070547}
+    - target: {fileID: 5319390503971080706, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
+      propertyPath: m_Name
+      value: Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 3025640832990122148, guid: 61d4e32f2654aa64699bae27ed4dd6a4, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025640832990122148, guid: 61d4e32f2654aa64699bae27ed4dd6a4, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3618586807806059172, guid: 61d4e32f2654aa64699bae27ed4dd6a4, type: 3}
+    - target: {fileID: 6903995252062111845, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.19
+      value: -13.95
       objectReference: {fileID: 0}
-    - target: {fileID: 3618586807806059172, guid: 61d4e32f2654aa64699bae27ed4dd6a4, type: 3}
+    - target: {fileID: 6903995252062111845, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.05
+      value: -13.75
       objectReference: {fileID: 0}
-    - target: {fileID: 3618586807806059172, guid: 61d4e32f2654aa64699bae27ed4dd6a4, type: 3}
+    - target: {fileID: 6903995252062111845, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
-    - target: {fileID: 3618586807806059172, guid: 61d4e32f2654aa64699bae27ed4dd6a4, type: 3}
+    - target: {fileID: 6903995252062111845, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3618586807806059172, guid: 61d4e32f2654aa64699bae27ed4dd6a4, type: 3}
+    - target: {fileID: 6903995252062111845, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3618586807806059172, guid: 61d4e32f2654aa64699bae27ed4dd6a4, type: 3}
+    - target: {fileID: 6903995252062111845, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3618586807806059172, guid: 61d4e32f2654aa64699bae27ed4dd6a4, type: 3}
+    - target: {fileID: 6903995252062111845, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3618586807806059172, guid: 61d4e32f2654aa64699bae27ed4dd6a4, type: 3}
+    - target: {fileID: 6903995252062111845, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3618586807806059172, guid: 61d4e32f2654aa64699bae27ed4dd6a4, type: 3}
+    - target: {fileID: 6903995252062111845, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3618586807806059172, guid: 61d4e32f2654aa64699bae27ed4dd6a4, type: 3}
+    - target: {fileID: 6903995252062111845, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6943342613031338607, guid: 61d4e32f2654aa64699bae27ed4dd6a4, type: 3}
-      propertyPath: m_Name
-      value: BoxTest
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 61d4e32f2654aa64699bae27ed4dd6a4, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
+--- !u!1 &7311816992393425753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7311816993415469958, guid: eeff771bb5aae634ca095866f1559a73, type: 3}
+  m_PrefabInstance: {fileID: 1165486303}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2474,10 +2605,7 @@ SceneRoots:
   - {fileID: 1659070547}
   - {fileID: 1954120894}
   - {fileID: 1032201055}
-  - {fileID: 8824203428190139070}
-  - {fileID: 6080325030144656133}
-  - {fileID: 9016091166234114428}
-  - {fileID: 112220967}
+  - {fileID: 4323516419382249417}
   - {fileID: 1462073942}
   - {fileID: 1165486303}
   - {fileID: 1059366056}
@@ -2487,3 +2615,4 @@ SceneRoots:
   - {fileID: 1091085247}
   - {fileID: 1048646276}
   - {fileID: 1196853747}
+  - {fileID: 1670319519}

@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 /// Player Combat
 /// <summary>
 ///     Singleton <see cref="MonoBehaviour"/> for managing player combat
@@ -9,7 +10,7 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour {
     /// <summary>Default length of invincibility time</summary>
     const float INVINCIBILITY_PERIOD = 0.5f;
-    
+
     static PlayerCombat _Instance;
     /// <summary>Singleton <see cref="PlayerCombat"/> instance</summary>
     /// <value>Set only if null</value>
@@ -33,16 +34,32 @@ public class PlayerCombat : MonoBehaviour {
             _Health = value;
         }
     }
-    
+
+    private static bool _spikeDamageImmune = false;
+    public static bool spikeDamageImmune
+    {
+        get => _spikeDamageImmune;
+        set
+        {
+            _spikeDamageImmune = value;
+        }
+    }
+
     /// <summary>Invincibility status</summary>
     bool Invincible = false;
     
     // Sound
     public PlayerAudioScript playerAudioScript;
+
+    // PostProcessing for Damage Vignette Effect
+    private Volume vol;
+    private Vignette vignette;
     
 
     void Awake() {
         Instance = this;
+        vol = GameObject.FindGameObjectWithTag("PostProcess").GetComponent<Volume>();
+        vol.profile.TryGet(out vignette);
         Health = MaxHealth;
     }
     
@@ -54,12 +71,12 @@ public class PlayerCombat : MonoBehaviour {
     /// <param name="damage">Amount of damage to deal to player</param>
     public static void Hit(int damage) {
         if (!Instance.Invincible) {
+            // Damage Vignette
+            Instance.StartCoroutine(VignetteHit(0.175f));
             // Subtract health
             Health -= damage;
-            
             // Update health indicator
             HUD.HIndicator.Set(Health);
-            
             // Grant invincibility frames
             Instance.StartCoroutine(IFrames(INVINCIBILITY_PERIOD));
 
@@ -103,5 +120,32 @@ public class PlayerCombat : MonoBehaviour {
         Instance.Invincible = true;
         yield return new WaitForSeconds(time);
         Instance.Invincible = false;
+    }
+
+    /// Vignette Effect
+    /// <summary>
+    ///     Flash a red vignette on screen for <paramref name="time"/> *2 seconds
+    /// </summary>
+    /// <param name="time">Time for vignette effect to appear/dissapear</param>
+    static IEnumerator VignetteHit(float time)
+    {
+        float timeCount = 0;
+        while (timeCount < time)
+        {
+            float t = timeCount / time;
+            Instance.vignette.intensity.value = Mathf.Lerp(0f, 0.45f, t);
+            timeCount += Time.deltaTime;
+            yield return null;
+        }
+        Instance.vignette.intensity.value = 0.45f;
+        timeCount = 0;
+        while (timeCount < time)
+        {
+            float t = timeCount / time;
+            Instance.vignette.intensity.value = Mathf.Lerp(0.45f, 0f, t);
+            timeCount += Time.deltaTime;
+            yield return null;
+        }
+        Instance.vignette.intensity.value = 0f;
     }
 }

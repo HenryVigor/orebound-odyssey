@@ -10,13 +10,16 @@ public class BasicEnemy : BaseEnemy
 
     private AIChase aiChase;
 
+    private SpriteRenderer enemySprite;
+
     // Sound
     public ZombieAudioScript zombieAudioScript;
 
     private void Start()
     {
+        enemySprite = GetComponent<SpriteRenderer>();
+        enemySprite.color = new(255f / 255f, 255f / 255f, 255f / 255f);
         currentHealth = maxHealth;
-
         aiChase = GetComponent<AIChase>();
     }
 
@@ -38,13 +41,30 @@ public class BasicEnemy : BaseEnemy
 
         if (currentHealth <= 0)
         {
-            ObjectDestroy();
+            aiChase.canMove = false;
+            isKillable = false;
+            // Fade out on death instead of the insta-destroy
+            StartCoroutine(FadeAway(0.15f));
         }
     }
 
     public override void ObjectDestroy()
     {
         Destroy(gameObject);
+    }
+
+    private IEnumerator FadeAway(float time)
+    {
+        float timeCount = 0;
+        while (timeCount < time)
+        {
+            float t = timeCount / time;
+            enemySprite.color = Color.Lerp(Color.white, new(0, 0, 0, 0), t);
+            timeCount += Time.deltaTime;
+            yield return null;
+        }
+        enemySprite.color = new(0, 0, 0, 0);
+        ObjectDestroy();
     }
 
     private void ResetMove()

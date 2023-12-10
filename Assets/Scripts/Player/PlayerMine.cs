@@ -104,6 +104,10 @@ public class PlayerMine : MonoBehaviour
                     entity.GetComponent<IDamageable>().Damage(Mathf.FloorToInt((attackDamage)));
                 }
 
+                // Play enemy hit particles
+                ParticleSystem hitParticles = entity.GetComponent<ParticleSystem>();
+                if (hitParticles != null) hitParticles.Play();
+
                 // Knockback
                 Vector2 diff = (transform.position - entity.transform.position).normalized;
                 Vector2 force = diff * knockback;

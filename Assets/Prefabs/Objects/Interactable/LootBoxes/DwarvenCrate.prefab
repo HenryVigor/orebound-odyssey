@@ -151,6 +151,7 @@ MonoBehaviour:
   limitInteractions: 0
   maxInteractions: 2
   interactState: 0
+  breakParticles: {fileID: 1782700655131604157, guid: d0474cab02dd0e3479c28d4abfb1e55f, type: 3}
   possibleBasicItems:
   - {fileID: 5658562684107599227, guid: 0fc8894dd5a5a1f4386631dd3c58183c, type: 3}
   - {fileID: 4072601693245005556, guid: 4bfbb7f6e019ef64f8e6612b4c1057ae, type: 3}
@@ -174,6 +175,7 @@ MonoBehaviour:
   - {fileID: 674928472080405030, guid: 5486b351bf24f9d4f96563e245530d9e, type: 3}
   - {fileID: 6131649409726753973, guid: 6887c1991f81ff345a731476a7db51c0, type: 3}
   - {fileID: 6131649409726753973, guid: 5660e11d6d33a2c4d8b0b6b918b2301a, type: 3}
+  - {fileID: 6131649409726753973, guid: a9f4fea2059a079468f051e36428a172, type: 3}
   possibleSpecialItems:
   - {fileID: 7067467450453258317, guid: ebb304f9a2453764c8953e6e71ce9e20, type: 3}
   - {fileID: 6778510398236049725, guid: cac0cc18f72b52a44aca3a5434c897e9, type: 3}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LootObject : InteractObject, IEducational
 {
-
+    public GameObject breakParticles;
     [SerializeField] List<GameObject> possibleBasicItems = new List<GameObject>();
     [SerializeField] List<GameObject> possibleRareItems = new List<GameObject>();
     [SerializeField] List<GameObject> possibleSpecialItems = new List<GameObject>();
@@ -47,6 +47,8 @@ public class LootObject : InteractObject, IEducational
         }
         else
         {
+            GameObject breakObj = Instantiate(breakParticles, transform.position, Quaternion.identity);
+            breakObj.GetComponent<ParticleSystem>().Play();
             DropLoot();
             Destroy(gameObject);
         }

@@ -151,6 +151,7 @@ MonoBehaviour:
   limitInteractions: 0
   maxInteractions: 2
   interactState: 0
+  breakParticles: {fileID: 1782700655131604157, guid: d0474cab02dd0e3479c28d4abfb1e55f, type: 3}
   possibleBasicItems:
   - {fileID: 9079316254227664623, guid: 501542f00348fff41b572ec54faa9a22, type: 3}
   - {fileID: 7929988436631910921, guid: 0e94da5f49ed90c41997cb5fdcaa80c5, type: 3}

@@ -9,7 +9,7 @@ public class BlockObject : BaseBlockObject
     //
 
     SpriteRenderer blockSpriteRenderer;
-
+    public GameObject breakParticles;
     private void Start()
     {
         blockSpriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -54,13 +54,17 @@ public class BlockObject : BaseBlockObject
         else
         {
             int currentBreakStage = (maxDurability - currentDurability) / breakTextureThreshold;
-            gameObject.GetComponent<SpriteRenderer>().sprite = breakSpriteList[currentBreakStage];
+            blockSpriteRenderer.sprite = breakSpriteList[currentBreakStage];
         }
 
     }
 
     public override void ObjectDestroy()
     {
+        GameObject breakObj = Instantiate(breakParticles, transform.position, Quaternion.identity);
+        ParticleSystem.MainModule main = breakObj.GetComponent<ParticleSystem>().main;
+        main.startColor = (blockSpriteRenderer.color/2.25f);
+        breakObj.GetComponent<ParticleSystem>().Play();
         Destroy(gameObject);
     }
 

@@ -122,7 +122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 0.6666667, y: 0.6666667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Attack Rate II
-  itemText: +0.1 Attack Rate
+  itemText: +0.02 Attack Rate
   itemAction: Pickup
   isInteractable: 1
   interactCooldown: 10
@@ -155,7 +155,7 @@ MonoBehaviour:
   healBonus: 0
   maxHealthBonus: 0
   upgradingAttack: 1
-  attackRateBonus: 0.1
+  attackRateBonus: 0.02
   attackDamageBonus: 0
   critChanceBonus: 0
   critMultiplierBonus: 0

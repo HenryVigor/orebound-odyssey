@@ -16,6 +16,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrappedStoneBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 8624341106286949554, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624341106286949554, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624341106286949554, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9182620941261498350, guid: 80bf8d49669e452458de6fb2c4f485c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -92,4 +104,4 @@ MonoBehaviour:
   - {fileID: -368958170, guid: 10bc32446adeeb242b87a1807d096ceb, type: 3}
   - {fileID: -252043280, guid: 0bb867af7b53fb04f8887788ad1ba604, type: 3}
   breakParticles: {fileID: 2289549727386296429, guid: c4c0175a4faa80f40b495aea2be73e02, type: 3}
-  SpawnedEnemy: {fileID: 5319390503971080706, guid: edf0c6874c83f6b4a8a32c97762c7fe6, type: 3}
+  SpawnedEnemy: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}

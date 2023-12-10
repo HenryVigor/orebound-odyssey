@@ -2093,6 +2093,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6779765981701635370, guid: c48827d9d84dd6548833a75a01b04b3f, type: 3}
+      propertyPath: SpItems.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779765981701635370, guid: c48827d9d84dd6548833a75a01b04b3f, type: 3}
+      propertyPath: SpItems.Array.data[14]
+      value: 
+      objectReference: {fileID: 6131649409726753973, guid: a9f4fea2059a079468f051e36428a172, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4187,6 +4195,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6779765981701635370, guid: c48827d9d84dd6548833a75a01b04b3f, type: 3}
+      propertyPath: SpItems.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779765981701635370, guid: c48827d9d84dd6548833a75a01b04b3f, type: 3}
+      propertyPath: SpItems.Array.data[14]
+      value: 
+      objectReference: {fileID: 6131649409726753973, guid: a9f4fea2059a079468f051e36428a172, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4265,6 +4281,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6779765981701635370, guid: c48827d9d84dd6548833a75a01b04b3f, type: 3}
+      propertyPath: SpItems.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6779765981701635370, guid: c48827d9d84dd6548833a75a01b04b3f, type: 3}
+      propertyPath: SpItems.Array.data[14]
+      value: 
+      objectReference: {fileID: 6131649409726753973, guid: a9f4fea2059a079468f051e36428a172, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

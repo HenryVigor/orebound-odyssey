@@ -90,6 +90,8 @@ public class CavernGenerator : MonoBehaviour
         noiseScale = Random.Range(6f, 13f);
         structurePos = new List<Vector3>(); // Holds positions to spawn structures after placing all blocks/extras
 
+        blockHolder = new GameObject("BlockHolder");
+
         // Random Color Variation
         float randomColorVar = Random.Range(-25, 25) / 255f;
         floorBaseColor = new(Mathf.Clamp((floorBaseColor.r + randomColorVar), 0, 1)
@@ -104,16 +106,13 @@ public class CavernGenerator : MonoBehaviour
         trappedBlock.GetComponent<SpriteRenderer>().color = floorBaseColor;
 
         // Generate background sprite
-        GameObject backgroundSprite = Instantiate(backgroundSpritePrefab, transform.position, Quaternion.identity);
+        GameObject backgroundSprite = Instantiate(backgroundSpritePrefab, transform.position, Quaternion.identity, blockHolder.transform);
         backgroundSprite.GetComponent<SpriteRenderer>().color = floorBaseColor;
         backgroundSprite.transform.localScale = new Vector3(width, height, 1);
 
         // Place background behind normal sprites
         backgroundSprite.transform.position = new Vector3(width / 2f - 0.5f, height / 2f - 0.5f, 0);
         backgroundSprite.GetComponent<SpriteRenderer>().sortingOrder = -1;
-
-        // Generate background sprite
-        blockHolder = new GameObject("BlockHolder");
 
         // Calculate spawn weights for spawnable items and set colors
         float totalEnemyRarity = 0f;

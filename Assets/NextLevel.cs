@@ -28,7 +28,7 @@ public class NextLevel : MonoBehaviour, IEducational
     }
 
     const int shopFrequency = 3; // How often a shop will appear
-    //const int shopScene = 1; // Shop scene index
+    static bool playerAtShop = false; // Whether player is at the shop
 
     void OnCollisionStay2D(Collision2D collision)
     {
@@ -50,20 +50,18 @@ public class NextLevel : MonoBehaviour, IEducational
 
     public void GoNextLevel()
     {
-        if (levelIndicator.LevelValue % shopFrequency == 0)
+        if (!playerAtShop && levelIndicator.LevelValue % shopFrequency == 0)
         {
-            SceneManager.LoadScene("ShopScene");
-            levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text
+            // Send player to shop
+            Player.Obj.transform.position = new(150.5f, 51.5f, Player.Obj.transform.position.z);
+            Instantiate(gameObject, new(150.5f, 49.5f, transform.position.z), Quaternion.identity);
+            Shop.Initialize();
+            playerAtShop = true;
         }
         else
         {
             Destroy(GameObject.Find("BlockHolder"));
             levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text --- Needed to move this into here so that the value was incremented before generation (for getting floor theme)
-
-            //// Randomly select a color from predefinedColors and color cavernPrefab's sprite renderer
-            //int randomIndex = Random.Range(0, predefinedColors.Length);
-            //cavernSpriteRenderer.color = predefinedColors[randomIndex];
-            //trappedStoneBlock.GetComponent<SpriteRenderer>().color = predefinedColors[randomIndex]; //Change color of trap blocks as well
 
             cavernGenerator.GenerateCavern();
         }

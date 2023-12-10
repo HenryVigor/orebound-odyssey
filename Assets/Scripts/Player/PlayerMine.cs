@@ -42,7 +42,7 @@ public class PlayerMine : MonoBehaviour
 
     [Header("Player Audio Settings")]
     // Sound
-    public PlayerAudioScript playerAudioScript;
+    public PlayerAudio playerAudio;
 
     private void Start()
     {
@@ -84,9 +84,6 @@ public class PlayerMine : MonoBehaviour
         // Attack any enemies in the attack range
         if (canAttack && usePickaxe == false)
         {
-            // Animation
-            toolAnimator.SetBool("Using Tool", true);
-
             canAttack = false;
 
             Collider2D[] hitEntities = Physics2D.OverlapBoxAll(attackPoint.position, new Vector2(attackAreaX, attackAreaY), attackPoint.eulerAngles.z, enemyLayers);
@@ -114,17 +111,14 @@ public class PlayerMine : MonoBehaviour
                 entity.attachedRigidbody.AddForce(-force, ForceMode2D.Impulse);
 
             }
-
-            Invoke("ResetUsingTool", 0.2f);
+            Debug.Log("attacking");
+            toolAnimator.SetTrigger("UseTool");
             Invoke("ResetAttack", attackRate);
         }
 
         // Mine any blocks in the mining range
         if (canMine && usePickaxe == true)
         {
-            // Animation
-            toolAnimator.SetBool("Using Tool", true);
-
             canMine = false;
 
             Collider2D[] hitEntities = Physics2D.OverlapBoxAll(attackPoint.position, new Vector2(mineAreaX, mineAreaY), attackPoint.eulerAngles.z, mineableLayers);
@@ -139,20 +133,15 @@ public class PlayerMine : MonoBehaviour
                 }
 
                 // Play mine sound
-                if (playerAudioScript != null) {
-                    playerAudioScript.PlaySoundMine();
+                if (playerAudio != null) {
+                    playerAudio.PlaySoundMine();
                 }
             }
 
-            Invoke("ResetUsingTool", 0.2f);
+            toolAnimator.SetTrigger("UseTool");
             Invoke("ResetMine", mineSpeed);
         }
 
-    }
-
-    private void ResetUsingTool()
-    {
-        toolAnimator.SetBool("Using Tool", false);
     }
 
     private void ResetAttack()

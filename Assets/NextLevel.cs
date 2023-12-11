@@ -50,6 +50,8 @@ public class NextLevel : MonoBehaviour, IEducational
             levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text --- Needed to move this into here so that the value was incremented before generation (for getting floor theme)
 
             cavernGenerator.GenerateCavern();
+            
+            playerAtShop = false;
         }
         Destroy(gameObject);
     }

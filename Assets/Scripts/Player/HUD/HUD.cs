@@ -30,4 +30,8 @@ public class HUD : MonoBehaviour {
             }
         }
     }
+    
+    void OnDestroy() {
+        _Instance = null;
+    }
 }

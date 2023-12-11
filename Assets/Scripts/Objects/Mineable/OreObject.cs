@@ -97,7 +97,7 @@ public class OreObject : BlockObject
         {
             DropItems();
         }
-
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMine>().playerScore += 1;
         base.ObjectDestroy();
     }
 

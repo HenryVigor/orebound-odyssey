@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.InputSystem;
 /// Player Combat
 /// <summary>
 ///     Singleton <see cref="MonoBehaviour"/> for managing player combat
@@ -50,6 +51,7 @@ public class PlayerCombat : MonoBehaviour {
 
     // Sound
     public PlayerAudio playerAudio;
+    public AudioClip deathSong;
 
     // PostProcessing for Damage Vignette Effect
     private Volume vol;
@@ -61,12 +63,19 @@ public class PlayerCombat : MonoBehaviour {
 
     // Inventory
     private InventorySystem inventorySystem;
-    
+
+    // Game Over HUD
+    private static GameObject gameOverScreen;
+    private bool gameOver = false;
 
     void Awake() {
         Instance = this;
+        Instance.gameObject.GetComponent<SpriteRenderer>().color = new(1, 1, 1, 1);
         vol = GameObject.FindGameObjectWithTag("PostProcess").GetComponent<Volume>();
         vol.profile.TryGet(out vignette);
+        gameOverScreen = transform.Find("HUD").Find("GameOverMenu").gameObject;
+        Instance.gameOver = false;
+        Instance.Invincible = false;
         Health = MaxHealth;
     }
     
@@ -77,7 +86,7 @@ public class PlayerCombat : MonoBehaviour {
     /// <summary>Registers a hit if player is not currently invincible</summary>
     /// <param name="damage">Amount of damage to deal to player</param>
     public static void Hit(int damage, string enemyName) {
-        if (!Instance.Invincible) {
+        if (!Instance.Invincible && !Instance.gameOver) {
             // Damage Vignette
             Instance.StartCoroutine(VignetteHit(0.175f));
             // Subtract health
@@ -108,6 +117,14 @@ public class PlayerCombat : MonoBehaviour {
             {
                 Instance.playerAudio.PlaySoundHurt();
             }
+
+            // Game Over
+            if (Health <= 0)
+            {
+                Instance.gameOver = true;
+                Instance.GameOver();
+            }
+
         }
     }
     
@@ -182,4 +199,37 @@ public class PlayerCombat : MonoBehaviour {
     {
         Instance.playerMovement.ExternalSpeedModifier = 1f;
     }
+
+    static IEnumerator FadeAway(float time)
+    {
+        SpriteRenderer playerSprite = Instance.gameObject.GetComponent<SpriteRenderer>();
+        float timeCount = 0;
+        while (timeCount < time)
+        {
+            float t = timeCount / time;
+            playerSprite.color = Color.Lerp(Color.white, new(0, 0, 0, 0), t);
+            timeCount += Time.deltaTime;
+            yield return null;
+        }
+        playerSprite.color = new(0, 0, 0, 0);
+    }
+
+    private void GameOver()
+    {
+        // Set player invincible and fade sprite away
+        Instance.StartCoroutine(IFrames(999f));
+        Instance.StartCoroutine(FadeAway(1.25f));
+        // Deactivate Player Components
+        Instance.gameObject.GetComponent<PlayerMine>().enabled = false;
+        Instance.gameObject.GetComponent<PlayerMovement>().enabled = false;
+        Instance.gameObject.GetComponent<PlayerPlace>().enabled = false;
+        Instance.gameObject.GetComponent<PlayerInteract>().enabled = false;
+        Instance.gameObject.GetComponent<PlayerInput>().enabled = false;
+        // Set death background music
+        GameObject.Find("Background Music").GetComponent<AudioSource>().clip = Instance.deathSong;
+        GameObject.Find("Background Music").GetComponent<AudioSource>().Play();
+        // Enable gameover screen
+        gameOverScreen.SetActive(true);
+    }
+
 }

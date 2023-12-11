@@ -15,6 +15,9 @@ public class PlayerMine : MonoBehaviour
     // Set which tool the player is using
     public bool usePickaxe = true;
 
+    // Score (for end screen)
+    public int playerScore = 0;
+
     // Attack Variables
     [Header("Player Attack Settings")]
     public float attackRate = 0.45f; // Cooldown between attacks

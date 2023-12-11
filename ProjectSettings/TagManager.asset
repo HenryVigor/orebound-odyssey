@@ -11,6 +11,7 @@ TagManager:
   - Stairs
   - Torch
   - PostProcess
+  - Inventory
   layers:
   - Default
   - TransparentFX

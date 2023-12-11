@@ -54,7 +54,12 @@ public class BlockObject : BaseBlockObject
         else
         {
             int currentBreakStage = (maxDurability - currentDurability) / breakTextureThreshold;
-            blockSpriteRenderer.sprite = breakSpriteList[currentBreakStage];
+            if (currentBreakStage > breakSpriteList.Count - 1)
+            {
+                blockSpriteRenderer.sprite = breakSpriteList[breakSpriteList.Count - 1];
+            } else {
+                blockSpriteRenderer.sprite = breakSpriteList[currentBreakStage];
+            }
         }
 
     }

@@ -60,8 +60,6 @@ public class PlayerMine : MonoBehaviour
     private void Awake()
     {
         pi = GetComponent<PlayerInput>();
-
-        
     }
 
     private void Update()

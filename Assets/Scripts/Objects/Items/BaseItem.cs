@@ -17,6 +17,7 @@ public class BaseItem : AbstractItem
     protected override void AddUpgrade()
     {
         var player = GameObject.FindGameObjectWithTag("Player");
+        var inventory = GameObject.FindGameObjectWithTag("Inventory");
         if (upgradingHealth)
         {
             PlayerCombat.UpgradeMaxHealth(PlayerCombat.GetMaxHealth() + Mathf.FloorToInt(maxHealthBonus));
@@ -28,6 +29,7 @@ public class BaseItem : AbstractItem
         //}
         if (upgradingAttack)
         {
+            // Player values
             var playerAttack = player.GetComponent<PlayerMine>();
             var playerAttackRange = player.transform.Find("PlayerRange");
             playerAttack.attackRate -= attackRateBonus;
@@ -37,9 +39,19 @@ public class BaseItem : AbstractItem
             playerAttack.attackAreaX += attackAreaXBonus;
             playerAttack.attackAreaY += attackAreaYBonus;
             playerAttackRange.transform.position = new Vector2(playerAttackRange.transform.position.x + (attackAreaXBonus / 2), playerAttackRange.transform.position.y);
+
+            // Hud values
+            var inventorySystem = inventory.GetComponent<InventorySystem>();
+            inventorySystem.attackDamageValue += Mathf.RoundToInt(attackDamageBonus);
+            inventorySystem.attackRangeValue += Mathf.RoundToInt(attackAreaXBonus * 10);
+            inventorySystem.attackSpeedValue += Mathf.RoundToInt(attackRateBonus * 10);
+            inventorySystem.attackWidthValue += Mathf.RoundToInt(attackAreaYBonus * 10);
+            inventorySystem.critChanceValue += Mathf.RoundToInt(critChanceBonus);
+            inventorySystem.critDamageValue += Mathf.RoundToInt(critMultiplierBonus * 10);
         }
         if (upgradingMining)
         {
+            // Player values
             var playerMine = player.GetComponent<PlayerMine>();
             var playerMineRange = player.transform.Find("PlayerRange");
             playerMine.mineSpeed -= mineSpeedBonus;
@@ -49,6 +61,15 @@ public class BaseItem : AbstractItem
             playerMine.mineAreaX += mineAreaXBonus;
             playerMine.mineAreaY += mineAreaYBonus;
             playerMineRange.transform.position = new Vector2(playerMineRange.transform.position.x + (attackAreaXBonus / 2), playerMineRange.transform.position.y);
+
+            // HUD values
+            var inventorySystem = inventory.GetComponent<InventorySystem>();
+            inventorySystem.mineDamageValue += Mathf.RoundToInt(mineDamageBonus);
+            inventorySystem.mineRangeValue += Mathf.RoundToInt(mineAreaXBonus * 10);
+            inventorySystem.mineSpeedValue += Mathf.RoundToInt(mineSpeedBonus * 10);
+            inventorySystem.mineWidthValue += Mathf.RoundToInt(mineAreaYBonus * 10);
+            inventorySystem.oreBonusValue += Mathf.RoundToInt(mineOreBonus);
+            inventorySystem.oreMultiplierValue += Mathf.RoundToInt(oreMultiplierBonus * 10);
         }
     }
 

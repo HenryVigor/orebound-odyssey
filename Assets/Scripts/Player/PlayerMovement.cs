@@ -46,11 +46,10 @@ public class PlayerMovement : BehaviourFSM {
         if (toolAnimatorObject != null)
         {
         toolAnimator = toolAnimatorObject.GetComponent<Animator>();
-        Debug.Log("FOUND");
         }
         else
         {
-            Debug.LogError("oops");
+            Debug.LogError("Animator not found!");
         }
     }
 

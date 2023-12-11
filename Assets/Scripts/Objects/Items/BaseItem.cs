@@ -44,7 +44,7 @@ public class BaseItem : AbstractItem
             var inventorySystem = inventory.GetComponent<InventorySystem>();
             inventorySystem.attackDamageValue += Mathf.RoundToInt(attackDamageBonus);
             inventorySystem.attackRangeValue += Mathf.RoundToInt(attackAreaXBonus * 10);
-            inventorySystem.attackSpeedValue += Mathf.RoundToInt(attackRateBonus * 10);
+            inventorySystem.attackSpeedValue += Mathf.RoundToInt(attackRateBonus * 100);
             inventorySystem.attackWidthValue += Mathf.RoundToInt(attackAreaYBonus * 10);
             inventorySystem.critChanceValue += Mathf.RoundToInt(critChanceBonus);
             inventorySystem.critDamageValue += Mathf.RoundToInt(critMultiplierBonus * 10);
@@ -66,7 +66,7 @@ public class BaseItem : AbstractItem
             var inventorySystem = inventory.GetComponent<InventorySystem>();
             inventorySystem.mineDamageValue += Mathf.RoundToInt(mineDamageBonus);
             inventorySystem.mineRangeValue += Mathf.RoundToInt(mineAreaXBonus * 10);
-            inventorySystem.mineSpeedValue += Mathf.RoundToInt(mineSpeedBonus * 10);
+            inventorySystem.mineSpeedValue += Mathf.RoundToInt(mineSpeedBonus * 100);
             inventorySystem.mineWidthValue += Mathf.RoundToInt(mineAreaYBonus * 10);
             inventorySystem.oreBonusValue += Mathf.RoundToInt(mineOreBonus);
             inventorySystem.oreMultiplierValue += Mathf.RoundToInt(oreMultiplierBonus * 10);

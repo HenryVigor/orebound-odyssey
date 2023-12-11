@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.60784316, g: 0.34117648, b: 0.7921569, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 7fbd7db68bfd90a40ac667c521ab3f1f, type: 3}
+  m_Color: {r: 0.8237355, g: 0.77345145, b: 0.8584906, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -122,7 +122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.8, y: 0.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68fd099aadd932f4984c80c14f1ca282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Dwarven Helmet
+  itemName: Dwarven Armor
   itemText: +25% Max HP
   itemAction: Pickup
   isInteractable: 1

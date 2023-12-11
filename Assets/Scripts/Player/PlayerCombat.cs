@@ -54,6 +54,13 @@ public class PlayerCombat : MonoBehaviour {
     // PostProcessing for Damage Vignette Effect
     private Volume vol;
     private Vignette vignette;
+
+    // Player movement
+    public PlayerMovement playerMovement;
+    public float movementPenaltyCooldown = 2f;
+
+    // Inventory
+    private InventorySystem inventorySystem;
     
 
     void Awake() {
@@ -69,7 +76,7 @@ public class PlayerCombat : MonoBehaviour {
     
     /// <summary>Registers a hit if player is not currently invincible</summary>
     /// <param name="damage">Amount of damage to deal to player</param>
-    public static void Hit(int damage) {
+    public static void Hit(int damage, string enemyName) {
         if (!Instance.Invincible) {
             // Damage Vignette
             Instance.StartCoroutine(VignetteHit(0.175f));
@@ -80,8 +87,25 @@ public class PlayerCombat : MonoBehaviour {
             // Grant invincibility frames
             Instance.StartCoroutine(IFrames(INVINCIBILITY_PERIOD));
 
+            if (enemyName == "Spider")
+            {
+                Instance.playerMovement.ExternalSpeedModifier = 0.5f;
+                Instance.Invoke("ResetPlayerSpeed", Instance.movementPenaltyCooldown);
+            }
+            if (enemyName == "Goblin")
+            {
+                Instance.inventorySystem = FindObjectOfType<InventorySystem>();
+                if (Instance.inventorySystem.CoinsValue < 10)
+                {
+                    Instance.inventorySystem.CoinsValue -= Instance.inventorySystem.CoinsValue;
+                } else {
+                    Instance.inventorySystem.CoinsValue -= 10;
+                }
+            }
+
             // Play hurt sound
-            if (Instance.playerAudio != null) {
+            if (Instance.playerAudio != null) 
+            {
                 Instance.playerAudio.PlaySoundHurt();
             }
         }
@@ -92,6 +116,10 @@ public class PlayerCombat : MonoBehaviour {
     public static void Heal(int amt) {
         // Add health
         Health += amt;
+        if (Health > GetMaxHealth())
+        {
+            Health = GetMaxHealth();
+        }
         
         // Update health indicator
         HUD.HIndicator.Set(Health);
@@ -103,6 +131,7 @@ public class PlayerCombat : MonoBehaviour {
     {
         // Add health
         Instance.MaxHealth = amt;
+        HUD.MaxHIndicator.Set(GetMaxHealth());
     }
 
     /// <summary>Get the player's max health</summary>
@@ -147,5 +176,10 @@ public class PlayerCombat : MonoBehaviour {
             yield return null;
         }
         Instance.vignette.intensity.value = 0f;
+    }
+
+    private void ResetPlayerSpeed()
+    {
+        Instance.playerMovement.ExternalSpeedModifier = 1f;
     }
 }

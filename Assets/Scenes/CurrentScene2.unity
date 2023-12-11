@@ -1717,11 +1717,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &175048278 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8951510992305758813, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
-  m_PrefabInstance: {fileID: 1954120894}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &256717145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3588,9 +3583,11 @@ MonoBehaviour:
     rarity: 5
   enemies:
   - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
-    rarity: 70
+    rarity: 50
   - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
     rarity: 30
+  - enemyPrefab: {fileID: 7735587945354466331, guid: 64a47a6f9e35d4b488c3c44b79c4a319, type: 3}
+    rarity: 20
   threshold: 0.4
   oreChance: 0.05
   trapBlockChance: 0.005
@@ -3679,9 +3676,11 @@ MonoBehaviour:
       rarity: 5
     enemies:
     - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
-      rarity: 70
+      rarity: 50
     - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
       rarity: 30
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 64a47a6f9e35d4b488c3c44b79c4a319, type: 3}
+      rarity: 20
     threshold: 0.4
     oreChance: 0.05
     trapBlockChance: 0.005
@@ -3726,9 +3725,11 @@ MonoBehaviour:
       rarity: 5
     enemies:
     - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
-      rarity: 70
+      rarity: 50
     - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
       rarity: 30
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 64a47a6f9e35d4b488c3c44b79c4a319, type: 3}
+      rarity: 20
     threshold: 0.53
     oreChance: 0.07
     trapBlockChance: 0.005
@@ -3773,9 +3774,11 @@ MonoBehaviour:
       rarity: 5
     enemies:
     - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
-      rarity: 40
+      rarity: 20
     - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
       rarity: 60
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 64a47a6f9e35d4b488c3c44b79c4a319, type: 3}
+      rarity: 20
     threshold: 0.465
     oreChance: 0.04
     trapBlockChance: 0.0065
@@ -3820,9 +3823,11 @@ MonoBehaviour:
       rarity: 5
     enemies:
     - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
-      rarity: 20
+      rarity: 10
     - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
       rarity: 80
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 64a47a6f9e35d4b488c3c44b79c4a319, type: 3}
+      rarity: 10
     threshold: 0.38
     oreChance: 0.05
     trapBlockChance: 0.005
@@ -3867,8 +3872,10 @@ MonoBehaviour:
       rarity: 5
     enemies:
     - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
-      rarity: 80
+      rarity: 60
     - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
+      rarity: 20
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 64a47a6f9e35d4b488c3c44b79c4a319, type: 3}
       rarity: 20
     threshold: 0.42
     oreChance: 0.05
@@ -3914,9 +3921,11 @@ MonoBehaviour:
       rarity: 10
     enemies:
     - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
-      rarity: 70
+      rarity: 50
     - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
       rarity: 30
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 64a47a6f9e35d4b488c3c44b79c4a319, type: 3}
+      rarity: 20
     threshold: 0.3
     oreChance: 0.065
     trapBlockChance: 0.005
@@ -3959,9 +3968,11 @@ MonoBehaviour:
       rarity: 5
     enemies:
     - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
-      rarity: 70
+      rarity: 50
     - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
       rarity: 30
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 64a47a6f9e35d4b488c3c44b79c4a319, type: 3}
+      rarity: 20
     threshold: 0.42
     oreChance: 0.065
     trapBlockChance: 0.005
@@ -4006,9 +4017,11 @@ MonoBehaviour:
       rarity: 25
     enemies:
     - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
-      rarity: 70
+      rarity: 50
     - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
       rarity: 30
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 64a47a6f9e35d4b488c3c44b79c4a319, type: 3}
+      rarity: 20
     threshold: 0.35
     oreChance: 0.062
     trapBlockChance: 0.005
@@ -4053,9 +4066,11 @@ MonoBehaviour:
       rarity: 5
     enemies:
     - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
-      rarity: 70
+      rarity: 10
     - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
-      rarity: 30
+      rarity: 10
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 64a47a6f9e35d4b488c3c44b79c4a319, type: 3}
+      rarity: 80
     threshold: 0.5
     oreChance: 0.06
     trapBlockChance: 0.006
@@ -4102,8 +4117,10 @@ MonoBehaviour:
       rarity: 5
     enemies:
     - enemyPrefab: {fileID: 7735587945354466331, guid: 41626ee12f8596a439e87b8434bc76b8, type: 3}
-      rarity: 70
+      rarity: 40
     - enemyPrefab: {fileID: 7735587945354466331, guid: 724eeee89669f12418a043744356c366, type: 3}
+      rarity: 30
+    - enemyPrefab: {fileID: 7735587945354466331, guid: 64a47a6f9e35d4b488c3c44b79c4a319, type: 3}
       rarity: 30
     threshold: 0.45
     oreChance: 0.1
@@ -12844,11 +12861,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1940222469 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7202451973715323715, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
-  m_PrefabInstance: {fileID: 1954120894}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1954120894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12857,37 +12869,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3240434164324330300, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
-      propertyPath: m_Color.a
-      value: 0.29411766
-      objectReference: {fileID: 0}
-    - target: {fileID: 3240434164324330300, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
-      propertyPath: m_Color.g
-      value: 0.0627451
-      objectReference: {fileID: 0}
-    - target: {fileID: 3240434164324330300, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3550935856256458566, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5235846513286306316, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
-      propertyPath: m_Color.a
-      value: 0.29411766
-      objectReference: {fileID: 0}
-    - target: {fileID: 5235846513286306316, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5235846513286306316, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
-      propertyPath: m_Color.g
-      value: 0.06209462
-      objectReference: {fileID: 0}
-    - target: {fileID: 5235846513286306316, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6255884248394636117, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12929,14 +12913,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8675188648218143622, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
-      propertyPath: swordHighlight
-      value: 
-      objectReference: {fileID: 1940222469}
-    - target: {fileID: 8675188648218143622, guid: e03f82b1db7b22e49bad96900352a8a9, type: 3}
-      propertyPath: pickaxeHightlight
-      value: 
-      objectReference: {fileID: 175048278}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

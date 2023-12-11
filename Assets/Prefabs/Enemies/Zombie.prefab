@@ -123,6 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyKnockback: 7
+  enemyName: Zombie
+  aIChase: {fileID: 2900217717080131260}
 --- !u!114 &9058645523666162167
 MonoBehaviour:
   m_ObjectHideFlags: 0

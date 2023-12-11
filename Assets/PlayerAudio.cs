@@ -7,6 +7,7 @@ public class PlayerAudio : MonoBehaviour
 
     public AudioSource audioSourceHurt;
     public AudioSource audioSourceMine;
+    public AudioSource audioSourcePowerup;
 
     public void PlaySoundHurt() {
         audioSourceHurt.Play();
@@ -14,5 +15,9 @@ public class PlayerAudio : MonoBehaviour
 
     public void PlaySoundMine() {
         audioSourceMine.Play();
+    }
+
+    public void PlaySoundPowerup() {
+        audioSourcePowerup.Play();
     }
 }

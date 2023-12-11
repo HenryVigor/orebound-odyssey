@@ -49,11 +49,11 @@ public class PlayerMine : MonoBehaviour
         Transform toolAnimatorObject = transform.Find("Tool");
         if (toolAnimatorObject != null)
         {
-        toolAnimator = toolAnimatorObject.GetComponent<Animator>();
+            toolAnimator = toolAnimatorObject.GetComponent<Animator>();
         }
         else
         {
-            Debug.LogError("oops");
+            Debug.LogError("Animator not found!");
         }
     }
 
@@ -109,7 +109,6 @@ public class PlayerMine : MonoBehaviour
                 entity.attachedRigidbody.AddForce(-force, ForceMode2D.Impulse);
 
             }
-            Debug.Log("attacking");
             toolAnimator.SetTrigger("UseTool");
             Invoke("ResetAttack", attackRate);
         }

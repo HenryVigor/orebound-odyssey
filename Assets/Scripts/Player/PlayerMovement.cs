@@ -21,7 +21,7 @@ public class PlayerMovement : BehaviourFSM {
     /// <summary>
     ///     Serialized modifier for speed and acceleration calculations
     /// </summary>
-    [SerializeField] float ExternalSpeedModifier;
+    [SerializeField] public float ExternalSpeedModifier;
     
     /// <summary>Lock status for movement input</summary>
     bool InputLocked = false;

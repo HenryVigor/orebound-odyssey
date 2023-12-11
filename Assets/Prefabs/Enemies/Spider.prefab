@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 681f6bf5a8ef20b479d558f7177207f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
   canMove: 1
   canRoam: 1
   animator: {fileID: 2325871617621789824}
@@ -123,6 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyKnockback: 7
+  enemyName: Spider
+  aIChase: {fileID: 2900217717080131260}
 --- !u!114 &9058645523666162167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,8 +138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isKillable: 1
-  maxHealth: 30
-  currentHealth: 30
+  maxHealth: 20
+  currentHealth: 20
   stunRate: 0.45
   enemyAudio: {fileID: -6117480292627856856}
 --- !u!50 &1693895048652100578
@@ -243,7 +245,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2d3bea29d2a70714c9fa020c999137e7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 635ea56951086af46983f1301aafcaff, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

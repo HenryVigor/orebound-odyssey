@@ -17,6 +17,7 @@ public class BaseItem : AbstractItem
     protected override void AddUpgrade()
     {
         var player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<PlayerMine>().playerScore += 2;
         var inventory = GameObject.FindGameObjectWithTag("Inventory");
         if (upgradingHealth)
         {

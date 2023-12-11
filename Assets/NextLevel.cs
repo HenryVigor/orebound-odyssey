@@ -48,7 +48,7 @@ public class NextLevel : MonoBehaviour, IEducational
         {
             Destroy(GameObject.Find("BlockHolder"));
             levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text --- Needed to move this into here so that the value was incremented before generation (for getting floor theme)
-
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMine>().playerScore += 1;
             cavernGenerator.GenerateCavern();
         }
         Destroy(gameObject);

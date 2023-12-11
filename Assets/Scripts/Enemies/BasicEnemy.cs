@@ -50,6 +50,7 @@ public class BasicEnemy : BaseEnemy
 
     public override void ObjectDestroy()
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMine>().playerScore += 3;
         Destroy(gameObject);
     }
 

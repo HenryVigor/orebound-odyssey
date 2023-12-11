@@ -112,7 +112,7 @@ public class CavernGenerator : MonoBehaviour
 
         // Place background behind normal sprites
         backgroundSprite.transform.position = new Vector3(width / 2f - 0.5f, height / 2f - 0.5f, 0);
-        backgroundSprite.GetComponent<SpriteRenderer>().sortingOrder = -1;
+        backgroundSprite.GetComponent<SpriteRenderer>().sortingOrder = -2;
 
         // Calculate spawn weights for spawnable items and set colors
         float totalEnemyRarity = 0f;

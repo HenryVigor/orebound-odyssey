@@ -31,6 +31,20 @@ public class Player : MonoBehaviour {
         // else DontDestroyOnLoad(gameObject);
     }
     
+    // void Update() {
+    //     if (Input.GetKeyDown(KeyCode.Return)) {
+    //         // Teleport player to shop (for testing)
+    //         Obj.transform.position =
+    //             new(150.5f, 51.5f, Obj.transform.position.z)
+    //         ;
+    //     }
+        
+    //     if (Input.GetKeyDown(KeyCode.RightShift)) {
+    //         // Reroll shop items (for testing)
+    //         Shop.RollItems();
+    //     }
+    // }
+    
     void OnDestroy() {
         _Instance = null;
     }

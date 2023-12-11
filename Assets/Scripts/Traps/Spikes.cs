@@ -7,7 +7,8 @@ public class Spikes : MonoBehaviour {
             collider.gameObject == Player.Obj &&
             collider.GetComponent<Rigidbody2D>().velocity.magnitude >= 0.3f
         ) {
-            PlayerCombat.Hit(1);
+            if (PlayerCombat.spikeDamageImmune == false)
+            PlayerCombat.Hit(1, "Spikes");
         }
     }
 }

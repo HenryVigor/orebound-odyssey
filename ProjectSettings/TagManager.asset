@@ -10,6 +10,8 @@ TagManager:
   - Interactable
   - Stairs
   - Torch
+  - PostProcess
+  - Inventory
   layers:
   - Default
   - TransparentFX

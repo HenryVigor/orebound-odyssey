@@ -74,9 +74,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0a56f7bc9cde6c0479060838f8f255fc, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.84365517, g: 0.8005964, b: 0.7139827, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -152,6 +152,7 @@ MonoBehaviour:
   - {fileID: 386452361, guid: c7d21fcf01d56d744bcf0e841e9ae7a9, type: 3}
   - {fileID: -1170953536, guid: c7d21fcf01d56d744bcf0e841e9ae7a9, type: 3}
   - {fileID: 1491619233, guid: c7d21fcf01d56d744bcf0e841e9ae7a9, type: 3}
+  breakParticles: {fileID: 2289549727386296429, guid: c4c0175a4faa80f40b495aea2be73e02, type: 3}
   hasDrops: 1
   dropCount: 1
   baseDropValue: 1

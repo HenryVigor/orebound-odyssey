@@ -6,6 +6,7 @@ using UnityEngine;
 public class HUD : MonoBehaviour {
     /// <summary>Static pointer to HUD'S health indicator script</summary>
     public static HealthIndicator HIndicator { get; private set; }
+    public static MaxHealthIndicator MaxHIndicator { get; private set; }
     
     static HUD _Instance;
     /// <summary>Singleton HUD instance</summary>
@@ -22,6 +23,9 @@ public class HUD : MonoBehaviour {
             foreach (Transform child in transform) {
                 if (child.name == "Health Indicator") {
                     HIndicator = child.GetComponent<HealthIndicator>();
+                }
+                if (child.name == "Max Health Indicator") {
+                    MaxHIndicator = child.GetComponent<MaxHealthIndicator>();
                 }
             }
         }

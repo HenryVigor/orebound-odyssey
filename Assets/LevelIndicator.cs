@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class LevelIndicator : MonoBehaviour
 {
-    private static int staticLevelValue = 1;
-    
     public TextMeshProUGUI levelText;
     [SerializeField] private int _levelValue = 1; //[SerializeField] will make the private value visible in the inspector window.
 
@@ -19,7 +17,6 @@ public class LevelIndicator : MonoBehaviour
             {
                 _levelValue = value;
                 UpdateLevelText();
-                staticLevelValue = value;
             }
         }
     }
@@ -27,7 +24,6 @@ public class LevelIndicator : MonoBehaviour
     void Start()
     {
         // Initial setup of the text
-        LevelValue = staticLevelValue;
         UpdateLevelText();
     }
 

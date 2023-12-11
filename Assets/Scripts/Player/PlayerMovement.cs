@@ -21,7 +21,7 @@ public class PlayerMovement : BehaviourFSM {
     /// <summary>
     ///     Serialized modifier for speed and acceleration calculations
     /// </summary>
-    [SerializeField] float ExternalSpeedModifier;
+    [SerializeField] public float ExternalSpeedModifier;
     
     /// <summary>Lock status for movement input</summary>
     bool InputLocked = false;
@@ -46,11 +46,10 @@ public class PlayerMovement : BehaviourFSM {
         if (toolAnimatorObject != null)
         {
         toolAnimator = toolAnimatorObject.GetComponent<Animator>();
-        Debug.Log("FOUND");
         }
         else
         {
-            Debug.LogError("oops");
+            Debug.LogError("Animator not found!");
         }
     }
 

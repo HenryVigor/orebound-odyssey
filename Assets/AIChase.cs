@@ -11,6 +11,11 @@ public class AIChase : MonoBehaviour
     // Prevent moving when damaged
     public bool canMove = true;
 
+    // For idle roaming - enemies moving slightly when not following player
+    public bool canRoam = true;
+    private bool isRoaming = false;
+    private Vector2 roamPos;
+
     // Set up Animator Controller
     public Animator animator;
 
@@ -19,6 +24,8 @@ public class AIChase : MonoBehaviour
     {
         // Get animation component
         animator = GetComponent<Animator>();
+        // Set default idle pos
+        roamPos = transform.position;
     }
 
     // Update is called once per frame
@@ -31,15 +38,48 @@ public class AIChase : MonoBehaviour
 
         if(distance < 4 && canMove)
         {
+            isRoaming = false;
             transform.position = Vector2.MoveTowards(this.transform.position, Player.Obj.transform.position, speed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(Vector3.forward * angle);
 
             // Set animation values
             animator.SetBool("Is Moving", true);
             animator.SetFloat("Angle", angle);
-        } else {
+        } 
+        else if (canRoam && isRoaming)
+        {
+            Vector2 roamDir = roamPos - new Vector2(transform.position.x, transform.position.y);
+            roamDir.Normalize();
+            float roamAngle = Mathf.Atan2(roamDir.y, roamDir.x) * Mathf.Rad2Deg;
+            transform.position = Vector2.MoveTowards(transform.position, roamPos, speed/2 * Time.deltaTime);
+            transform.rotation = Quaternion.Euler(Vector3.forward * roamAngle);
+            // Set animation values
+            if (Mathf.Approximately(transform.position.x, roamPos.x) && Mathf.Approximately(transform.position.y, roamPos.y))
+            {
+                animator.SetBool("Is Moving", false);
+            }
+            else
+            {
+                animator.SetBool("Is Moving", true);
+                animator.SetFloat("Angle", roamAngle);
+            }
+        }
+        else if (canRoam && distance < 24 && canMove && !isRoaming)
+        {
+            roamPos = new Vector2(transform.position.x + Random.Range(-1.5f, 1.5f), transform.position.y + Random.Range(-1.5f, 1.5f));
+            isRoaming = true;
+            Invoke("ResetRoaming", Random.Range(6f, 12f));
+        }
+        else {
             animator.SetBool("Is Moving", false);
         }
 
     }
+
+    private void ResetRoaming()
+    {
+        isRoaming = false;
+    }
+
+
 }

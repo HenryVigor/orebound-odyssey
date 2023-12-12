@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.IO;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
@@ -57,7 +58,9 @@ public class EducationQuestion : MonoBehaviour
     private void Awake()
     {
         // Create question bank from JSON
-        questionBank = JsonUtility.FromJson<Questions>(questionBankJSON.text);
+        string jsonPath = Application.streamingAssetsPath + "/QuestionBank.txt";
+        string jsonContents = File.ReadAllText(jsonPath);
+        questionBank = JsonUtility.FromJson<Questions>(jsonContents);
     }
 
     private void OnEnable()
@@ -209,13 +212,13 @@ public class EducationQuestion : MonoBehaviour
         bButtonImage.color = new(1, 1, 1, 0);
         cButtonImage.color = new(1, 1, 1, 0);
         dButtonImage.color = new(1, 1, 1, 0);
+        ClosePrompt();
         if (correct)
         {
             // Apply success results
             targetObject.GetComponent<IEducational>().EduAnswerCorrect();
             questionAnsweredCount++;
         }
-        ClosePrompt();
     }
 
 }

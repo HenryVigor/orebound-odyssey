@@ -7,6 +7,7 @@ public class NextLevel : MonoBehaviour, IEducational
 {
     public CavernGenerator cavernGenerator; // Reference to the CavernGenerator component
     private LevelIndicator levelIndicator; // Declare levelIndicator at the class level
+    private bool hasBeenPrompted = false;
 
     void Start()
     {
@@ -22,10 +23,14 @@ public class NextLevel : MonoBehaviour, IEducational
         {
             if (collision.gameObject.GetComponent<PlayerInteract>().educationalMode == true)
             {
-                var prompt = GameObject.FindGameObjectWithTag("Player").transform.Find("HUD").Find("EduPrompt");
-                prompt.GetComponent<EducationQuestion>().targetObject = gameObject;
-                prompt.transform.Find("DropText").gameObject.SetActive(false);
-                prompt.gameObject.SetActive(true);
+                if (!hasBeenPrompted)
+                {
+                    var prompt = GameObject.FindGameObjectWithTag("Player").transform.Find("HUD").Find("EduPrompt");
+                    prompt.GetComponent<EducationQuestion>().targetObject = gameObject;
+                    prompt.transform.Find("DropText").gameObject.SetActive(false);
+                    prompt.gameObject.SetActive(true);
+                    hasBeenPrompted = true;
+                }
             }
             else
             {
@@ -50,6 +55,7 @@ public class NextLevel : MonoBehaviour, IEducational
             levelIndicator.LevelValue += 1; // Increment the level value, this will automatically update the UI text --- Needed to move this into here so that the value was incremented before generation (for getting floor theme)
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMine>().playerScore += 1;
             cavernGenerator.GenerateCavern();
+            playerAtShop = false;
         }
         Destroy(gameObject);
     }

@@ -36,19 +36,19 @@ public class DevTools : MonoBehaviour
 
     private void TPCrate()
     {
-        if (GameObject.Find("BlockHolder").transform.Find("WoodenCrate(Clone)").gameObject != null)
+        if (GameObject.Find("BlockHolder").transform.Find("WoodenCrate(Clone)") != null)
         {
             GameObject crate = GameObject.Find("BlockHolder").transform.Find("WoodenCrate(Clone)").gameObject;
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             player.transform.position = new Vector3(crate.transform.position.x, crate.transform.position.y - 2f, player.transform.position.z);
         }
-        else if (GameObject.Find("BlockHolder").transform.Find("MetalCrate(Clone)").gameObject != null)
+        else if (GameObject.Find("BlockHolder").transform.Find("MetalCrate(Clone)") != null)
         {
             GameObject crate2 = GameObject.Find("BlockHolder").transform.Find("MetalCrate(Clone)").gameObject;
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             player.transform.position = new Vector3(crate2.transform.position.x, crate2.transform.position.y - 2f, player.transform.position.z);
         }
-        else if (GameObject.Find("BlockHolder").transform.Find("DwarvenCrate(Clone)").gameObject != null)
+        else if (GameObject.Find("BlockHolder").transform.Find("DwarvenCrate(Clone)") != null)
         {
             GameObject crate3 = GameObject.Find("BlockHolder").transform.Find("DwarvenCrate(Clone)").gameObject;
             GameObject player = GameObject.FindGameObjectWithTag("Player");

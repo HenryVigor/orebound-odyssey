@@ -22,10 +22,7 @@ public class NextLevel : MonoBehaviour, IEducational
         {
             if (collision.gameObject.GetComponent<PlayerInteract>().educationalMode == true)
             {
-                var prompt = GameObject.FindGameObjectWithTag("Player").transform.Find("HUD").Find("EduPrompt");
-                prompt.GetComponent<EducationQuestion>().targetObject = gameObject;
-                prompt.transform.Find("DropText").gameObject.SetActive(false);
-                prompt.gameObject.SetActive(true);
+                GoNextLevel();
             }
             else
             {

@@ -35,6 +35,7 @@ public class GameOverMenu : MonoBehaviour
 
     public void BackToMenu()
     {
+        Shop.ResetShop();
         SceneManager.LoadScene("MainMenu2");
     }
 

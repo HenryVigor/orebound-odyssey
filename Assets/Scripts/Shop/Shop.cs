@@ -48,7 +48,20 @@ public static class Shop {
     public static void AddBuyStation(BuyStation station) {
         BuyStations.Add(station);
     }
-    
+
+    public static void ResetShop()
+    {
+        BuyStations = new();
+        SpecialRolled = false;
+    }
+
+    public static void ResetShopObjects()
+    {
+        Inv = Object.FindObjectOfType<InventorySystem>();
+        Lev = Object.FindObjectOfType<LevelIndicator>();
+        Rlr = Object.FindObjectOfType<Reroller>();
+    }
+
     public static void Initialize() {
         RollItems();
         RerollCost = Lev.LevelValue * INIT_REROLL_MULTIPLIER;

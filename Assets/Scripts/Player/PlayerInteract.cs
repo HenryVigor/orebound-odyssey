@@ -18,6 +18,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void Awake()
     {
+        Shop.ResetShopObjects();
         pi = GetComponent<PlayerInput>();
     }
 

@@ -6,8 +6,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerPlace : MonoBehaviour
 {
+    [Header("Torch Place Settings")]
     // Torch prefab
     public GameObject torchPrefab;
+    public bool canPlace = true;
+    public float placeCooldown = 0.5f;
+
+    // How much coal needed for 1 torch
+    [SerializeField] int torchCost = 1;
 
     // Get player inventory
     private InventorySystem inventorySystem;
@@ -18,12 +24,7 @@ public class PlayerPlace : MonoBehaviour
     // Get block holder
     private GameObject blockHolder;
 
-    [Header("Torch Place Settings")]
-    public bool canPlace = true;
-    public float placeCooldown = 0.5f;
-
-    // How much coal needed for 1 torch
-    [SerializeField] int torchCost = 1;
+    
 
     void Start()
     {
@@ -44,7 +45,7 @@ public class PlayerPlace : MonoBehaviour
 
     void Place() 
     {
-        if (canPlace && inventorySystem.CoalValue >= 1)
+        if (canPlace && inventorySystem.CoalValue >= 1) // If player has coal
         {
             canPlace = false;
 
@@ -56,7 +57,9 @@ public class PlayerPlace : MonoBehaviour
             GameObject newTorch = Instantiate(torchPrefab, placePosition, Quaternion.identity);
             newTorch.transform.SetParent(blockHolder.transform);
 
+            // Reset canPlace
             Invoke("ResetPlace", placeCooldown);
+            // Remove coal from inventory
             RemoveCoal();
         }
     }

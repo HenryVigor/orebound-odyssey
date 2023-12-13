@@ -29,6 +29,7 @@ public class LevelIndicator : MonoBehaviour
 
     void UpdateLevelText()
     {
+        // Update level text
         levelText.text = $"<b>Level: {_levelValue}</b>";
     }
 

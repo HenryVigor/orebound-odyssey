@@ -10,6 +10,7 @@ public class MaxHealthIndicator : MonoBehaviour {
         TextField = GetComponent<TextMeshProUGUI>();
     }
 
+    // Sets inventory text to maxHealth
     public void Set(int maxHealth) {
         if (maxHealth > 0) TextField.text = "<b>" + maxHealth + "</b>"; 
         else TextField.text = "<b>0</b>";

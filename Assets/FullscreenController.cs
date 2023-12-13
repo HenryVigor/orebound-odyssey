@@ -6,7 +6,7 @@ public class FullscreenController : MonoBehaviour
 {
     void Update()
     {
-        // Toggle fullscreen when the F key is pressed (you can use any key or input method you prefer)
+        // Toggle fullscreen when the F key is pressed
         if (Input.GetKeyDown(KeyCode.F))
         {
             ToggleFullscreen();

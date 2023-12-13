@@ -17,7 +17,9 @@ public class ExitIndicator : MonoBehaviour
 
     void Update()
     {
+        // Get distance from player
         distance = Vector3.Distance(trackingPos, playerTransform.position);
+        // Update exit text
         exitText.text = "Exit: " + Mathf.FloorToInt(distance) + "m";
     }
 

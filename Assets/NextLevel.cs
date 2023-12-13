@@ -7,6 +7,7 @@ public class NextLevel : MonoBehaviour, IEducational
 {
     public CavernGenerator cavernGenerator; // Reference to the CavernGenerator component
     private LevelIndicator levelIndicator; // Declare levelIndicator at the class level
+    [SerializeField] GameObject cratePrefab; // For checking Educational Mode on since the game wouldn't toggle PlayerInteract on build?
     private bool hasBeenPrompted = false;
 
     void Start()
@@ -21,7 +22,7 @@ public class NextLevel : MonoBehaviour, IEducational
     {
         if (collision.gameObject == Player.Obj && cavernGenerator != null)
         {
-            if (collision.gameObject.GetComponent<PlayerInteract>().educationalMode == true)
+            if (cratePrefab.GetComponent<LootObject>().educationalMode == true)
             {
                 if (!hasBeenPrompted)
                 {

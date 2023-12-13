@@ -16,8 +16,8 @@ public class BaseMultiplyItem : BaseItem
         var player = GameObject.FindGameObjectWithTag("Player");
         if (upgradingHealth)
         {
-            PlayerCombat.UpgradeMaxHealth(Mathf.CeilToInt(PlayerCombat.GetMaxHealth() * maxHealthBonus));
-            PlayerCombat.Heal(Mathf.CeilToInt(PlayerCombat.Health * healBonus));
+            PlayerCombat.MulMaxHealth(maxHealthBonus);
+            PlayerCombat.MulHeal(healBonus);
         }
         //if (upgradingSpeed)
         //{

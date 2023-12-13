@@ -16,7 +16,6 @@ public class MainMenu : MonoBehaviour
         cratePrefabA.GetComponent<LootObject>().educationalMode = false;
         cratePrefabB.GetComponent<LootObject>().educationalMode = false;
         cratePrefabC.GetComponent<LootObject>().educationalMode = false;
-        playerPrefab.GetComponent<PlayerInteract>().educationalMode = false;
     }
     public void PlayGame()
     {

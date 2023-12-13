@@ -21,7 +21,7 @@ public class BaseItem : AbstractItem
         var inventory = GameObject.FindGameObjectWithTag("Inventory");
         if (upgradingHealth)
         {
-            PlayerCombat.UpgradeMaxHealth(PlayerCombat.GetMaxHealth() + Mathf.FloorToInt(maxHealthBonus));
+            PlayerCombat.UpgradeMaxHealth(Mathf.FloorToInt(maxHealthBonus));
             PlayerCombat.Heal(Mathf.FloorToInt(healBonus));
         }
         //if (upgradingSpeed)

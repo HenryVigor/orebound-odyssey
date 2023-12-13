@@ -14,7 +14,6 @@ public class PlayerInteract : MonoBehaviour
     public float interactCooldown = 0.25f;
     public Transform interactPoint;
     public Vector2 interactArea = new Vector2(0.65f, .5f);
-    public bool educationalMode = false;
 
     private void Awake()
     {
@@ -59,18 +58,6 @@ public class PlayerInteract : MonoBehaviour
         }
 
         Gizmos.DrawWireCube(interactPoint.position, interactArea);
-    }
-
-    public void ToggleEducational()
-    {
-        if (!educationalMode)
-        {
-            educationalMode = true;
-        }
-        else
-        {
-            educationalMode = false;
-        }
     }
 
 }

@@ -15,9 +15,10 @@ public class GameOverMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI backText;
     [SerializeField] TextMeshProUGUI quitText;
     [SerializeField] GameObject player;
+    [SerializeField] GameObject cratePrefab;
     private void OnEnable()
     {
-        if (player.GetComponent<PlayerInteract>().educationalMode == true)
+        if (cratePrefab.GetComponent<LootObject>().educationalMode == true)
         {
             scoreText.text = "Educational Questions Correct: " + transform.parent.Find("EduPrompt").GetComponent<EducationQuestion>().questionAnsweredCount;
         }

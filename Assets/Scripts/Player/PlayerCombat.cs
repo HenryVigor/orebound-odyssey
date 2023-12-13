@@ -142,12 +142,36 @@ public class PlayerCombat : MonoBehaviour {
         HUD.HIndicator.Set(Health);
     }
 
-    /// <summary>Upgrades the player's max health to <paramref name="amt"/> health</summary>
+    /// <summary>Multiply current health of the player by <paramref name="multiplier"/> modifier</summary>
+    /// <param name="amt">Amount of health to heal</param>
+    public static void MulHeal(float multiplier)
+    {
+        // Add health
+        Health = Mathf.CeilToInt(Health * multiplier);
+        if (Health > GetMaxHealth())
+        {
+            Health = GetMaxHealth();
+        }
+
+        // Update health indicator
+        HUD.HIndicator.Set(Health);
+    }
+
+    /// <summary>Upgrades the player's max health by <paramref name="amt"/> health</summary>
     /// <param name="amt">Amount of health to set</param>
     public static void UpgradeMaxHealth(int amt)
     {
         // Add health
-        Instance.MaxHealth = amt;
+        Instance.MaxHealth += amt;
+        HUD.MaxHIndicator.Set(GetMaxHealth());
+    }
+
+    /// <summary>Multiply the player's max health by <paramref name="multiplier"/> modifier</summary>
+    /// <param name="amt">Amount of health to set</param>
+    public static void MulMaxHealth(float multiplier)
+    {
+        // Add health
+        Instance.MaxHealth = Mathf.CeilToInt(Instance.MaxHealth * multiplier);
         HUD.MaxHIndicator.Set(GetMaxHealth());
     }
 

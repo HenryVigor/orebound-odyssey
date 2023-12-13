@@ -33,7 +33,7 @@ The project should then be visible and able to be opened from Unity Hub. Current
 # **Developer / Demonstration Controls**
 - U - Regenerate Level  
 - I - TP to Stairs  
-- O - TP to Crate (this one throws errors sometimes if it can't find crates but it doesn't break anything as far as I know)  
+- O - TP to Crate
 - P - add +2 to each ore and coins in inventory  
 - Y - +1 Health  
 - [ - -1 Health  
